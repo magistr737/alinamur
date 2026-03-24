@@ -3,1486 +3,1412 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO Meta Tags -->
   <title>Алина Мур — Архитектор-дизайнер интерьеров в Москве</title>
-  <meta name="description" content="Создаю пространства, которые вдохновляют. Архитектурное проектирование и дизайн интерьеров премиум-класса. Авторский подход, уникальные решения для вашего дома и бизнеса.">
-  <meta name="keywords" content="архитектор дизайнер москва, дизайн интерьера, архитектурный проект, дизайн квартиры, дизайн загородного дома, 3д визуализация интерьера">
+  <meta name="description" content="Создаю пространства, которые вдохновляют. Архитектурное проектирование и дизайн интерьеров. Авторский подход, уникальные решения.">
   <meta name="author" content="Алина Мур">
-  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://alinamur.ru">
-
-  <!-- Open Graph / Social -->
   <meta property="og:title" content="Алина Мур — Архитектор-дизайнер">
   <meta property="og:description" content="Создаю пространства, которые вдохновляют. Дизайн интерьеров и архитектурное проектирование.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://alinamur.ru">
-  <meta property="og:locale" content="ru_RU">
 
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Алина Мур",
-    "jobTitle": "Архитектор-дизайнер",
-    "description": "Архитектурное проектирование и дизайн интерьеров премиум-класса",
-    "url": "https://alinamur.ru",
-    "telephone": "+79001234567",
-    "email": "hello@alinamur.ru",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Москва",
-      "addressCountry": "RU"
-    },
-    "knowsAbout": ["Дизайн интерьера", "Архитектурное проектирование", "3D-визуализация", "Авторский надзор"],
-    "sameAs": [
-      "https://instagram.com/alinamur",
-      "https://t.me/alinamur"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Алина Мур — Архитектор-дизайнер",
-    "description": "Создаю уникальные интерьеры и архитектурные решения",
-    "url": "https://alinamur.ru",
-    "telephone": "+79001234567",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Москва",
-      "addressCountry": "RU"
-    },
-    "priceRange": "₽₽₽",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "120"
-    }
-  }
-  </script>
-
-  <!-- Fonts: Cormorant Garamond (display) + Syne (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* ============================================================
-       CSS Custom Properties
-    ============================================================ */
+    /* ─── Variables ─────────────────────────────────────────── */
     :root {
-      --bg:          #080808;
-      --bg-2:        #0f0f0f;
-      --bg-3:        #181818;
-      --bg-card:     #111111;
-      --gold:        #c8a96e;
-      --gold-light:  #dfc08a;
-      --gold-dim:    rgba(200, 169, 110, 0.12);
-      --text:        #f0ebe0;
-      --text-muted:  #706860;
-      --text-dim:    #2e2a26;
-      --border:      rgba(200, 169, 110, 0.12);
-      --border-h:    rgba(200, 169, 110, 0.38);
-      --nav-h:       84px;
-      --sp:          clamp(80px, 10vw, 140px);
-      --r:           var(--font-display);
-      --font-display:'Cormorant Garamond', Georgia, serif;
-      --font-body:   'Syne', sans-serif;
+      --paper:      #F9F7F4;
+      --cream:      #EDE8E0;
+      --cream-2:    #E4DDD3;
+      --ink:        #1A1917;
+      --ink-mid:    #5C574F;
+      --ink-soft:   #9B9389;
+      --ink-faint:  #D6D0C8;
+      --red:        #C0392B;
+      --warm-dark:  #1C1A17;
+      --nav-h:      72px;
     }
 
-    /* ============================================================
-       Reset
-    ============================================================ */
+    /* ─── Reset ─────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; font-size: 16px; }
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--font-body);
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
       font-size: 1rem;
       line-height: 1.6;
       overflow-x: hidden;
-      cursor: none;
     }
     a { color: inherit; text-decoration: none; }
-    img { max-width: 100%; display: block; }
-    ::selection { background: var(--gold); color: var(--bg); }
+    img { max-width: 100%; display: block; object-fit: cover; }
+    ::selection { background: var(--ink); color: var(--paper); }
     ::-webkit-scrollbar { width: 2px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: var(--gold); }
+    ::-webkit-scrollbar-thumb { background: var(--ink-faint); }
 
-    /* ============================================================
-       Cursor
-    ============================================================ */
-    #cur-dot {
-      position: fixed; width: 8px; height: 8px; border-radius: 50%;
-      background: var(--gold); pointer-events: none; z-index: 99999;
-      transform: translate(-50%,-50%); transition: transform .1s;
+    /* ─── Reveal ─────────────────────────────────────────────── */
+    [data-r] {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1);
     }
-    #cur-ring {
-      position: fixed; width: 38px; height: 38px; border-radius: 50%;
-      border: 1px solid rgba(200,169,110,.45); pointer-events: none; z-index: 99998;
-      transform: translate(-50%,-50%);
-      transition: width .35s, height .35s, border-color .35s, opacity .35s;
-    }
-    body:has(a:hover,button:hover) #cur-ring {
-      width: 56px; height: 56px; border-color: var(--gold);
-    }
+    [data-r].vis { opacity: 1; transform: none; }
+    [data-d="1"]{ transition-delay:.1s }
+    [data-d="2"]{ transition-delay:.2s }
+    [data-d="3"]{ transition-delay:.3s }
+    [data-d="4"]{ transition-delay:.4s }
+    [data-d="5"]{ transition-delay:.5s }
+    [data-d="6"]{ transition-delay:.6s }
 
-    /* ============================================================
-       Typography
-    ============================================================ */
-    h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 300; line-height: 1.08; }
-    h1 { font-size: clamp(3.2rem, 8.5vw, 9rem); letter-spacing: -.02em; }
-    h2 { font-size: clamp(2.6rem, 5.5vw, 5.5rem); }
-    h3 { font-size: clamp(1.5rem, 2.5vw, 2.4rem); }
-    h4 { font-size: clamp(1.2rem, 1.8vw, 1.6rem); }
-    p { line-height: 1.8; }
-
-    /* ============================================================
-       Layout
-    ============================================================ */
-    .container { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 clamp(24px, 5.5vw, 88px); }
-    .sp { padding: var(--sp) 0; }
-
-    .lbl {
-      display: inline-flex; align-items: center; gap: 14px;
-      font-size: .7rem; font-weight: 700; letter-spacing: .22em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 28px;
-    }
-    .lbl::before { content: ''; display: block; width: 36px; height: 1px; background: var(--gold); }
-
-    /* ============================================================
-       Loader
-    ============================================================ */
-    #loader {
-      position: fixed; inset: 0; background: var(--bg); z-index: 99999;
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px;
-    }
-    .ld-logo {
-      font-family: var(--font-display); font-size: 3rem; font-weight: 300;
-      letter-spacing: .12em; opacity: 0; transition: opacity .5s;
-    }
-    .ld-bar { width: 220px; height: 1px; background: var(--text-dim); overflow: hidden; }
-    .ld-prog { height: 100%; background: var(--gold); width: 0; transition: width 1.9s cubic-bezier(.4,0,.2,1); }
-    .ld-num { font-size: .72rem; font-weight: 700; letter-spacing: .18em; color: var(--text-muted); }
-
-    /* ============================================================
-       Navigation
-    ============================================================ */
+    /* ─── Navigation ─────────────────────────────────────────── */
     #nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      height: var(--nav-h); display: flex; align-items: center;
-      transition: background .45s, backdrop-filter .45s, border-bottom-color .45s;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      height: var(--nav-h);
+      display: flex; align-items: center;
+      padding: 0 clamp(20px, 5vw, 72px);
+      transition: background .4s, border-color .4s;
       border-bottom: 1px solid transparent;
     }
     #nav.scrolled {
-      background: rgba(8,8,8,.9); backdrop-filter: blur(24px) saturate(180%);
-      -webkit-backdrop-filter: blur(24px) saturate(180%);
-      border-bottom-color: var(--border);
+      background: rgba(249,247,244,.92);
+      backdrop-filter: blur(20px);
+      border-bottom-color: var(--ink-faint);
     }
-    .nav-in { display: flex; align-items: center; justify-content: space-between; width: 100%; }
-    .nav-logo { font-family: var(--font-display); font-size: 1.55rem; font-weight: 400; letter-spacing: .06em; }
-    .nav-logo em { font-style: normal; color: var(--gold); }
-    .nav-links { display: flex; align-items: center; gap: 44px; list-style: none; }
+    .nav-inner {
+      width: 100%; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+      font-family: 'Cormorant', serif; font-weight: 400; font-size: 1.3rem;
+      letter-spacing: .12em; text-transform: uppercase;
+    }
+    .nav-links {
+      display: flex; align-items: center; gap: 40px; list-style: none;
+    }
     .nav-links a {
-      font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
-      color: var(--text-muted); position: relative; transition: color .3s;
+      font-size: .72rem; font-weight: 400; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--ink-soft); transition: color .25s;
     }
-    .nav-links a::after {
-      content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 1px;
-      background: var(--gold); transition: width .35s;
-    }
-    .nav-links a:hover { color: var(--text); }
-    .nav-links a:hover::after { width: 100%; }
+    .nav-links a:hover { color: var(--ink); }
     .nav-cta {
-      font-size: .72rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
-      padding: 13px 30px; border: 1px solid var(--gold); color: var(--gold);
-      transition: background .3s, color .3s;
+      font-size: .68rem; font-weight: 500; letter-spacing: .16em; text-transform: uppercase;
+      padding: 11px 26px; border: 1px solid var(--ink);
+      transition: background .25s, color .25s;
     }
-    .nav-cta:hover { background: var(--gold); color: var(--bg); }
+    .nav-cta:hover { background: var(--ink); color: var(--paper); }
     .burger {
-      display: none; flex-direction: column; gap: 5px; cursor: pointer;
-      background: none; border: none; padding: 6px;
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
     }
-    .burger span { display: block; width: 28px; height: 1px; background: var(--text); transition: transform .35s, opacity .35s; }
+    .burger span {
+      display: block; width: 26px; height: 1px; background: var(--ink);
+      transition: transform .3s, opacity .3s;
+    }
     .mob-menu {
-      position: fixed; inset: 0; background: var(--bg); z-index: 999;
-      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 44px;
-      opacity: 0; pointer-events: none; transition: opacity .4s;
+      position: fixed; inset: 0; background: var(--paper); z-index: 99;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 32px;
+      opacity: 0; pointer-events: none; transition: opacity .35s;
     }
     .mob-menu.open { opacity: 1; pointer-events: all; }
     .mob-menu a {
-      font-family: var(--font-display); font-size: clamp(2rem, 7vw, 4.5rem); font-weight: 300;
-      color: var(--text-muted); transition: color .3s;
+      font-family: 'Cormorant', serif; font-size: clamp(2.4rem, 8vw, 5rem);
+      font-weight: 300; color: var(--ink-soft); transition: color .25s;
     }
-    .mob-menu a:hover { color: var(--gold); }
+    .mob-menu a:hover { color: var(--ink); }
+    .mob-close {
+      position: absolute; top: 28px; right: clamp(20px, 5vw, 72px);
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+      background: none; border: none; cursor: pointer; color: var(--ink-soft);
+    }
 
-    /* ============================================================
-       Hero
-    ============================================================ */
+    /* ─── Hero / Opener ──────────────────────────────────────── */
     #hero {
-      position: relative; min-height: 100svh; display: flex; flex-direction: column;
-      justify-content: flex-end; padding-bottom: clamp(60px, 9vw, 110px); overflow: hidden;
+      min-height: 100svh;
+      display: flex; flex-direction: column;
+      border-bottom: 1px solid var(--ink-faint);
+      overflow: hidden;
     }
-    .hero-grid-bg {
-      position: absolute; inset: 0; z-index: 0;
-      background-image:
-        linear-gradient(rgba(200,169,110,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(200,169,110,.025) 1px, transparent 1px);
-      background-size: 88px 88px;
+    .hero-title-row {
+      padding: var(--nav-h) clamp(20px, 5vw, 72px) 0;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: end;
+      gap: 0;
+      border-bottom: 1px solid var(--ink-faint);
     }
-    .hero-glow {
-      position: absolute; top: -30%; right: -5%; width: 55%; height: 90%;
-      background: radial-gradient(ellipse at center, rgba(200,169,110,.055) 0%, transparent 68%);
-      pointer-events: none; z-index: 0;
+    .hero-name-left {
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: clamp(5rem, 13vw, 16rem);
+      line-height: .88; letter-spacing: -.01em;
+      padding-bottom: .08em;
     }
-    .hero-photo {
-      position: absolute; right: 0; top: 0; width: 48%; height: 100%; overflow: hidden; z-index: 1;
+    .hero-dot {
+      width: clamp(12px, 2vw, 22px); height: clamp(12px, 2vw, 22px);
+      background: var(--red); border-radius: 50%;
+      align-self: center; flex-shrink: 0;
+      margin: 0 clamp(12px, 2vw, 28px);
     }
-    .hero-photo-inner {
+    .hero-name-right {
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: clamp(5rem, 13vw, 16rem);
+      line-height: .88; letter-spacing: -.01em;
+      text-align: right; padding-bottom: .08em;
+    }
+    .hero-meta-row {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      padding: 14px clamp(20px, 5vw, 72px);
+      border-bottom: 1px solid var(--ink-faint);
+    }
+    .hero-meta-item {
+      font-size: .65rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--ink-soft); font-weight: 400;
+    }
+    .hero-meta-item:nth-child(2) { text-align: center; }
+    .hero-meta-item:nth-child(3) { text-align: right; }
+    .hero-split {
+      flex: 1; display: grid; grid-template-columns: 45% 55%;
+      min-height: 60vh;
+    }
+    .hero-left {
+      border-right: 1px solid var(--ink-faint);
+      background: var(--cream); position: relative; overflow: hidden;
+    }
+    .hero-photo-wrap {
       width: 100%; height: 100%; position: relative;
-      background: linear-gradient(160deg, #1c1710 0%, #0d0c0a 60%, #151108 100%);
     }
-    .hero-photo-inner::after {
-      content: 'ВАШЕ ФОТО'; position: absolute; inset: 0; display: flex;
-      align-items: center; justify-content: center; font-size: .65rem;
-      letter-spacing: .3em; color: var(--text-dim); font-weight: 700;
-    }
-    .hero-photo img {
+    .hero-photo-wrap img {
       width: 100%; height: 100%; object-fit: cover; object-position: center top;
-      display: none; /* show when real photo added */
+      filter: grayscale(20%);
     }
-    .hero-overlay {
-      position: absolute; inset: 0; z-index: 2;
-      background: linear-gradient(to right, var(--bg) 38%, rgba(8,8,8,.3) 65%, transparent 100%);
+    .hero-photo-placeholder {
+      width: 100%; height: 100%; min-height: 50vh;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(160deg, #D8D2C8 0%, #C8C0B4 100%);
     }
-    .hero-content { position: relative; z-index: 3; }
-    .hero-tag {
-      font-size: .68rem; font-weight: 700; letter-spacing: .28em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 28px; opacity: 0; transform: translateY(16px);
-      display: flex; align-items: center; gap: 12px;
+    .hero-photo-placeholder span {
+      font-size: .6rem; letter-spacing: .3em; text-transform: uppercase;
+      color: rgba(26,25,23,.3); writing-mode: vertical-rl;
     }
-    .hero-tag::before { content: ''; width: 32px; height: 1px; background: var(--gold); display: block; }
-    .hero-h1 { opacity: 0; transform: translateY(44px); }
-    .hero-h1 em { font-style: italic; color: var(--gold); }
-    .hero-lead {
-      max-width: 500px; margin-top: 28px; color: var(--text-muted);
-      font-size: 1.05rem; opacity: 0; transform: translateY(20px);
+    .hero-right {
+      background: var(--cream-2); position: relative; overflow: hidden;
     }
-    .hero-actions {
-      display: flex; align-items: center; gap: 36px; margin-top: 52px;
-      opacity: 0; transform: translateY(20px);
+    .hero-right-photo {
+      width: 100%; height: 100%; min-height: 50vh; position: relative;
     }
-    .hero-stats {
-      display: flex; align-items: center; gap: clamp(28px, 5vw, 88px);
-      margin-top: 88px; padding-top: 52px; border-top: 1px solid var(--border);
-      opacity: 0;
+    .hero-right-photo img {
+      width: 100%; height: 100%; object-fit: cover;
     }
-    .stat-n {
-      font-family: var(--font-display); font-size: clamp(2.2rem, 4vw, 3.8rem);
-      font-weight: 300; line-height: 1; color: var(--text);
+    .hero-right-placeholder {
+      width: 100%; height: 100%; min-height: 50vh;
+      background: linear-gradient(160deg, #C8BFB0 0%, #AFA49A 100%);
+      display: flex; align-items: center; justify-content: center;
     }
-    .stat-n span { color: var(--gold); }
-    .stat-l {
-      font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
-      color: var(--text-muted); margin-top: 6px;
+    .hero-right-placeholder span {
+      font-size: .6rem; letter-spacing: .3em; text-transform: uppercase;
+      color: rgba(26,25,23,.3);
     }
-    .scroll-ind {
-      position: absolute; bottom: 44px; right: clamp(24px, 5.5vw, 88px);
-      display: flex; flex-direction: column; align-items: center; gap: 12px; z-index: 3;
-    }
-    .scroll-ind span {
-      font-size: .62rem; font-weight: 700; letter-spacing: .24em; text-transform: uppercase;
-      color: var(--text-muted); writing-mode: vertical-rl;
-    }
-    .scroll-ln {
-      width: 1px; height: 64px;
-      background: linear-gradient(to bottom, var(--gold), transparent);
-      animation: scrlLn 2.4s ease-in-out infinite;
-    }
-    @keyframes scrlLn {
-      0%,100%{ opacity:1; transform:scaleY(1); }
-      50%{ opacity:.4; transform:scaleY(.5); }
-    }
-
-    /* ============================================================
-       Buttons
-    ============================================================ */
-    .btn-p {
-      display: inline-flex; align-items: center; gap: 12px;
-      background: var(--gold); color: var(--bg); font-family: var(--font-body);
-      font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
-      padding: 18px 38px; transition: background .3s, transform .3s;
-    }
-    .btn-p:hover { background: var(--gold-light); transform: translateY(-2px); }
-    .btn-t {
+    .hero-cta-pill {
+      position: absolute; bottom: 32px; left: 32px; z-index: 2;
       display: inline-flex; align-items: center; gap: 10px;
-      font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-      color: var(--text-muted); transition: color .3s;
+      background: var(--ink); color: var(--paper);
+      padding: 14px 24px;
+      font-size: .68rem; letter-spacing: .15em; text-transform: uppercase;
+      font-weight: 400;
+      transition: background .25s;
     }
-    .btn-t svg { transition: transform .3s; }
-    .btn-t:hover { color: var(--gold); }
-    .btn-t:hover svg { transform: translateX(4px); }
-    .btn-outline {
-      display: inline-flex; align-items: center; gap: 12px;
-      border: 1px solid var(--border-h); color: var(--text-muted); font-family: var(--font-body);
-      font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-      padding: 17px 36px; transition: border-color .3s, color .3s;
+    .hero-cta-pill:hover { background: var(--red); }
+    .hero-cta-pill svg { transition: transform .25s; }
+    .hero-cta-pill:hover svg { transform: translateX(4px); }
+    .hero-stats-bar {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      border-top: 1px solid var(--ink-faint);
     }
-    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .hero-stat {
+      padding: 24px clamp(20px, 5vw, 72px);
+      border-right: 1px solid var(--ink-faint);
+      display: flex; align-items: center; gap: 16px;
+    }
+    .hero-stat:last-child { border-right: none; }
+    .stat-num {
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: clamp(2.2rem, 4vw, 3.2rem); line-height: 1;
+    }
+    .stat-num sup { font-size: .45em; vertical-align: super; }
+    .stat-label {
+      font-size: .65rem; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--ink-soft); line-height: 1.4;
+    }
 
-    /* ============================================================
-       Marquee
-    ============================================================ */
-    .mq-wrap { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 18px 0; overflow: hidden; background: var(--bg-2); }
-    .mq-track { display: flex; gap: 64px; animation: mq 34s linear infinite; width: max-content; }
+    /* ─── Marquee ─────────────────────────────────────────────── */
+    .marquee-wrap {
+      overflow: hidden; border-bottom: 1px solid var(--ink-faint);
+      background: var(--cream); padding: 16px 0;
+    }
+    .marquee-track {
+      display: flex; gap: 0; width: max-content;
+      animation: mq 28s linear infinite;
+    }
+    .marquee-wrap:hover .marquee-track { animation-play-state: paused; }
     .mq-item {
-      display: flex; align-items: center; gap: 22px; white-space: nowrap;
-      font-family: var(--font-display); font-size: 1.15rem; font-weight: 300; font-style: italic;
-      color: var(--text-muted);
+      display: flex; align-items: center; gap: 24px; padding: 0 24px;
+      font-family: 'Cormorant', serif; font-size: clamp(1rem, 2vw, 1.4rem);
+      font-weight: 300; font-style: italic; color: var(--ink-mid);
+      white-space: nowrap;
     }
-    .mq-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+    .mq-sep {
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--red); flex-shrink: 0;
+    }
     @keyframes mq { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
-    .mq-wrap:hover .mq-track { animation-play-state: paused; }
 
-    /* ============================================================
-       Reveal animations
-    ============================================================ */
-    [data-r] { opacity: 0; transform: translateY(44px); transition: opacity .85s cubic-bezier(.23,1,.32,1), transform .85s cubic-bezier(.23,1,.32,1); }
-    [data-r].in { opacity: 1; transform: translateY(0); }
-    [data-rd="1"]{ transition-delay: .1s; }
-    [data-rd="2"]{ transition-delay: .2s; }
-    [data-rd="3"]{ transition-delay: .3s; }
-    [data-rd="4"]{ transition-delay: .4s; }
-    [data-rd="5"]{ transition-delay: .5s; }
+    /* ─── Section common ─────────────────────────────────────── */
+    .section-pad { padding: clamp(72px, 10vw, 140px) 0; }
+    .container { width: 100%; max-width: 1440px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px); }
+    .section-label {
+      font-size: .62rem; letter-spacing: .24em; text-transform: uppercase;
+      color: var(--ink-soft); display: flex; align-items: center; gap: 14px;
+      margin-bottom: 20px;
+    }
+    .section-label::before {
+      content: ''; display: block; width: 28px; height: 1px; background: var(--ink-faint);
+    }
 
-    /* ============================================================
-       About
-    ============================================================ */
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(60px, 9vw, 140px); align-items: center; }
-    .about-img-wrap { position: relative; }
-    .about-img {
-      width: 100%; aspect-ratio: 3/4; background: var(--bg-3); overflow: hidden; position: relative;
+    /* ─── Photo + Services (integrated section) ──────────────── */
+    #photo-services {
+      border-top: 1px solid var(--ink-faint);
+      border-bottom: 1px solid var(--ink-faint);
     }
-    .about-img::after {
-      content: 'ВАШЕ ФОТО'; position: absolute; inset: 0; display: flex;
-      align-items: center; justify-content: center; font-size: .65rem;
-      letter-spacing: .3em; color: var(--text-dim); font-weight: 700;
+    .ps-grid {
+      display: grid; grid-template-columns: 44% 56%;
     }
-    .about-img img { width:100%; height:100%; object-fit:cover; display:none; }
-    .about-accent {
-      position: absolute; bottom: -22px; right: -22px; width: 58%; height: 58%;
-      border: 1px solid var(--border); z-index: -1;
+    .ps-photo {
+      position: relative; overflow: hidden; min-height: 700px;
+      border-right: 1px solid var(--ink-faint);
     }
-    .about-badge {
-      position: absolute; top: -26px; right: -26px;
-      width: 118px; height: 118px; border-radius: 50%; background: var(--gold);
-      display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 2;
+    .ps-photo img {
+      width: 100%; height: 100%; object-fit: cover; object-position: center;
     }
-    .about-badge .bn { font-family: var(--font-display); font-size: 2.6rem; font-weight: 300; color: var(--bg); line-height: 1; }
-    .about-badge .bl { font-size: .58rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--bg); }
-    .about-text h2 { margin-bottom: 28px; }
-    .about-text p { color: var(--text-muted); margin-bottom: 18px; }
-    .about-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
-    .tag {
-      font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
-      padding: 9px 18px; border: 1px solid var(--border); color: var(--text-muted);
-      transition: border-color .3s, color .3s;
+    .ps-photo-placeholder {
+      width: 100%; height: 100%; min-height: 700px;
+      background: linear-gradient(170deg, #D0C9BE 0%, #B8AF A4 60%, #A8A098 100%);
+      display: flex; align-items: flex-end; justify-content: flex-start;
+      padding: 40px;
     }
-    .tag:hover { border-color: var(--gold); color: var(--gold); }
-    .sig { font-family: var(--font-display); font-size: 2.2rem; font-style: italic; color: var(--gold); margin-top: 44px; }
+    .ps-photo-placeholder-inner {
+      width: 100%; height: 100%; min-height: 700px;
+      background: linear-gradient(170deg, #C8C0B4 0%, #AFA49A 100%);
+      display: flex; align-items: flex-end; justify-content: flex-start;
+      padding: 40px; position: absolute; inset: 0;
+    }
+    .ps-photo-label {
+      font-size: .6rem; letter-spacing: .24em; text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+    }
+    .ps-right {
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .ps-header {
+      padding: clamp(36px, 5vw, 64px) clamp(32px, 4vw, 56px);
+      border-bottom: 1px solid var(--ink-faint);
+    }
+    .ps-header h2 {
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: clamp(2.2rem, 4vw, 4rem); line-height: 1.1;
+      margin-top: 12px;
+    }
+    .ps-header h2 em { font-style: italic; }
+    .ps-services-list {
+      flex: 1; display: flex; flex-direction: column;
+    }
+    .srv-row {
+      display: grid;
+      grid-template-columns: 36px 1fr auto;
+      align-items: center; gap: 24px;
+      padding: clamp(20px, 2.5vw, 28px) clamp(32px, 4vw, 56px);
+      border-bottom: 1px solid var(--ink-faint);
+      position: relative; overflow: hidden;
+      transition: background .3s;
+      cursor: default;
+    }
+    .srv-row::after {
+      content: ''; position: absolute; left: 0; bottom: 0; height: 1px;
+      width: 0; background: var(--ink);
+      transition: width .45s cubic-bezier(.16,1,.3,1);
+    }
+    .srv-row:hover { background: var(--cream); }
+    .srv-row:hover::after { width: 100%; }
+    .srv-row-num {
+      font-family: 'Cormorant', serif; font-size: 1rem; font-weight: 300;
+      color: var(--ink-faint); line-height: 1; padding-top: 2px;
+    }
+    .srv-row-name {
+      font-family: 'Cormorant', serif; font-weight: 400;
+      font-size: clamp(1.1rem, 1.8vw, 1.5rem); line-height: 1.2;
+    }
+    .srv-row-desc {
+      font-size: .78rem; color: var(--ink-soft); margin-top: 3px; line-height: 1.5;
+    }
+    .srv-row-price {
+      font-size: .72rem; letter-spacing: .06em;
+      color: var(--ink-mid); text-align: right; white-space: nowrap;
+      font-weight: 400;
+    }
 
-    /* ============================================================
-       Services
-    ============================================================ */
-    #services { background: var(--bg-2); }
-    .services-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: clamp(56px, 7vw, 96px); }
-    .srv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); }
-    .srv-card {
-      background: var(--bg-2); padding: clamp(32px, 4vw, 56px); position: relative;
-      overflow: hidden; transition: background .4s;
+    /* ─── Stats ──────────────────────────────────────────────── */
+    #stats {
+      background: var(--ink); color: var(--paper);
+      border-top: 1px solid rgba(255,255,255,.06);
     }
-    .srv-card::after {
-      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
-      background: var(--gold); transform: scaleX(0); transform-origin: left;
-      transition: transform .55s cubic-bezier(.23,1,.32,1);
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4,1fr);
     }
-    .srv-card:hover::after { transform: scaleX(1); }
-    .srv-card:hover { background: var(--bg-3); }
-    .srv-num {
-      font-family: var(--font-display); font-size: 4.5rem; font-weight: 300;
-      color: var(--text-dim); line-height: 1; margin-bottom: 32px; transition: color .4s;
+    .stat-cell {
+      padding: clamp(48px, 7vw, 88px) clamp(20px, 4vw, 56px);
+      border-right: 1px solid rgba(255,255,255,.08);
     }
-    .srv-card:hover .srv-num { color: rgba(200,169,110,.18); }
-    .srv-price {
-      position: absolute; top: 24px; right: 24px; font-size: .65rem; font-weight: 700;
-      letter-spacing: .08em; color: var(--text-dim);
+    .stat-cell:last-child { border-right: none; }
+    .stat-big {
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: clamp(3.5rem, 7vw, 7rem); line-height: .9;
+      letter-spacing: -.02em;
     }
-    .srv-card h3 { margin-bottom: 16px; font-size: clamp(1.3rem, 1.9vw, 1.9rem); }
-    .srv-card p { font-size: .88rem; color: var(--text-muted); line-height: 1.75; }
-    .srv-more {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
-      color: var(--gold); margin-top: 28px; opacity: 0; transform: translateX(-10px);
-      transition: opacity .3s, transform .3s;
+    .stat-big-suffix { font-size: .5em; vertical-align: super; }
+    .stat-text {
+      font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
+      color: rgba(255,255,255,.4); margin-top: 16px; line-height: 1.5;
     }
-    .srv-card:hover .srv-more { opacity: 1; transform: translateX(0); }
 
-    /* ============================================================
-       Portfolio
-    ============================================================ */
-    #portfolio { overflow: hidden; }
-    .port-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; }
-    .port-filters { display: flex; gap: 4px; flex-wrap: wrap; margin-bottom: 44px; }
-    .fbtn {
-      background: none; border: 1px solid var(--border); color: var(--text-muted);
-      font-family: var(--font-body); font-size: .68rem; font-weight: 700;
-      letter-spacing: .13em; text-transform: uppercase; padding: 10px 22px;
-      cursor: pointer; transition: all .3s;
+    /* ─── Portfolio ───────────────────────────────────────────── */
+    #portfolio { border-top: 1px solid var(--ink-faint); }
+    .port-header {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      padding-bottom: clamp(48px, 6vw, 80px);
+      border-bottom: 1px solid var(--ink-faint);
+      margin-bottom: clamp(40px, 5vw, 64px);
     }
-    .fbtn.on, .fbtn:hover { background: var(--gold); border-color: var(--gold); color: var(--bg); }
-    .port-swiper { overflow: visible !important; }
-    .port-item { position: relative; overflow: hidden; aspect-ratio: 4/3; background: var(--bg-3); cursor: pointer; }
+    .port-header h2 {
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: clamp(2.8rem, 6vw, 6rem); line-height: 1;
+    }
+    .port-header h2 em { font-style: italic; }
+    .port-link-all {
+      font-size: .68rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--ink-soft); display: flex; align-items: center; gap: 8px;
+      transition: color .25s; align-self: flex-start; margin-top: 4px;
+    }
+    .port-link-all svg { transition: transform .25s; }
+    .port-link-all:hover { color: var(--ink); }
+    .port-link-all:hover svg { transform: translateX(4px); }
+    .port-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: auto auto;
+      gap: 2px;
+    }
+    .port-item {
+      position: relative; overflow: hidden;
+      background: var(--cream);
+    }
+    .port-item:nth-child(1) { grid-column: 1 / 8; grid-row: 1; aspect-ratio: 16/9; }
+    .port-item:nth-child(2) { grid-column: 8 / 13; grid-row: 1; aspect-ratio: 4/5; }
+    .port-item:nth-child(3) { grid-column: 1 / 5; grid-row: 2; aspect-ratio: 4/5; }
+    .port-item:nth-child(4) { grid-column: 5 / 9; grid-row: 2; aspect-ratio: 4/5; }
+    .port-item:nth-child(5) { grid-column: 9 / 13; grid-row: 2; aspect-ratio: 4/5; }
+    .port-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .7s cubic-bezier(.16,1,.3,1);
+    }
+    .port-item:hover img { transform: scale(1.04); }
     .port-ph {
-      width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
-      transition: transform .65s cubic-bezier(.23,1,.32,1); position: relative;
+      width: 100%; height: 100%; min-height: 240px;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(145deg, #D8D2C8 0%, #C4BDB4 100%);
+      transition: transform .7s cubic-bezier(.16,1,.3,1);
     }
-    .port-ph::after {
-      content: attr(data-label); font-size: .62rem; letter-spacing: .24em;
-      color: var(--text-dim); font-weight: 700; text-transform: uppercase;
+    .port-item:hover .port-ph { transform: scale(1.04); }
+    .port-ph span {
+      font-size: .58rem; letter-spacing: .26em; text-transform: uppercase;
+      color: rgba(26,25,23,.25); writing-mode: vertical-rl;
     }
-    .port-item:hover .port-ph { transform: scale(1.05); }
-    .port-item img { width:100%; height:100%; object-fit:cover; transition:transform .65s cubic-bezier(.23,1,.32,1); display:none; }
-    .port-item:hover img { transform: scale(1.05); }
     .port-ov {
       position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,.88) 0%, transparent 52%);
-      opacity: 0; transition: opacity .42s; display: flex; flex-direction: column;
-      justify-content: flex-end; padding: 32px;
+      background: linear-gradient(to top, rgba(26,25,23,.75) 0%, transparent 55%);
+      opacity: 0; transition: opacity .4s;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 24px;
     }
     .port-item:hover .port-ov { opacity: 1; }
-    .port-ov h4 { font-family: var(--font-display); font-size: 1.7rem; font-weight: 300; transform: translateY(18px); transition: transform .42s; }
-    .port-item:hover .port-ov h4 { transform: translateY(0); }
-    .port-ov p { font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); margin-top: 5px; transform: translateY(18px); transition: transform .42s .05s; }
-    .port-item:hover .port-ov p { transform: translateY(0); }
-    .sw-ctrl { display: flex; align-items: center; gap: 12px; margin-top: 48px; justify-content: flex-end; }
-    .sw-btn {
-      width: 56px; height: 56px; border: 1px solid var(--border); background: none;
-      color: var(--text-muted); cursor: pointer; display: flex; align-items: center;
-      justify-content: center; transition: all .3s; font-size: 1rem;
+    .port-ov-title {
+      font-family: 'Cormorant', serif; font-weight: 300; font-size: 1.4rem;
+      color: var(--paper); transform: translateY(12px);
+      transition: transform .4s cubic-bezier(.16,1,.3,1);
     }
-    .sw-btn:hover { border-color: var(--gold); color: var(--gold); }
+    .port-item:hover .port-ov-title { transform: none; }
+    .port-ov-sub {
+      font-size: .62rem; letter-spacing: .14em; text-transform: uppercase;
+      color: rgba(255,255,255,.55); margin-top: 4px;
+      transform: translateY(12px); transition: transform .4s .04s cubic-bezier(.16,1,.3,1);
+    }
+    .port-item:hover .port-ov-sub { transform: none; }
 
-    /* ============================================================
-       Process
-    ============================================================ */
-    #process { background: var(--bg-2); position: relative; overflow: hidden; }
-    #process::before {
-      content: 'PROCESS'; position: absolute; top: 50%; left: 50%;
-      transform: translate(-50%,-50%); font-family: var(--font-display);
-      font-size: clamp(5rem, 16vw, 18rem); font-weight: 300; letter-spacing: .1em;
-      color: rgba(200,169,110,.018); white-space: nowrap; pointer-events: none; user-select: none;
+    /* ─── About ──────────────────────────────────────────────── */
+    #about {
+      border-top: 1px solid var(--ink-faint);
+      background: var(--cream);
     }
-    .proc-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
-      position: relative;
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 8vw, 120px); align-items: center;
     }
-    .proc-grid::before {
-      content: ''; position: absolute; top: 32px; left: 12%; right: 12%;
-      height: 1px; background: var(--border);
+    .about-img-col { position: relative; }
+    .about-img {
+      aspect-ratio: 3/4; overflow: hidden;
+      background: linear-gradient(160deg, #C8C0B4 0%, #AFA49A 100%);
     }
-    .proc-step { padding: 0 20px; text-align: center; position: relative; }
-    .proc-dot {
-      width: 64px; height: 64px; border-radius: 50%; border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center; margin: 0 auto 36px;
-      background: var(--bg-2); transition: border-color .35s, background .35s;
-      position: relative; z-index: 1;
+    .about-img img { width:100%; height:100%; object-fit:cover; object-position:top; }
+    .about-img-placeholder {
+      width:100%; height:100%; min-height:500px;
+      display:flex; align-items:center; justify-content:center;
     }
-    .proc-step:hover .proc-dot { border-color: var(--gold); background: var(--gold-dim); }
-    .proc-dn {
-      font-family: var(--font-display); font-size: 1.4rem; font-weight: 300;
-      color: var(--text-muted); transition: color .35s;
+    .about-img-placeholder span {
+      font-size:.58rem; letter-spacing:.28em; text-transform:uppercase;
+      color:rgba(26,25,23,.25); writing-mode:vertical-rl;
     }
-    .proc-step:hover .proc-dn { color: var(--gold); }
-    .proc-step h4 { margin-bottom: 14px; }
-    .proc-step p { font-size: .85rem; color: var(--text-muted); line-height: 1.75; }
+    .about-year {
+      position: absolute; bottom: -18px; right: -18px;
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: 8rem; line-height: 1; color: var(--cream-2);
+      pointer-events: none; user-select: none; z-index: -1;
+    }
+    .about-text-col h2 {
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: clamp(2.2rem, 4.5vw, 4.5rem); line-height: 1.08;
+      margin: 14px 0 28px;
+    }
+    .about-text-col h2 em { font-style: italic; }
+    .about-text-col p {
+      color: var(--ink-mid); font-size: .95rem; line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .about-tools {
+      display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px;
+    }
+    .tool-tag {
+      font-size: .62rem; letter-spacing: .14em; text-transform: uppercase;
+      padding: 7px 14px; border: 1px solid var(--ink-faint);
+      color: var(--ink-soft); transition: border-color .25s, color .25s;
+    }
+    .tool-tag:hover { border-color: var(--ink); color: var(--ink); }
+    .about-sig {
+      font-family: 'Cormorant', serif; font-size: 2.8rem; font-style: italic;
+      font-weight: 300; margin-top: 36px; color: var(--ink-mid);
+    }
 
-    /* ============================================================
-       Testimonials
-    ============================================================ */
-    .test-head { text-align: center; margin-bottom: clamp(56px, 8vw, 100px); }
-    .test-head h2 { margin-bottom: 14px; }
-    .test-head p { color: var(--text-muted); }
+    /* ─── Process ─────────────────────────────────────────────── */
+    #process {
+      border-top: 1px solid var(--ink-faint);
+    }
+    .proc-header {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: end;
+      margin-bottom: clamp(48px, 7vw, 88px);
+    }
+    .proc-header h2 {
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: clamp(2.2rem, 4vw, 4rem); line-height: 1.08;
+    }
+    .proc-header h2 em { font-style: italic; }
+    .proc-header p {
+      color: var(--ink-mid); font-size: .9rem; line-height: 1.8;
+      align-self: end;
+    }
+    .proc-list {
+      border-top: 1px solid var(--ink-faint);
+    }
+    .proc-item {
+      display: grid; grid-template-columns: 80px 1fr 1fr; gap: 32px; align-items: start;
+      padding: clamp(28px, 3.5vw, 44px) 0;
+      border-bottom: 1px solid var(--ink-faint);
+      transition: background .25s;
+    }
+    .proc-item:hover { background: var(--cream); margin: 0 -72px; padding-left: 72px; padding-right: 72px; }
+    .proc-n {
+      font-family: 'Cormorant', serif; font-size: 3.5rem; font-weight: 300;
+      color: var(--ink-faint); line-height: 1;
+    }
+    .proc-title {
+      font-family: 'Cormorant', serif; font-weight: 400;
+      font-size: clamp(1.4rem, 2vw, 1.9rem); line-height: 1.2;
+      padding-top: 6px;
+    }
+    .proc-desc {
+      color: var(--ink-mid); font-size: .88rem; line-height: 1.8; padding-top: 6px;
+    }
+
+    /* ─── Testimonials ───────────────────────────────────────── */
+    #testimonials {
+      border-top: 1px solid var(--ink-faint);
+      background: var(--cream);
+    }
+    .test-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+    }
     .test-card {
-      border: 1px solid var(--border); padding: clamp(32px, 4vw, 52px); height: 100%;
-      background: var(--bg-2); transition: border-color .35s; display: flex; flex-direction: column;
+      background: var(--paper); padding: clamp(28px, 3.5vw, 44px);
+      display: flex; flex-direction: column; gap: 20px;
     }
-    .test-card:hover { border-color: var(--border-h); }
-    .test-q { font-family: var(--font-display); font-size: 4.5rem; color: var(--gold); line-height: .8; margin-bottom: 22px; }
-    .test-txt {
-      font-family: var(--font-display); font-size: clamp(1.05rem, 1.5vw, 1.4rem);
-      font-weight: 300; font-style: italic; line-height: 1.65; color: var(--text); flex: 1; margin-bottom: 36px;
+    .test-quote-mark {
+      font-family: 'Cormorant', serif; font-size: 4rem; font-weight: 300;
+      color: var(--ink-faint); line-height: .8;
     }
-    .test-auth { display: flex; align-items: center; gap: 16px; }
-    .test-av {
-      width: 52px; height: 52px; border-radius: 50%; background: var(--bg-3);
-      border: 1px solid var(--border); overflow: hidden; flex-shrink: 0;
+    .test-text {
+      font-family: 'Cormorant', serif; font-weight: 300; font-style: italic;
+      font-size: clamp(1.1rem, 1.6vw, 1.4rem); line-height: 1.55;
+      color: var(--ink); flex: 1;
     }
-    .test-av img { width:100%; height:100%; object-fit:cover; display:none; }
-    .test-name { font-weight: 700; font-size: .88rem; letter-spacing: .04em; }
-    .test-role { font-size: .72rem; color: var(--text-muted); margin-top: 3px; }
-    .test-stars { margin-left: auto; display: flex; gap: 3px; color: var(--gold); font-size: .72rem; }
+    .test-author {
+      display: flex; flex-direction: column; gap: 3px;
+      padding-top: 16px; border-top: 1px solid var(--ink-faint);
+    }
+    .test-name { font-size: .82rem; font-weight: 500; }
+    .test-role { font-size: .72rem; color: var(--ink-soft); letter-spacing: .06em; }
+    .test-header {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      margin-bottom: clamp(36px, 5vw, 56px);
+    }
+    .test-header h2 {
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: clamp(2.2rem, 4.5vw, 4rem); line-height: 1.08;
+    }
+    .test-header h2 em { font-style: italic; }
+    .test-header p { color: var(--ink-soft); font-size: .82rem; max-width: 240px; text-align: right; }
 
-    /* ============================================================
-       CTA
-    ============================================================ */
-    #cta { position: relative; overflow: hidden; }
-    #cta::before {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse at 50% 120%, rgba(200,169,110,.07) 0%, transparent 70%);
+    /* ─── CTA ─────────────────────────────────────────────────── */
+    #cta {
+      border-top: 1px solid var(--ink-faint);
     }
-    .cta-in { position: relative; z-index: 1; text-align: center; max-width: 840px; margin: 0 auto; }
-    .cta-in h2 { margin-bottom: 24px; }
-    .cta-in > p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 52px; }
-    .cta-acts { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .cta-inner {
+      display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 48px;
+    }
+    .cta-inner h2 {
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: clamp(2.4rem, 6vw, 7rem); line-height: .95;
+    }
+    .cta-inner h2 em { font-style: italic; }
+    .cta-actions { display: flex; flex-direction: column; gap: 12px; align-items: flex-end; }
+    .btn-fill {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--ink); color: var(--paper);
+      padding: 15px 32px; font-size: .7rem; letter-spacing: .16em; text-transform: uppercase;
+      transition: background .25s;
+    }
+    .btn-fill:hover { background: var(--red); }
+    .btn-fill svg { transition: transform .25s; }
+    .btn-fill:hover svg { transform: translateX(4px); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: .68rem; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--ink-soft); transition: color .25s;
+    }
+    .btn-ghost:hover { color: var(--ink); }
 
-    /* ============================================================
-       Contact
-    ============================================================ */
-    #contact { background: var(--bg-2); }
-    .cont-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(60px, 8vw, 130px); }
-    .cont-info h2 { margin-bottom: 24px; }
-    .cont-info > p { color: var(--text-muted); margin-bottom: 52px; }
-    .cont-det { display: flex; align-items: flex-start; gap: 18px; margin-bottom: 28px; }
-    .cont-ico {
-      width: 42px; height: 42px; border: 1px solid var(--border); display: flex;
-      align-items: center; justify-content: center; color: var(--gold); font-size: .88rem; flex-shrink: 0;
+    /* ─── Contact ─────────────────────────────────────────────── */
+    #contact {
+      border-top: 1px solid var(--ink-faint);
+      background: var(--cream);
     }
-    .cont-lbl { font-size: .62rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 5px; }
-    .cont-val { font-size: 1rem; transition: color .3s; }
-    .cont-val:hover { color: var(--gold); }
-    .socials { display: flex; gap: 12px; margin-top: 52px; }
-    .soc {
-      width: 44px; height: 44px; border: 1px solid var(--border); display: flex;
-      align-items: center; justify-content: center; color: var(--text-muted); font-size: .88rem;
-      transition: border-color .3s, color .3s;
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: clamp(48px, 8vw, 120px);
     }
-    .soc:hover { border-color: var(--gold); color: var(--gold); }
-    .form { display: flex; flex-direction: column; gap: 20px; }
-    .fg label { display: block; font-size: .62rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 9px; }
-    .fg input, .fg textarea, .fg select {
-      width: 100%; background: var(--bg); border: 1px solid var(--border);
-      color: var(--text); font-family: var(--font-body); font-size: .95rem;
-      padding: 16px 20px; outline: none; transition: border-color .3s; appearance: none;
+    .contact-info h2 {
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: clamp(2rem, 4vw, 3.5rem); line-height: 1.1; margin: 12px 0 28px;
     }
-    .fg input:focus, .fg textarea:focus, .fg select:focus { border-color: var(--gold); }
-    .fg textarea { min-height: 140px; resize: vertical; }
-    .fg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .form-btn {
-      background: var(--gold); color: var(--bg); font-family: var(--font-body);
-      font-size: .72rem; font-weight: 800; letter-spacing: .16em; text-transform: uppercase;
-      padding: 20px 44px; border: none; cursor: pointer; transition: background .3s, transform .3s;
-      align-self: flex-start; display: flex; align-items: center; gap: 10px;
+    .contact-info p { color: var(--ink-mid); font-size: .9rem; line-height: 1.8; margin-bottom: 36px; }
+    .contact-details { display: flex; flex-direction: column; gap: 16px; }
+    .contact-detail {
+      display: flex; flex-direction: column; gap: 3px;
+      padding-bottom: 16px; border-bottom: 1px solid var(--ink-faint);
     }
-    .form-btn:hover { background: var(--gold-light); transform: translateY(-2px); }
-    .form-btn:disabled { opacity: .7; transform: none; cursor: not-allowed; }
-    .form-note { font-size: .72rem; color: var(--text-muted); margin-top: -4px; }
-    .form-note a { color: var(--gold); }
+    .contact-detail:last-child { border-bottom: none; }
+    .detail-label {
+      font-size: .6rem; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-soft);
+    }
+    .detail-value { font-size: .92rem; font-weight: 400; }
+    .contact-socials {
+      display: flex; gap: 16px; margin-top: 28px;
+    }
+    .social-link {
+      font-size: .65rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--ink-soft); padding-bottom: 3px; border-bottom: 1px solid transparent;
+      transition: color .25s, border-color .25s;
+    }
+    .social-link:hover { color: var(--ink); border-bottom-color: var(--ink); }
+    .contact-form { display: flex; flex-direction: column; gap: 0; }
+    .form-field {
+      border-bottom: 1px solid var(--ink-faint);
+      transition: border-color .25s;
+    }
+    .form-field:focus-within { border-color: var(--ink); }
+    .form-field label {
+      display: block; font-size: .6rem; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--ink-soft); padding-top: 20px; padding-bottom: 4px;
+    }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%; background: none; border: none; outline: none;
+      font-family: 'DM Sans', sans-serif; font-size: .92rem;
+      color: var(--ink); padding-bottom: 16px; resize: none;
+    }
+    .form-field select { cursor: pointer; }
+    .form-submit {
+      margin-top: 28px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .form-note { font-size: .68rem; color: var(--ink-soft); }
+    .form-success {
+      display: none; padding: 16px; background: var(--paper);
+      font-size: .82rem; color: var(--ink-mid); text-align: center; margin-top: 16px;
+    }
 
-    /* ============================================================
-       Footer
-    ============================================================ */
-    footer { border-top: 1px solid var(--border); padding: 48px 0; }
-    .foot-in { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
-    .foot-brand { font-family: var(--font-display); font-size: 1.4rem; font-weight: 300; letter-spacing: .06em; margin-bottom: 6px; }
-    .foot-brand em { font-style: normal; color: var(--gold); }
-    .foot-copy { font-size: .78rem; color: var(--text-muted); }
-    .foot-links { display: flex; gap: 36px; }
-    .foot-links a { font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); transition: color .3s; }
-    .foot-links a:hover { color: var(--gold); }
+    /* ─── Footer / Closer ─────────────────────────────────────── */
+    #footer {
+      background: var(--warm-dark); color: var(--paper);
+      border-top: 1px solid rgba(255,255,255,.06);
+      overflow: hidden;
+    }
+    .footer-name-display {
+      display: block;
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: clamp(5.5rem, 15vw, 18rem);
+      line-height: .85; letter-spacing: -.02em;
+      color: rgba(255,255,255,.06);
+      padding: clamp(32px, 5vw, 64px) clamp(20px, 5vw, 72px);
+      user-select: none; pointer-events: none;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .footer-inner {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      padding: clamp(36px, 5vw, 64px) clamp(20px, 5vw, 72px);
+      gap: 48px;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    .footer-col-label {
+      font-size: .58rem; letter-spacing: .24em; text-transform: uppercase;
+      color: rgba(255,255,255,.28); margin-bottom: 20px;
+    }
+    .footer-logo {
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: 1.6rem; letter-spacing: .08em;
+      color: rgba(255,255,255,.7); margin-bottom: 12px;
+    }
+    .footer-tagline { font-size: .8rem; color: rgba(255,255,255,.3); line-height: 1.6; }
+    .footer-nav { display: flex; flex-direction: column; gap: 10px; }
+    .footer-nav a {
+      font-size: .78rem; color: rgba(255,255,255,.38);
+      transition: color .25s; letter-spacing: .06em;
+    }
+    .footer-nav a:hover { color: rgba(255,255,255,.8); }
+    .footer-contacts { display: flex; flex-direction: column; gap: 10px; }
+    .footer-contacts a {
+      font-size: .78rem; color: rgba(255,255,255,.38);
+      transition: color .25s;
+    }
+    .footer-contacts a:hover { color: rgba(255,255,255,.8); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px clamp(20px, 5vw, 72px);
+    }
+    .footer-copy {
+      font-size: .6rem; letter-spacing: .12em; text-transform: uppercase;
+      color: rgba(255,255,255,.18);
+    }
+    .footer-red-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--red);
+    }
 
-    /* ============================================================
-       Responsive
-    ============================================================ */
+    /* ─── Responsive ─────────────────────────────────────────── */
     @media (max-width: 1100px) {
-      .srv-grid { grid-template-columns: repeat(2, 1fr); }
-      .proc-grid { grid-template-columns: repeat(2, 1fr); gap: 48px; }
-      .proc-grid::before { display: none; }
-      .cont-grid { grid-template-columns: 1fr; gap: 64px; }
+      .stats-grid { grid-template-columns: repeat(2,1fr); }
+      .stat-cell:nth-child(2) { border-right: none; }
+      .proc-item { grid-template-columns: 56px 1fr; }
+      .proc-desc { grid-column: 2; }
+      .proc-item:hover { margin: 0; padding-left: 0; padding-right: 0; }
     }
-    @media (max-width: 768px) {
-      .nav-links, .nav-cta { display: none; }
-      .burger { display: flex; }
+    @media (max-width: 900px) {
+      .hero-split { grid-template-columns: 1fr; }
+      .hero-right { display: none; }
+      .ps-grid { grid-template-columns: 1fr; }
+      .ps-photo { min-height: 400px; border-right: none; border-bottom: 1px solid var(--ink-faint); }
+      .ps-photo-placeholder-inner { min-height: 400px; }
+      .port-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .port-item:nth-child(1) { grid-column: 1 / 3; grid-row: 1; }
+      .port-item:nth-child(2) { grid-column: 1 / 2; grid-row: 2; }
+      .port-item:nth-child(3) { grid-column: 2 / 3; grid-row: 2; }
+      .port-item:nth-child(4) { grid-column: 1 / 2; grid-row: 3; }
+      .port-item:nth-child(5) { grid-column: 2 / 3; grid-row: 3; }
       .about-grid { grid-template-columns: 1fr; }
-      .about-img-wrap { order: -1; }
-      .about-img { aspect-ratio: 4/3; }
-      .srv-grid { grid-template-columns: 1fr; }
-      .services-head { flex-direction: column; align-items: flex-start; gap: 16px; }
-      .port-head { flex-direction: column; align-items: flex-start; gap: 16px; }
-      .hero-photo { display: none; }
-      .hero-overlay { background: linear-gradient(to right, var(--bg) 60%, rgba(8,8,8,.4) 100%); }
-      .hero-stats { flex-wrap: wrap; gap: 28px; }
-      .fg-row { grid-template-columns: 1fr; }
-      .foot-in { flex-direction: column; text-align: center; }
-      .foot-links { justify-content: center; }
-      .scroll-ind { display: none; }
-      .cta-acts { flex-direction: column; }
-      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .test-grid { grid-template-columns: 1fr; }
+      .cta-inner { grid-template-columns: 1fr; }
+      .cta-actions { align-items: flex-start; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .proc-header { grid-template-columns: 1fr; }
     }
-    @media (max-width: 520px) {
-      .proc-grid { grid-template-columns: 1fr; }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .nav-cta { display: none; }
+      .burger { display: flex; }
+      .hero-title-row { grid-template-columns: 1fr auto 1fr; }
+      .hero-meta-row { grid-template-columns: 1fr 1fr; }
+      .hero-meta-item:nth-child(2) { display: none; }
+      .hero-meta-item:nth-child(3) { text-align: right; }
+      .hero-stats-bar { grid-template-columns: 1fr; }
+      .hero-stat { border-right: none; border-bottom: 1px solid var(--ink-faint); }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .proc-item { grid-template-columns: 1fr; gap: 8px; }
+      .proc-n { font-size: 2rem; }
+      .port-grid { grid-template-columns: 1fr; }
+      .port-item:nth-child(n) { grid-column: 1; grid-row: auto; }
     }
-
-    /* ============================================================
-       Utility
-    ============================================================ */
-    .tg { color: var(--gold); }
-    .ti { font-style: italic; }
-    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   </style>
 </head>
 <body>
 
-<!-- =========================================================
-     LOADER
-========================================================= -->
-<div id="loader" role="status" aria-label="Загрузка страницы">
-  <div class="ld-logo" id="ldLogo">АМ</div>
-  <div class="ld-bar"><div class="ld-prog" id="ldProg"></div></div>
-  <div class="ld-num" id="ldNum">0%</div>
-</div>
-
-<!-- =========================================================
-     CURSOR
-========================================================= -->
-<div id="cur-dot" aria-hidden="true"></div>
-<div id="cur-ring" aria-hidden="true"></div>
-
-<!-- =========================================================
-     NAV
-========================================================= -->
+<!-- ══════════ NAV ══════════ -->
 <nav id="nav" role="navigation" aria-label="Основная навигация">
-  <div class="container">
-    <div class="nav-in">
-      <a href="#hero" class="nav-logo" aria-label="На главную">Алина <em>Мур</em></a>
-      <ul class="nav-links">
-        <li><a href="#about">Обо мне</a></li>
-        <li><a href="#services">Услуги</a></li>
-        <li><a href="#portfolio">Портфолио</a></li>
-        <li><a href="#process">Процесс</a></li>
-        <li><a href="#testimonials">Отзывы</a></li>
-      </ul>
-      <a href="#contact" class="nav-cta">Связаться</a>
-      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobMenu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo" aria-label="Алина Мур — главная">Алина Мур</a>
+    <ul class="nav-links">
+      <li><a href="#photo-services">Услуги</a></li>
+      <li><a href="#portfolio">Работы</a></li>
+      <li><a href="#about">Обо мне</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Обсудить проект</a>
+    <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
 <!-- Mobile menu -->
-<div class="mob-menu" id="mobMenu" aria-hidden="true" role="dialog" aria-label="Мобильное меню">
-  <a href="#about"        class="mlink">Обо мне</a>
-  <a href="#services"     class="mlink">Услуги</a>
-  <a href="#portfolio"    class="mlink">Портфолио</a>
-  <a href="#process"      class="mlink">Процесс</a>
-  <a href="#testimonials" class="mlink">Отзывы</a>
-  <a href="#contact"      class="mlink">Контакты</a>
+<div class="mob-menu" id="mobMenu" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+  <button class="mob-close" id="mobClose">Закрыть</button>
+  <a href="#photo-services" class="mlink">Услуги</a>
+  <a href="#portfolio"      class="mlink">Работы</a>
+  <a href="#about"          class="mlink">Обо мне</a>
+  <a href="#contact"        class="mlink">Контакты</a>
 </div>
 
-<!-- =========================================================
-     MAIN
-========================================================= -->
 <main>
 
-  <!-- ══════════ HERO ══════════ -->
-  <section id="hero" aria-labelledby="h1">
-    <div class="hero-grid-bg" aria-hidden="true"></div>
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="hero-photo" aria-hidden="true">
-      <div class="hero-photo-inner">
-        <!-- Replace <div> with <img src="your-photo.jpg" alt="Алина Мур — архитектор-дизайнер"> -->
-      </div>
-    </div>
-    <div class="hero-overlay" aria-hidden="true"></div>
+<!-- ══════════ HERO ══════════ -->
+<section id="hero" aria-labelledby="hero-name">
 
-    <div class="container">
-      <div class="hero-content">
-        <p class="hero-tag" id="heroTag">Архитектор-дизайнер · Москва</p>
-        <h1 class="hero-h1" id="h1">
-          Пространство,<br>которое <em>вдохновляет</em>
-        </h1>
-        <p class="hero-lead" id="heroLead">
-          Создаю уникальные интерьеры и архитектурные решения, отражающие вашу личность и образ жизни. Каждый проект — это история.
-        </p>
-        <div class="hero-actions" id="heroActs">
-          <a href="#portfolio" class="btn-p">
-            Смотреть работы
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M13 8l-4-4M13 8l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="#contact" class="btn-t">
-            Обсудить проект
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M13 8l-4-4M13 8l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-        <div class="hero-stats" id="heroStats" aria-label="Ключевые показатели">
-          <div>
-            <div class="stat-n"><span class="cnt" data-to="120">0</span><span class="tg">+</span></div>
-            <div class="stat-l">Реализованных проектов</div>
-          </div>
-          <div>
-            <div class="stat-n"><span class="cnt" data-to="8">0</span><span> лет</span></div>
-            <div class="stat-l">Опыта в дизайне</div>
-          </div>
-          <div>
-            <div class="stat-n"><span class="cnt" data-to="98">0</span><span class="tg">%</span></div>
-            <div class="stat-l">Довольных клиентов</div>
-          </div>
+  <!-- Name row -->
+  <div class="hero-title-row">
+    <div class="hero-name-left" id="hero-name" data-r>Алина</div>
+    <div class="hero-dot" aria-hidden="true"></div>
+    <div class="hero-name-right" data-r data-d="1">Мур</div>
+  </div>
+
+  <!-- Metadata -->
+  <div class="hero-meta-row" aria-hidden="true">
+    <span class="hero-meta-item">Дизайнер&thinsp;интерьеров</span>
+    <span class="hero-meta-item">Москва · Россия</span>
+    <span class="hero-meta-item">Архитектурное&thinsp;бюро</span>
+  </div>
+
+  <!-- Split photo area -->
+  <div class="hero-split">
+    <div class="hero-left">
+      <div class="hero-photo-wrap">
+        <!-- Replace with: <img src="portrait.jpg" alt="Алина Мур — архитектор-дизайнер"> -->
+        <div class="hero-photo-placeholder">
+          <span>Ваше фото</span>
         </div>
       </div>
     </div>
-    <div class="scroll-ind" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="scroll-ln"></div>
-    </div>
-  </section>
-
-  <!-- ══════════ MARQUEE ══════════ -->
-  <div class="mq-wrap" aria-hidden="true">
-    <div class="mq-track" id="mqTrack">
-      <span class="mq-item"><span class="mq-dot"></span>Дизайн интерьера</span>
-      <span class="mq-item"><span class="mq-dot"></span>Архитектурное проектирование</span>
-      <span class="mq-item"><span class="mq-dot"></span>3D-визуализация</span>
-      <span class="mq-item"><span class="mq-dot"></span>Авторский надзор</span>
-      <span class="mq-item"><span class="mq-dot"></span>Комплектация</span>
-      <span class="mq-item"><span class="mq-dot"></span>Дизайн фасадов</span>
-      <span class="mq-item"><span class="mq-dot"></span>Дизайн интерьера</span>
-      <span class="mq-item"><span class="mq-dot"></span>Архитектурное проектирование</span>
-      <span class="mq-item"><span class="mq-dot"></span>3D-визуализация</span>
-      <span class="mq-item"><span class="mq-dot"></span>Авторский надзор</span>
-      <span class="mq-item"><span class="mq-dot"></span>Комплектация</span>
-      <span class="mq-item"><span class="mq-dot"></span>Дизайн фасадов</span>
+    <div class="hero-right">
+      <div class="hero-right-photo">
+        <!-- Replace with: <img src="hero-interior.jpg" alt="Интерьер"> -->
+        <div class="hero-right-placeholder">
+          <span>Фото интерьера</span>
+        </div>
+        <a href="#portfolio" class="hero-cta-pill">
+          Смотреть работы
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2.5 7h9M11.5 7L8 3.5M11.5 7L8 10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 
-  <!-- ══════════ ABOUT ══════════ -->
-  <section id="about" class="sp" aria-labelledby="aboutH">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-img-wrap" data-r>
-          <div class="about-img" role="img" aria-label="Фотография Алины Мур">
-            <!-- <img src="about-photo.jpg" alt="Алина Мур — архитектор-дизайнер"> -->
-          </div>
-          <div class="about-accent" aria-hidden="true"></div>
-          <div class="about-badge" aria-label="8 лет опыта">
-            <div class="bn">8</div>
-            <div class="bl">лет<br>опыта</div>
-          </div>
-        </div>
-        <div class="about-text">
-          <p class="lbl">Обо мне</p>
-          <h2 id="aboutH" data-r data-rd="1">Создаю<br><em>осмысленные</em><br>пространства</h2>
-          <p data-r data-rd="2">Меня зовут Алина Мур — архитектор-дизайнер с более чем 8-летним опытом в создании жилых и коммерческих интерьеров. Мой подход сочетает глубокое понимание архитектуры с чуткостью к потребностям каждого клиента.</p>
-          <p data-r data-rd="3">Каждый проект начинается со слушания. Я погружаюсь в образ жизни, привычки и мечты клиента, чтобы создать пространство, которое живёт и дышит вместе с ним.</p>
-          <div class="about-tags" data-r data-rd="4">
-            <span class="tag">Интерьерный дизайн</span>
-            <span class="tag">ArchiCAD</span>
-            <span class="tag">3ds Max</span>
-            <span class="tag">V-Ray</span>
-            <span class="tag">AutoCAD</span>
-            <span class="tag">Revit</span>
-            <span class="tag">SketchUp</span>
-          </div>
-          <div class="sig" data-r data-rd="5">Алина Мур</div>
-        </div>
+  <!-- Stats bar -->
+  <div class="hero-stats-bar" aria-label="Ключевые показатели">
+    <div class="hero-stat" data-r>
+      <div>
+        <div class="stat-num"><span class="cnt" data-to="120">0</span><sup>+</sup></div>
+        <div class="stat-label">Реализованных<br>проектов</div>
       </div>
     </div>
-  </section>
+    <div class="hero-stat" data-r data-d="1">
+      <div>
+        <div class="stat-num"><span class="cnt" data-to="8">0</span></div>
+        <div class="stat-label">Лет опыта<br>в дизайне</div>
+      </div>
+    </div>
+    <div class="hero-stat" data-r data-d="2">
+      <div>
+        <div class="stat-num"><span class="cnt" data-to="98">0</span><sup>%</sup></div>
+        <div class="stat-label">Довольных<br>клиентов</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- ══════════ SERVICES ══════════ -->
-  <section id="services" class="sp" aria-labelledby="srvH">
-    <div class="container">
-      <div class="services-head">
-        <div>
-          <p class="lbl">Услуги</p>
-          <h2 id="srvH" data-r>Что я<br><em>предлагаю</em></h2>
+<!-- ══════════ MARQUEE ══════════ -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-track" id="mqTrack">
+    <span class="mq-item"><span class="mq-sep"></span>Дизайн интерьера</span>
+    <span class="mq-item"><span class="mq-sep"></span>Архитектурное проектирование</span>
+    <span class="mq-item"><span class="mq-sep"></span>3D-визуализация</span>
+    <span class="mq-item"><span class="mq-sep"></span>Авторский надзор</span>
+    <span class="mq-item"><span class="mq-sep"></span>Комплектация</span>
+    <span class="mq-item"><span class="mq-sep"></span>Дизайн фасадов</span>
+    <span class="mq-item"><span class="mq-sep"></span>Дизайн интерьера</span>
+    <span class="mq-item"><span class="mq-sep"></span>Архитектурное проектирование</span>
+    <span class="mq-item"><span class="mq-sep"></span>3D-визуализация</span>
+    <span class="mq-item"><span class="mq-sep"></span>Авторский надзор</span>
+    <span class="mq-item"><span class="mq-sep"></span>Комплектация</span>
+    <span class="mq-item"><span class="mq-sep"></span>Дизайн фасадов</span>
+  </div>
+</div>
+
+<!-- ══════════ PHOTO + SERVICES ══════════ -->
+<section id="photo-services" aria-labelledby="srv-heading">
+  <div class="ps-grid">
+
+    <!-- Designer photo (editorial portrait) -->
+    <div class="ps-photo">
+      <!-- Replace with: <img src="designer-portrait.jpg" alt="Алина Мур"> -->
+      <div class="ps-photo-placeholder-inner">
+        <span class="ps-photo-label">Фото дизайнера</span>
+      </div>
+    </div>
+
+    <!-- Services + prices -->
+    <div class="ps-right">
+      <div class="ps-header">
+        <p class="section-label">Услуги &amp; Стоимость</p>
+        <h2 id="srv-heading" data-r>
+          От идеи<br>до <em>воплощения</em>
+        </h2>
+      </div>
+
+      <div class="ps-services-list" role="list">
+
+        <div class="srv-row" role="listitem" data-r>
+          <div class="srv-row-num">01</div>
+          <div class="srv-row-body">
+            <div class="srv-row-name">Дизайн интерьера</div>
+            <div class="srv-row-desc">Полный дизайн-проект с рабочей документацией</div>
+          </div>
+          <div class="srv-row-price">от 3&thinsp;500 ₽/м²</div>
         </div>
-        <p data-r style="max-width:300px;color:var(--text-muted);font-size:.9rem;">
-          Полный цикл работ от концепции до реализации — ваш проект в одних руках.
+
+        <div class="srv-row" role="listitem" data-r data-d="1">
+          <div class="srv-row-num">02</div>
+          <div class="srv-row-body">
+            <div class="srv-row-name">Архитектурный проект</div>
+            <div class="srv-row-desc">Жилые дома и загородные резиденции</div>
+          </div>
+          <div class="srv-row-price">по запросу</div>
+        </div>
+
+        <div class="srv-row" role="listitem" data-r data-d="2">
+          <div class="srv-row-num">03</div>
+          <div class="srv-row-body">
+            <div class="srv-row-name">3D-визуализация</div>
+            <div class="srv-row-desc">Фотореалистичные рендеры пространства</div>
+          </div>
+          <div class="srv-row-price">от 800 ₽/м²</div>
+        </div>
+
+        <div class="srv-row" role="listitem" data-r data-d="3">
+          <div class="srv-row-num">04</div>
+          <div class="srv-row-body">
+            <div class="srv-row-name">Авторский надзор</div>
+            <div class="srv-row-desc">Контроль качества на стройке</div>
+          </div>
+          <div class="srv-row-price">договорная</div>
+        </div>
+
+        <div class="srv-row" role="listitem" data-r data-d="4">
+          <div class="srv-row-num">05</div>
+          <div class="srv-row-body">
+            <div class="srv-row-name">Комплектация</div>
+            <div class="srv-row-desc">Подбор мебели, освещения и декора</div>
+          </div>
+          <div class="srv-row-price">от 2% бюджета</div>
+        </div>
+
+        <div class="srv-row" role="listitem" data-r data-d="5">
+          <div class="srv-row-num">06</div>
+          <div class="srv-row-body">
+            <div class="srv-row-name">Консультация</div>
+            <div class="srv-row-desc">Онлайн или на объекте — конкретные решения</div>
+          </div>
+          <div class="srv-row-price">индивидуально</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ STATS ══════════ -->
+<section id="stats" aria-label="Показатели">
+  <div class="stats-grid">
+    <div class="stat-cell" data-r>
+      <div class="stat-big"><span class="cnt2" data-to="120">120</span><span class="stat-big-suffix">+</span></div>
+      <div class="stat-text">Реализованных<br>проектов</div>
+    </div>
+    <div class="stat-cell" data-r data-d="1">
+      <div class="stat-big"><span class="cnt2" data-to="8">8</span></div>
+      <div class="stat-text">Лет опыта<br>в дизайне</div>
+    </div>
+    <div class="stat-cell" data-r data-d="2">
+      <div class="stat-big"><span class="cnt2" data-to="15">15</span><span class="stat-big-suffix">+</span></div>
+      <div class="stat-text">Наград<br>и номинаций</div>
+    </div>
+    <div class="stat-cell" data-r data-d="3">
+      <div class="stat-big"><span class="cnt2" data-to="98">98</span><span class="stat-big-suffix">%</span></div>
+      <div class="stat-text">Клиентов<br>довольны результатом</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PORTFOLIO ══════════ -->
+<section id="portfolio" class="section-pad" aria-labelledby="port-heading">
+  <div class="container">
+    <div class="port-header" data-r>
+      <div>
+        <p class="section-label">Портфолио</p>
+        <h2 id="port-heading">Избранные<br><em>работы</em></h2>
+      </div>
+      <a href="#contact" class="port-link-all">
+        Все проекты
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M2.5 7h9M11.5 7L8 3.5M11.5 7L8 10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="port-grid" role="list">
+
+      <div class="port-item" role="listitem" data-r>
+        <!-- <img src="portfolio/1.jpg" alt="Апартаменты «Тишина»"> -->
+        <div class="port-ph"><span>Апартаменты «Тишина»</span></div>
+        <div class="port-ov">
+          <div class="port-ov-title">Апартаменты «Тишина»</div>
+          <div class="port-ov-sub">Квартира · 95 м² · Минимализм</div>
+        </div>
+      </div>
+
+      <div class="port-item" role="listitem" data-r data-d="1">
+        <!-- <img src="portfolio/2.jpg" alt="Загородный дом «Лес»"> -->
+        <div class="port-ph"><span>Дом «Лес»</span></div>
+        <div class="port-ov">
+          <div class="port-ov-title">Загородный дом «Лес»</div>
+          <div class="port-ov-sub">Дом · 280 м² · Скандинавский</div>
+        </div>
+      </div>
+
+      <div class="port-item" role="listitem" data-r data-d="1">
+        <!-- <img src="portfolio/3.jpg" alt="Ресторан «Дом»"> -->
+        <div class="port-ph"><span>Ресторан «Дом»</span></div>
+        <div class="port-ov">
+          <div class="port-ov-title">Ресторан «Дом»</div>
+          <div class="port-ov-sub">Коммерческий · 420 м² · Неоклассика</div>
+        </div>
+      </div>
+
+      <div class="port-item" role="listitem" data-r data-d="2">
+        <!-- <img src="portfolio/4.jpg" alt="Студия в центре"> -->
+        <div class="port-ph"><span>Студия в центре</span></div>
+        <div class="port-ov">
+          <div class="port-ov-title">Студия в центре</div>
+          <div class="port-ov-sub">Квартира · 48 м² · Лофт</div>
+        </div>
+      </div>
+
+      <div class="port-item" role="listitem" data-r data-d="2">
+        <!-- <img src="portfolio/5.jpg" alt="Пентхаус на Патриарших"> -->
+        <div class="port-ph"><span>Пентхаус</span></div>
+        <div class="port-ov">
+          <div class="port-ov-title">Пентхаус на Патриарших</div>
+          <div class="port-ov-sub">Квартира · 220 м² · Арт-деко</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section id="about" class="section-pad" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-img-col" data-r>
+        <div class="about-img" role="img" aria-label="Фотография Алины Мур">
+          <!-- <img src="about.jpg" alt="Алина Мур — архитектор-дизайнер"> -->
+          <div class="about-img-placeholder"><span>Ваше фото</span></div>
+        </div>
+        <div class="about-year" aria-hidden="true">8</div>
+      </div>
+
+      <div class="about-text-col">
+        <p class="section-label">Обо мне</p>
+        <h2 id="about-heading" data-r>
+          Создаю<br><em>осмысленные</em><br>пространства
+        </h2>
+        <p data-r data-d="1">
+          Меня зовут Алина Мур — архитектор-дизайнер с более чем 8&nbsp;годами опыта в&nbsp;создании жилых и&nbsp;коммерческих интерьеров. Мой подход сочетает глубокое понимание архитектуры с&nbsp;чуткостью к&nbsp;потребностям каждого клиента.
         </p>
+        <p data-r data-d="2">
+          Каждый проект начинается со&nbsp;слушания. Я&nbsp;погружаюсь в&nbsp;образ жизни, привычки и&nbsp;мечты клиента, чтобы создать пространство, которое живёт и&nbsp;дышит вместе с&nbsp;ним.
+        </p>
+        <div class="about-tools" data-r data-d="3" aria-label="Инструменты">
+          <span class="tool-tag">ArchiCAD</span>
+          <span class="tool-tag">3ds Max</span>
+          <span class="tool-tag">V-Ray</span>
+          <span class="tool-tag">AutoCAD</span>
+          <span class="tool-tag">Revit</span>
+          <span class="tool-tag">SketchUp</span>
+        </div>
+        <div class="about-sig" data-r data-d="4" aria-hidden="true">Алина Мур</div>
       </div>
-      <div class="srv-grid" role="list">
-        <article class="srv-card" role="listitem" data-r>
-          <div class="srv-price">от 3 500 ₽/м²</div>
-          <div class="srv-num">01</div>
-          <h3>Дизайн интерьера</h3>
-          <p>Разрабатываю концепцию, планировочное решение, подбираю отделочные материалы и мебель. Полный дизайн-проект с рабочей документацией.</p>
-          <div class="srv-more" aria-hidden="true">Подробнее <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M11 6.5L7.5 3M11 6.5L7.5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        </article>
-        <article class="srv-card" role="listitem" data-r data-rd="1">
-          <div class="srv-price">по запросу</div>
-          <div class="srv-num">02</div>
-          <h3>Архитектурный проект</h3>
-          <p>Проектирование жилых домов и загородных резиденций. От эскиза до полного комплекта рабочих чертежей с технической документацией.</p>
-          <div class="srv-more" aria-hidden="true">Подробнее <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M11 6.5L7.5 3M11 6.5L7.5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        </article>
-        <article class="srv-card" role="listitem" data-r data-rd="2">
-          <div class="srv-price">от 800 ₽/м²</div>
-          <div class="srv-num">03</div>
-          <h3>3D-визуализация</h3>
-          <p>Фотореалистичные рендеры вашего будущего интерьера. Увидьте результат до начала ремонта и оцените каждую деталь пространства.</p>
-          <div class="srv-more" aria-hidden="true">Подробнее <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M11 6.5L7.5 3M11 6.5L7.5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        </article>
-        <article class="srv-card" role="listitem" data-r data-rd="3">
-          <div class="srv-price">договорная</div>
-          <div class="srv-num">04</div>
-          <h3>Авторский надзор</h3>
-          <p>Контролирую ход строительных и отделочных работ, обеспечиваю соответствие проекту. Ваш гарант качества на строительной площадке.</p>
-          <div class="srv-more" aria-hidden="true">Подробнее <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M11 6.5L7.5 3M11 6.5L7.5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        </article>
-        <article class="srv-card" role="listitem" data-r data-rd="4">
-          <div class="srv-price">от 2% бюджета</div>
-          <div class="srv-num">05</div>
-          <h3>Комплектация</h3>
-          <p>Подбор, заказ и контроль поставок мебели, освещения, декора и отделочных материалов. Экономлю ваше время и нервы.</p>
-          <div class="srv-more" aria-hidden="true">Подробнее <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M11 6.5L7.5 3M11 6.5L7.5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        </article>
-        <article class="srv-card" role="listitem" data-r data-rd="5">
-          <div class="srv-price">индивидуально</div>
-          <div class="srv-num">06</div>
-          <h3>Консультация</h3>
-          <p>Онлайн или на объекте. Отвечу на вопросы по планировке, стилю, материалам и ремонту. Конкретные советы для вашей ситуации.</p>
-          <div class="srv-more" aria-hidden="true">Подробнее <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M2 6.5h9M11 6.5L7.5 3M11 6.5L7.5 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-        </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PROCESS ══════════ -->
+<section id="process" class="section-pad" aria-labelledby="proc-heading">
+  <div class="container">
+    <div class="proc-header" data-r>
+      <div>
+        <p class="section-label">Как я работаю</p>
+        <h2 id="proc-heading">Путь от<br><em>идеи к&nbsp;результату</em></h2>
+      </div>
+      <p>Полный цикл работ от&nbsp;первой встречи до&nbsp;завершения ремонта — ваш проект всегда в&nbsp;надёжных руках.</p>
+    </div>
+    <div class="proc-list" role="list">
+      <div class="proc-item" role="listitem" data-r>
+        <div class="proc-n" aria-hidden="true">01</div>
+        <div class="proc-title">Знакомство</div>
+        <div class="proc-desc">Встреча или&nbsp;онлайн-звонок. Обсуждаем идеи, пожелания, бюджет и&nbsp;сроки. Осмотр объекта и&nbsp;замеры.</div>
+      </div>
+      <div class="proc-item" role="listitem" data-r data-d="1">
+        <div class="proc-n" aria-hidden="true">02</div>
+        <div class="proc-title">Концепция</div>
+        <div class="proc-desc">Разрабатываю планировочные решения, стилевую концепцию, подборку материалов и&nbsp;мудборд проекта.</div>
+      </div>
+      <div class="proc-item" role="listitem" data-r data-d="2">
+        <div class="proc-n" aria-hidden="true">03</div>
+        <div class="proc-title">Дизайн-проект</div>
+        <div class="proc-desc">Полный комплект рабочей документации: чертежи, спецификации, 3D-визуализации каждого помещения.</div>
+      </div>
+      <div class="proc-item" role="listitem" data-r data-d="3">
+        <div class="proc-n" aria-hidden="true">04</div>
+        <div class="proc-title">Реализация</div>
+        <div class="proc-desc">Авторский надзор за&nbsp;исполнением, комплектация и&nbsp;контроль качества на&nbsp;каждом этапе ремонта.</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══════════ PORTFOLIO ══════════ -->
-  <section id="portfolio" class="sp" aria-labelledby="portH">
-    <div class="container">
-      <div class="port-head">
-        <div>
-          <p class="lbl">Портфолио</p>
-          <h2 id="portH" data-r>Избранные<br><em>работы</em></h2>
+<!-- ══════════ TESTIMONIALS ══════════ -->
+<section id="testimonials" class="section-pad" aria-labelledby="test-heading">
+  <div class="container">
+    <div class="test-header" data-r>
+      <div>
+        <p class="section-label">Отзывы</p>
+        <h2 id="test-heading">Что говорят<br><em>клиенты</em></h2>
+      </div>
+      <p>120+ реализованных проектов — каждый клиент для меня особенный</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card" data-r>
+        <div class="test-quote-mark" aria-hidden="true">"</div>
+        <p class="test-text">Алина полностью изменила наш взгляд на то, каким может быть пространство. Она не просто создала красивый интерьер — она создала дом, в котором хочется жить каждый день.</p>
+        <div class="test-author">
+          <div class="test-name">Екатерина Соколова</div>
+          <div class="test-role">Квартира 110 м², Москва</div>
         </div>
-        <a href="#contact" class="btn-t" data-r>
-          Все проекты
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M13 8l-4-4M13 8l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="test-card" data-r data-d="1">
+        <div class="test-quote-mark" aria-hidden="true">"</div>
+        <p class="test-text">Профессиональный подход, внимание к деталям и удивительное чувство стиля. Наш загородный дом превзошёл все ожидания. Рекомендуем без малейших сомнений!</p>
+        <div class="test-author">
+          <div class="test-name">Михаил и Ирина Петровы</div>
+          <div class="test-role">Загородный дом 320 м²</div>
+        </div>
+      </div>
+      <div class="test-card" data-r data-d="2">
+        <div class="test-quote-mark" aria-hidden="true">"</div>
+        <p class="test-text">Сотрудничество с Алиной — это удовольствие. Она вникает в каждую мелочь, предлагает нестандартные решения и всегда держит слово по срокам.</p>
+        <div class="test-author">
+          <div class="test-name">Андрей Волков</div>
+          <div class="test-role">Офис 200 м², Санкт-Петербург</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA ══════════ -->
+<section id="cta" class="section-pad" aria-label="Призыв к действию">
+  <div class="container">
+    <div class="cta-inner" data-r>
+      <h2>Начнём<br>ваш <em>проект?</em></h2>
+      <div class="cta-actions">
+        <a href="#contact" class="btn-fill">
+          Написать мне
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2.5 7h9M11.5 7L8 3.5M11.5 7L8 10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
         </a>
-      </div>
-
-      <div class="port-filters" role="group" aria-label="Фильтр проектов">
-        <button class="fbtn on" data-f="all">Все</button>
-        <button class="fbtn" data-f="apartment">Квартиры</button>
-        <button class="fbtn" data-f="house">Дома</button>
-        <button class="fbtn" data-f="commercial">Коммерческие</button>
-        <button class="fbtn" data-f="exterior">Экстерьер</button>
-      </div>
-
-      <div class="swiper port-swiper" id="portSwiper" aria-label="Карусель проектов">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide" data-cat="apartment">
-            <div class="port-item">
-              <div class="port-ph" data-label="Фото 1 — Апартаменты «Тишина»" style="background:linear-gradient(140deg,#1c1710 0%,#0d0b08 100%)">
-                <!-- <img src="portfolio/1.jpg" alt="Апартаменты Тишина"> -->
-              </div>
-              <div class="port-ov"><h4>Апартаменты «Тишина»</h4><p>Квартира · 95 м² · Минимализм</p></div>
-            </div>
-          </div>
-
-          <div class="swiper-slide" data-cat="house">
-            <div class="port-item">
-              <div class="port-ph" data-label="Фото 2 — Дом «Лес»" style="background:linear-gradient(140deg,#0e1a14 0%,#080e0a 100%)">
-                <!-- <img src="portfolio/2.jpg" alt="Загородный дом Лес"> -->
-              </div>
-              <div class="port-ov"><h4>Загородный дом «Лес»</h4><p>Дом · 280 м² · Скандинавский</p></div>
-            </div>
-          </div>
-
-          <div class="swiper-slide" data-cat="commercial">
-            <div class="port-item">
-              <div class="port-ph" data-label="Фото 3 — Ресторан «Дом»" style="background:linear-gradient(140deg,#140f1a 0%,#0b080f 100%)">
-                <!-- <img src="portfolio/3.jpg" alt="Ресторан Дом"> -->
-              </div>
-              <div class="port-ov"><h4>Ресторан «Дом»</h4><p>Коммерческий · 420 м² · Неоклассика</p></div>
-            </div>
-          </div>
-
-          <div class="swiper-slide" data-cat="apartment">
-            <div class="port-item">
-              <div class="port-ph" data-label="Фото 4 — Студия в центре" style="background:linear-gradient(140deg,#1a1012 0%,#0f0a0c 100%)">
-                <!-- <img src="portfolio/4.jpg" alt="Студия в центре Москвы"> -->
-              </div>
-              <div class="port-ov"><h4>Студия в центре</h4><p>Квартира · 48 м² · Лофт</p></div>
-            </div>
-          </div>
-
-          <div class="swiper-slide" data-cat="exterior">
-            <div class="port-item">
-              <div class="port-ph" data-label="Фото 5 — Вилла у воды" style="background:linear-gradient(140deg,#1a190f 0%,#0f0e08 100%)">
-                <!-- <img src="portfolio/5.jpg" alt="Вилла у воды"> -->
-              </div>
-              <div class="port-ov"><h4>Вилла у воды</h4><p>Экстерьер · Современный</p></div>
-            </div>
-          </div>
-
-          <div class="swiper-slide" data-cat="house">
-            <div class="port-item">
-              <div class="port-ph" data-label="Фото 6 — Резиденция «Север»" style="background:linear-gradient(140deg,#0f1a1a 0%,#080f0f 100%)">
-                <!-- <img src="portfolio/6.jpg" alt="Резиденция Север"> -->
-              </div>
-              <div class="port-ov"><h4>Резиденция «Север»</h4><p>Дом · 450 м² · Контемпорари</p></div>
-            </div>
-          </div>
-
-          <div class="swiper-slide" data-cat="commercial">
-            <div class="port-item">
-              <div class="port-ph" data-label="Фото 7 — Офис «Форма»" style="background:linear-gradient(140deg,#1a1510 0%,#0c0b08 100%)">
-                <!-- <img src="portfolio/7.jpg" alt="Офис Форма"> -->
-              </div>
-              <div class="port-ov"><h4>Офис «Форма»</h4><p>Коммерческий · 180 м² · Брутализм</p></div>
-            </div>
-          </div>
-
-          <div class="swiper-slide" data-cat="apartment">
-            <div class="port-item">
-              <div class="port-ph" data-label="Фото 8 — Пентхаус" style="background:linear-gradient(140deg,#181218 0%,#0d080d 100%)">
-                <!-- <img src="portfolio/8.jpg" alt="Пентхаус"> -->
-              </div>
-              <div class="port-ov"><h4>Пентхаус на Патриарших</h4><p>Квартира · 220 м² · Арт-деко</p></div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="sw-ctrl">
-        <button class="sw-btn" id="portPrev" aria-label="Предыдущий проект">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <button class="sw-btn" id="portNext" aria-label="Следующий проект">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
+        <a href="#portfolio" class="btn-ghost">Посмотреть работы →</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ══════════ PROCESS ══════════ -->
-  <section id="process" class="sp" aria-labelledby="procH">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:clamp(56px,8vw,100px)">
-        <p class="lbl" style="justify-content:center">Как я работаю</p>
-        <h2 id="procH" data-r>Четыре шага к<br><em>идеальному результату</em></h2>
-      </div>
-      <div class="proc-grid" role="list">
-        <div class="proc-step" role="listitem" data-r>
-          <div class="proc-dot" aria-hidden="true"><span class="proc-dn">01</span></div>
-          <h4>Знакомство</h4>
-          <p>Встреча или онлайн-звонок. Обсуждаем ваши идеи, пожелания, бюджет и сроки. Осмотр объекта и замеры.</p>
-        </div>
-        <div class="proc-step" role="listitem" data-r data-rd="1">
-          <div class="proc-dot" aria-hidden="true"><span class="proc-dn">02</span></div>
-          <h4>Концепция</h4>
-          <p>Разрабатываю планировочные решения, стилевую концепцию, подборку материалов и мудборд проекта.</p>
-        </div>
-        <div class="proc-step" role="listitem" data-r data-rd="2">
-          <div class="proc-dot" aria-hidden="true"><span class="proc-dn">03</span></div>
-          <h4>Дизайн-проект</h4>
-          <p>Полный комплект рабочей документации: чертежи, спецификации, 3D-визуализации каждого помещения.</p>
-        </div>
-        <div class="proc-step" role="listitem" data-r data-rd="3">
-          <div class="proc-dot" aria-hidden="true"><span class="proc-dn">04</span></div>
-          <h4>Реализация</h4>
-          <p>Авторский надзор за исполнением, комплектация и контроль качества на каждом этапе ремонта.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- ══════════ CONTACT ══════════ -->
+<section id="contact" class="section-pad" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-grid">
 
-  <!-- ══════════ TESTIMONIALS ══════════ -->
-  <section id="testimonials" class="sp" aria-labelledby="testH">
-    <div class="container">
-      <div class="test-head">
-        <p class="lbl" style="justify-content:center">Отзывы клиентов</p>
-        <h2 id="testH" data-r>Что говорят<br><em>обо мне</em></h2>
-        <p data-r>120+ реализованных проектов — каждый клиент для меня особенный</p>
-      </div>
-      <div class="swiper" id="testSwiper" aria-label="Карусель отзывов">
-        <div class="swiper-wrapper">
-
-          <div class="swiper-slide">
-            <div class="test-card">
-              <div class="test-q" aria-hidden="true">"</div>
-              <p class="test-txt">Алина полностью изменила наш взгляд на то, каким может быть пространство. Она не просто создала красивый интерьер — она создала дом, в котором хочется жить каждый день.</p>
-              <div class="test-auth">
-                <div class="test-av" role="img" aria-label="Фото клиента Екатерины Соколовой">
-                  <!-- <img src="clients/1.jpg" alt="Екатерина Соколова"> -->
-                </div>
-                <div>
-                  <div class="test-name">Екатерина Соколова</div>
-                  <div class="test-role">Квартира 110 м², Москва</div>
-                </div>
-                <div class="test-stars" aria-label="Оценка 5 из 5">
-                  <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
+      <div class="contact-info" data-r>
+        <p class="section-label">Контакты</p>
+        <h2 id="contact-heading">На&nbsp;связи<br><em>всегда</em></h2>
+        <p>Напишите мне — расскажите о&nbsp;вашем проекте. Отвечу в&nbsp;течение дня и&nbsp;предложу удобный формат первой встречи.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <span class="detail-label">Телефон</span>
+            <a href="tel:+79001234567" class="detail-value">+7 (900) 123-45-67</a>
           </div>
-
-          <div class="swiper-slide">
-            <div class="test-card">
-              <div class="test-q" aria-hidden="true">"</div>
-              <p class="test-txt">Профессиональный подход, внимание к деталям и удивительное чувство стиля. Наш загородный дом превзошёл все ожидания. Рекомендуем без малейших сомнений!</p>
-              <div class="test-auth">
-                <div class="test-av" role="img" aria-label="Фото клиентов Петровых">
-                  <!-- <img src="clients/2.jpg" alt="Михаил и Ирина Петровы"> -->
-                </div>
-                <div>
-                  <div class="test-name">Михаил и Ирина Петровы</div>
-                  <div class="test-role">Загородный дом 320 м²</div>
-                </div>
-                <div class="test-stars" aria-label="Оценка 5 из 5">
-                  <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
+          <div class="contact-detail">
+            <span class="detail-label">Email</span>
+            <a href="mailto:hello@alinamur.ru" class="detail-value">hello@alinamur.ru</a>
           </div>
-
-          <div class="swiper-slide">
-            <div class="test-card">
-              <div class="test-q" aria-hidden="true">"</div>
-              <p class="test-txt">Сотрудничество с Алиной — это удовольствие. Она вникает в каждую мелочь, предлагает нестандартные решения и всегда держит слово по срокам.</p>
-              <div class="test-auth">
-                <div class="test-av" role="img" aria-label="Фото клиента Андрея Волкова">
-                  <!-- <img src="clients/3.jpg" alt="Андрей Волков"> -->
-                </div>
-                <div>
-                  <div class="test-name">Андрей Волков</div>
-                  <div class="test-role">Офис 200 м², Санкт-Петербург</div>
-                </div>
-                <div class="test-stars" aria-label="Оценка 5 из 5">
-                  <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
+          <div class="contact-detail">
+            <span class="detail-label">Город</span>
+            <span class="detail-value">Москва, Россия</span>
           </div>
-
-          <div class="swiper-slide">
-            <div class="test-card">
-              <div class="test-q" aria-hidden="true">"</div>
-              <p class="test-txt">Результат превзошёл все ожидания. Алина предложила решения, о которых мы сами бы не додумались, и органично вписала их в наш бюджет.</p>
-              <div class="test-auth">
-                <div class="test-av" role="img" aria-label="Фото клиентки Марины Орловой">
-                  <!-- <img src="clients/4.jpg" alt="Марина Орлова"> -->
-                </div>
-                <div>
-                  <div class="test-name">Марина Орлова</div>
-                  <div class="test-role">Студия 52 м², Москва</div>
-                </div>
-                <div class="test-stars" aria-label="Оценка 5 из 5">
-                  <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i><i class="fas fa-star" aria-hidden="true"></i>
-                  <i class="fas fa-star" aria-hidden="true"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        </div>
+        <div class="contact-socials">
+          <a href="https://instagram.com/alinamur" class="social-link" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://t.me/alinamur" class="social-link" target="_blank" rel="noopener">Telegram</a>
         </div>
       </div>
-      <div class="sw-ctrl">
-        <button class="sw-btn" id="testPrev" aria-label="Предыдущий отзыв">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M11 4L6 9l5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <button class="sw-btn" id="testNext" aria-label="Следующий отзыв">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M7 4l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-      </div>
-    </div>
-  </section>
 
-  <!-- ══════════ CTA ══════════ -->
-  <section id="cta" class="sp" aria-labelledby="ctaH">
-    <div class="container">
-      <div class="cta-in">
-        <p class="lbl" style="justify-content:center">Начнём?</p>
-        <h2 id="ctaH" data-r>Готовы создать пространство<br>вашей <em>мечты?</em></h2>
-        <p data-r>Первая консультация — бесплатно. Обсудим ваш проект, оценим стоимость и составим план работ.</p>
-        <div class="cta-acts" data-r>
-          <a href="#contact" class="btn-p">
-            Получить консультацию
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M13 8l-4-4M13 8l-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="tel:+79001234567" class="btn-outline">
-            <i class="fas fa-phone" aria-hidden="true"></i> +7 (900) 123-45-67
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════ CONTACT ══════════ -->
-  <section id="contact" class="sp" aria-labelledby="contH">
-    <div class="container">
-      <div class="cont-grid">
-        <!-- Info -->
-        <div class="cont-info">
-          <p class="lbl">Контакты</p>
-          <h2 id="contH" data-r>Напишите<br><em>мне</em></h2>
-          <p data-r>Расскажите о вашем проекте — отвечу в течение 24 часов и предложу оптимальное решение.</p>
-
-          <div class="cont-det" data-r>
-            <div class="cont-ico" aria-hidden="true"><i class="fas fa-phone"></i></div>
-            <div>
-              <div class="cont-lbl">Телефон</div>
-              <a href="tel:+79001234567" class="cont-val">+7 (900) 123-45-67</a>
-            </div>
+      <div data-r data-d="1">
+        <form class="contact-form" id="contactForm" novalidate aria-label="Форма обратной связи">
+          <div class="form-field">
+            <label for="f-name">Имя</label>
+            <input type="text" id="f-name" name="name" placeholder="Ваше имя" required autocomplete="name">
           </div>
-          <div class="cont-det" data-r data-rd="1">
-            <div class="cont-ico" aria-hidden="true"><i class="fas fa-envelope"></i></div>
-            <div>
-              <div class="cont-lbl">Email</div>
-              <a href="mailto:hello@alinamur.ru" class="cont-val">hello@alinamur.ru</a>
-            </div>
+          <div class="form-field">
+            <label for="f-phone">Телефон</label>
+            <input type="tel" id="f-phone" name="phone" placeholder="+7 (___) ___-__-__" autocomplete="tel">
           </div>
-          <div class="cont-det" data-r data-rd="2">
-            <div class="cont-ico" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
-            <div>
-              <div class="cont-lbl">Город</div>
-              <div class="cont-val">Москва (работаю по всей России)</div>
-            </div>
+          <div class="form-field">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" placeholder="your@email.com" autocomplete="email">
           </div>
-
-          <div class="socials" data-r data-rd="3">
-            <a href="#" class="soc" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-            <a href="#" class="soc" aria-label="Telegram"><i class="fab fa-telegram" aria-hidden="true"></i></a>
-            <a href="#" class="soc" aria-label="ВКонтакте"><i class="fab fa-vk" aria-hidden="true"></i></a>
-            <a href="#" class="soc" aria-label="Pinterest"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
-            <a href="#" class="soc" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
-          </div>
-        </div>
-
-        <!-- Form -->
-        <form class="form" id="contForm" action="#" method="post" novalidate aria-label="Форма обратной связи">
-          <div class="fg-row">
-            <div class="fg">
-              <label for="fname">Имя *</label>
-              <input type="text" id="fname" name="name" placeholder="Ваше имя" required autocomplete="given-name">
-            </div>
-            <div class="fg">
-              <label for="fphone">Телефон *</label>
-              <input type="tel" id="fphone" name="phone" placeholder="+7 (___) ___-__-__" required autocomplete="tel">
-            </div>
-          </div>
-          <div class="fg">
-            <label for="femail">Email</label>
-            <input type="email" id="femail" name="email" placeholder="your@email.com" autocomplete="email">
-          </div>
-          <div class="fg">
-            <label for="fservice">Услуга</label>
-            <select id="fservice" name="service">
-              <option value="">Выберите услугу...</option>
-              <option value="interior">Дизайн интерьера</option>
-              <option value="architecture">Архитектурный проект</option>
-              <option value="visualization">3D-визуализация</option>
-              <option value="supervision">Авторский надзор</option>
-              <option value="consultation">Консультация</option>
+          <div class="form-field">
+            <label for="f-service">Услуга</label>
+            <select id="f-service" name="service">
+              <option value="">Выберите услугу</option>
+              <option>Дизайн интерьера</option>
+              <option>Архитектурный проект</option>
+              <option>3D-визуализация</option>
+              <option>Авторский надзор</option>
+              <option>Комплектация</option>
+              <option>Консультация</option>
             </select>
           </div>
-          <div class="fg">
-            <label for="fmsg">Сообщение</label>
-            <textarea id="fmsg" name="message" placeholder="Опишите ваш проект: площадь, тип объекта, пожелания, сроки и бюджет..."></textarea>
+          <div class="form-field">
+            <label for="f-msg">Сообщение</label>
+            <textarea id="f-msg" name="message" rows="4" placeholder="Расскажите о вашем проекте…"></textarea>
           </div>
-          <button type="submit" class="form-btn" id="formBtn">
-            Отправить заявку
-            <i class="fas fa-arrow-right" aria-hidden="true"></i>
-          </button>
-          <p class="form-note">
-            Нажимая кнопку, вы соглашаетесь с <a href="#">политикой конфиденциальности</a>
-          </p>
+          <div class="form-submit">
+            <span class="form-note">Отвечаю в течение 24 часов</span>
+            <button type="submit" class="btn-fill">
+              Отправить
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2.5 7h9M11.5 7L8 3.5M11.5 7L8 10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="form-success" id="formSuccess" role="alert">
+            Сообщение отправлено. Свяжусь с вами в ближайшее время!
+          </div>
         </form>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
 </main>
 
-<!-- =========================================================
-     FOOTER
-========================================================= -->
-<footer>
-  <div class="container">
-    <div class="foot-in">
-      <div>
-        <div class="foot-brand">Алина <em>Мур</em></div>
-        <p class="foot-copy">© 2024 Алина Мур. Все права защищены.</p>
-      </div>
-      <nav class="foot-links" aria-label="Нижняя навигация">
-        <a href="#about">Обо мне</a>
-        <a href="#services">Услуги</a>
+<!-- ══════════ FOOTER / CLOSER ══════════ -->
+<footer id="footer" role="contentinfo">
+
+  <!-- Giant name at the end -->
+  <span class="footer-name-display" aria-hidden="true">Алина Мур</span>
+
+  <div class="footer-inner">
+    <div>
+      <div class="footer-col-label">Бренд</div>
+      <div class="footer-logo">Алина Мур</div>
+      <div class="footer-tagline">Архитектурное проектирование<br>и дизайн интерьеров</div>
+    </div>
+    <div>
+      <div class="footer-col-label">Навигация</div>
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <a href="#photo-services">Услуги</a>
         <a href="#portfolio">Портфолио</a>
+        <a href="#about">Обо мне</a>
+        <a href="#process">Процесс</a>
         <a href="#contact">Контакты</a>
       </nav>
     </div>
+    <div>
+      <div class="footer-col-label">Связь</div>
+      <div class="footer-contacts">
+        <a href="tel:+79001234567">+7 (900) 123-45-67</a>
+        <a href="mailto:hello@alinamur.ru">hello@alinamur.ru</a>
+        <a href="https://instagram.com/alinamur" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://t.me/alinamur" target="_blank" rel="noopener">Telegram</a>
+        <span style="color:rgba(255,255,255,.2);font-size:.78rem;margin-top:8px">Москва, Россия</span>
+      </div>
+    </div>
   </div>
+
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2024 Алина Мур. Все права защищены.</span>
+    <div class="footer-red-dot" aria-hidden="true"></div>
+    <span class="footer-copy">Архитектор-дизайнер · Москва</span>
+  </div>
+
 </footer>
 
-<!-- =========================================================
-     SCRIPTS
-========================================================= -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
 <script>
-/* ----------------------------------------------------------------
-   Loader
----------------------------------------------------------------- */
-(function () {
-  const loader = document.getElementById('loader');
-  const ldLogo = document.getElementById('ldLogo');
-  const ldProg = document.getElementById('ldProg');
-  const ldNum  = document.getElementById('ldNum');
-
-  setTimeout(() => { ldLogo.style.opacity = '1'; }, 80);
-  setTimeout(() => { ldProg.style.width = '100%'; }, 120);
-
-  let n = 0;
-  const iv = setInterval(() => {
-    n += Math.random() > .65 ? 3 : 1;
-    if (n > 100) n = 100;
-    ldNum.textContent = n + '%';
-    if (n >= 100) { clearInterval(iv); setTimeout(done, 200); }
-  }, 18);
-
-  function done() {
-    loader.style.transition = 'opacity .7s, transform .7s';
-    loader.style.opacity = '0';
-    loader.style.transform = 'translateY(-24px)';
-    setTimeout(() => { loader.style.display = 'none'; initPage(); }, 720);
-  }
-})();
-
-/* ----------------------------------------------------------------
-   Custom Cursor
----------------------------------------------------------------- */
-(function () {
-  const dot   = document.getElementById('cur-dot');
-  const ring  = document.getElementById('cur-ring');
-  if (!dot || window.matchMedia('(pointer: coarse)').matches) return;
-  let mx = 0, my = 0, rx = 0, ry = 0;
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    dot.style.left = mx + 'px'; dot.style.top = my + 'px';
-  });
-  (function raf() {
-    rx += (mx - rx) * .13; ry += (my - ry) * .13;
-    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-    requestAnimationFrame(raf);
-  })();
-})();
-
-/* ----------------------------------------------------------------
-   Nav + Mobile menu
----------------------------------------------------------------- */
-(function () {
-  const nav     = document.getElementById('nav');
-  const burger  = document.getElementById('burger');
-  const mobMenu = document.getElementById('mobMenu');
-  const spans   = burger.querySelectorAll('span');
-
+  /* ─── Navigation scroll state ─── */
+  const nav = document.getElementById('nav');
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', scrollY > 60);
+    nav.classList.toggle('scrolled', window.scrollY > 40);
   }, { passive: true });
 
-  function toggle() {
-    const open = mobMenu.classList.toggle('open');
-    burger.setAttribute('aria-expanded', open);
-    mobMenu.setAttribute('aria-hidden', !open);
-    document.body.style.overflow = open ? 'hidden' : '';
-    spans[0].style.transform = open ? 'translateY(6px) rotate(45deg)'  : '';
-    spans[1].style.opacity   = open ? '0' : '';
-    spans[2].style.transform = open ? 'translateY(-6px) rotate(-45deg)' : '';
+  /* ─── Mobile menu ─── */
+  const burger = document.getElementById('burgerBtn');
+  const mobMenu = document.getElementById('mobMenu');
+  const mobClose = document.getElementById('mobClose');
+  const mlinks = document.querySelectorAll('.mlink');
+
+  function openMenu() {
+    mobMenu.classList.add('open');
+    burger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
   }
-  burger.addEventListener('click', toggle);
-  mobMenu.querySelectorAll('.mlink').forEach(l => l.addEventListener('click', toggle));
-})();
+  function closeMenu() {
+    mobMenu.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  burger.addEventListener('click', openMenu);
+  mobClose.addEventListener('click', closeMenu);
+  mlinks.forEach(l => l.addEventListener('click', closeMenu));
 
-/* ----------------------------------------------------------------
-   Main page init (after loader)
----------------------------------------------------------------- */
-function initPage() {
-  gsap.registerPlugin(ScrollTrigger);
-  heroAnim();
-  revealInit();
-  counterInit();
-  paralaxInit();
-}
-
-/* ----------------------------------------------------------------
-   Hero entrance
----------------------------------------------------------------- */
-function heroAnim() {
-  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
-  tl.to('#heroTag',   { opacity: 1, y: 0, duration: .8 })
-    .to('.hero-h1',   { opacity: 1, y: 0, duration: 1 },   '-=.4')
-    .to('.hero-lead', { opacity: 1, y: 0, duration: .8 },  '-=.5')
-    .to('#heroActs',  { opacity: 1, y: 0, duration: .8 },  '-=.5')
-    .to('#heroStats', { opacity: 1, duration: .8 },         '-=.4');
-}
-
-/* ----------------------------------------------------------------
-   Scroll reveal
----------------------------------------------------------------- */
-function revealInit() {
-  const els = document.querySelectorAll('[data-r]');
-  const io  = new IntersectionObserver(entries => {
+  /* ─── Scroll reveal ─── */
+  const revealEls = document.querySelectorAll('[data-r]');
+  const io = new IntersectionObserver((entries) => {
     entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      if (e.isIntersecting) {
+        e.target.classList.add('vis');
+        io.unobserve(e.target);
+      }
     });
-  }, { threshold: .14, rootMargin: '0px 0px -64px 0px' });
-  els.forEach(el => io.observe(el));
-}
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  revealEls.forEach(el => io.observe(el));
 
-/* ----------------------------------------------------------------
-   Counters
----------------------------------------------------------------- */
-function counterInit() {
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      const el  = e.target;
-      const to  = +el.dataset.to;
-      const t0  = performance.now();
-      const dur = 2200;
-      (function tick(now) {
-        const p = Math.min((now - t0) / dur, 1);
-        el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * to);
-        if (p < 1) requestAnimationFrame(tick);
-      })(performance.now());
-      io.unobserve(el);
-    });
-  }, { threshold: .5 });
-  document.querySelectorAll('.cnt').forEach(c => io.observe(c));
-}
-
-/* ----------------------------------------------------------------
-   Parallax (hero photo + glow)
----------------------------------------------------------------- */
-function paralaxInit() {
-  gsap.to('.hero-photo', {
-    yPercent: 18, ease: 'none',
-    scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true }
-  });
-  gsap.to('.hero-glow', {
-    yPercent: 30, ease: 'none',
-    scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true }
-  });
-}
-
-/* ----------------------------------------------------------------
-   Portfolio Swiper
----------------------------------------------------------------- */
-const portSW = new Swiper('#portSwiper', {
-  slidesPerView: 1.15,
-  spaceBetween: 18,
-  grabCursor: true,
-  navigation: { nextEl: '#portNext', prevEl: '#portPrev' },
-  breakpoints: {
-    640:  { slidesPerView: 2,   spaceBetween: 22 },
-    1024: { slidesPerView: 3,   spaceBetween: 28 },
-    1280: { slidesPerView: 3.3, spaceBetween: 32 },
+  /* ─── Counter animation (hero stats) ─── */
+  function animateCount(el, target, duration = 1600) {
+    let start = null;
+    const step = (ts) => {
+      if (!start) start = ts;
+      const p = Math.min((ts - start) / duration, 1);
+      const ease = 1 - Math.pow(1 - p, 4);
+      el.textContent = Math.round(ease * target);
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
   }
-});
 
-/* ----------------------------------------------------------------
-   Portfolio Filters
----------------------------------------------------------------- */
-(function () {
-  const btns   = document.querySelectorAll('.fbtn');
-  const slides = document.querySelectorAll('#portSwiper .swiper-slide');
-  btns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btns.forEach(b => b.classList.remove('on'));
-      btn.classList.add('on');
-      const f = btn.dataset.f;
-      slides.forEach(s => { s.style.display = (f === 'all' || s.dataset.cat === f) ? '' : 'none'; });
-      portSW.update();
-    });
-  });
-})();
+  const heroStatSection = document.querySelector('.hero-stats-bar');
+  const heroStatIO = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      document.querySelectorAll('.cnt').forEach(el => {
+        animateCount(el, parseInt(el.dataset.to));
+      });
+      heroStatIO.disconnect();
+    }
+  }, { threshold: 0.5 });
+  if (heroStatSection) heroStatIO.observe(heroStatSection);
 
-/* ----------------------------------------------------------------
-   Testimonials Swiper
----------------------------------------------------------------- */
-new Swiper('#testSwiper', {
-  slidesPerView: 1,
-  spaceBetween: 22,
-  grabCursor: true,
-  autoplay: { delay: 7000, pauseOnMouseEnter: true, disableOnInteraction: false },
-  navigation: { nextEl: '#testNext', prevEl: '#testPrev' },
-  breakpoints: {
-    768:  { slidesPerView: 2 },
-    1200: { slidesPerView: 3 },
+  const statsSection = document.getElementById('stats');
+  const statsIO = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      document.querySelectorAll('.cnt2').forEach(el => {
+        animateCount(el, parseInt(el.dataset.to), 1800);
+      });
+      statsIO.disconnect();
+    }
+  }, { threshold: 0.3 });
+  if (statsSection) statsIO.observe(statsSection);
+
+  /* ─── Marquee clone ─── */
+  const mq = document.getElementById('mqTrack');
+  if (mq) {
+    mq.innerHTML += mq.innerHTML;
   }
-});
 
-/* ----------------------------------------------------------------
-   Contact Form
----------------------------------------------------------------- */
-(function () {
-  const form = document.getElementById('contForm');
-  const btn  = document.getElementById('formBtn');
-  if (!form) return;
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-    btn.disabled = true;
-    btn.innerHTML = 'Отправляем... <i class="fas fa-circle-notch fa-spin" aria-hidden="true"></i>';
-    await new Promise(r => setTimeout(r, 1600));
-    btn.innerHTML = 'Заявка отправлена! <i class="fas fa-check" aria-hidden="true"></i>';
-    btn.style.background = '#4caf72';
-    form.reset();
-    setTimeout(() => {
-      btn.innerHTML = 'Отправить заявку <i class="fas fa-arrow-right" aria-hidden="true"></i>';
-      btn.style.background = '';
-      btn.disabled = false;
-    }, 5000);
-  });
-})();
-
-/* ----------------------------------------------------------------
-   Smooth-scroll anchors
----------------------------------------------------------------- */
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const id = a.getAttribute('href');
-    if (id === '#') return;
-    const el = document.querySelector(id);
-    if (!el) return;
-    e.preventDefault();
-    const offset = document.getElementById('nav').offsetHeight;
-    window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - offset, behavior: 'smooth' });
-  });
-});
+  /* ─── Contact form ─── */
+  const form = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.querySelector('#f-name').value.trim();
+      if (!name) { form.querySelector('#f-name').focus(); return; }
+      // Simulate send
+      setTimeout(() => {
+        form.reset();
+        success.style.display = 'block';
+        setTimeout(() => success.style.display = 'none', 5000);
+      }, 400);
+    });
+  }
 </script>
-
 </body>
 </html>
