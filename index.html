@@ -409,6 +409,18 @@
       position: relative; overflow: hidden;
       background: var(--cream);
     }
+    .port-item--hidden { display: none; }
+    .port-item--hidden.vis-all { display: block; }
+    .port-show-more {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: clamp(32px,4vw,48px);
+      font-size: .68rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--ink-soft); transition: color .25s; cursor: pointer;
+      background: none; border: none; font-family: 'DM Sans', sans-serif;
+    }
+    .port-show-more:hover { color: var(--ink); }
+    .port-grid.collapsed .port-item:nth-child(1) { grid-column: 1 / 7; }
+    .port-grid.collapsed .port-item:nth-child(2) { grid-column: 7 / 13; grid-row: 1; aspect-ratio: 16/9; }
     .port-item:nth-child(1) { grid-column: 1 / 8; grid-row: 1; aspect-ratio: 16/9; }
     .port-item:nth-child(2) { grid-column: 8 / 13; grid-row: 1; aspect-ratio: 4/5; }
     .port-item:nth-child(3) { grid-column: 1 / 5; grid-row: 2; aspect-ratio: 4/5; }
@@ -858,13 +870,13 @@
     </div>
     <div class="hero-stat" data-r data-d="1">
       <div>
-        <div class="stat-num"><span class="cnt" data-to="8">0</span></div>
+        <div class="stat-num"><span class="cnt" data-to="10">0</span></div>
         <div class="stat-label">Лет опыта<br>в дизайне</div>
       </div>
     </div>
     <div class="hero-stat" data-r data-d="2">
       <div>
-        <div class="stat-num"><span class="cnt" data-to="98">0</span><sup>%</sup></div>
+        <div class="stat-num"><span class="cnt" data-to="100">0</span><sup>+</sup></div>
         <div class="stat-label">Довольных<br>клиентов</div>
       </div>
     </div>
@@ -888,6 +900,45 @@
     <span class="mq-item"><span class="mq-sep"></span>Дизайн фасадов</span>
   </div>
 </div>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section id="about" class="section-pad" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-img-col" data-r>
+        <div class="about-img" role="img" aria-label="Фотография Алины Мур">
+          <!-- <img src="about.jpg" alt="Алина Мур — архитектор-дизайнер"> -->
+          <div class="about-img-placeholder"><span>Ваше фото</span></div>
+        </div>
+        <div class="about-year" aria-hidden="true">10</div>
+      </div>
+
+      <div class="about-text-col">
+        <p class="section-label">Обо мне</p>
+        <h2 id="about-heading" data-r>
+          Создаю<br><em>осмысленные</em><br>пространства
+        </h2>
+        <p data-r data-d="1">
+          Меня зовут Алина Мур — архитектор-дизайнер с более чем 10&nbsp;годами опыта в&nbsp;создании жилых и&nbsp;коммерческих интерьеров. Мой подход сочетает глубокое понимание архитектуры с&nbsp;чуткостью к&nbsp;потребностям каждого клиента.
+        </p>
+        <p data-r data-d="2">
+          Каждый проект начинается со&nbsp;слушания. Я&nbsp;погружаюсь в&nbsp;образ жизни, привычки и&nbsp;мечты клиента, чтобы создать пространство, которое живёт и&nbsp;дышит вместе с&nbsp;ним.
+        </p>
+        <div class="about-tools" data-r data-d="3" aria-label="Инструменты">
+          <span class="tool-tag">ArchiCAD</span>
+          <span class="tool-tag">3ds Max</span>
+          <span class="tool-tag">V-Ray</span>
+          <span class="tool-tag">AutoCAD</span>
+          <span class="tool-tag">Revit</span>
+          <span class="tool-tag">SketchUp</span>
+        </div>
+        <div class="about-sig" data-r data-d="4" aria-hidden="true">Алина Мур</div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- ══════════ PHOTO + SERVICES ══════════ -->
 <section id="photo-services" aria-labelledby="srv-heading">
@@ -925,7 +976,7 @@
           <div class="srv-row-num">02</div>
           <div class="srv-row-body">
             <div class="srv-row-name">Архитектурный проект</div>
-            <div class="srv-row-desc">Жилые дома и загородные резиденции</div>
+            <div class="srv-row-desc">Жилые дома и загородные резиденции. Архитектурный, конструктивный, инженерные разделы (ВК, ОВ, ЭОМ, слаботочные системы)</div>
           </div>
           <div class="srv-row-price">по запросу</div>
         </div>
@@ -951,10 +1002,10 @@
         <div class="srv-row" role="listitem" data-r data-d="4">
           <div class="srv-row-num">05</div>
           <div class="srv-row-body">
-            <div class="srv-row-name">Комплектация</div>
-            <div class="srv-row-desc">Подбор мебели, освещения и декора</div>
+            <div class="srv-row-name">Под ключ</div>
+            <div class="srv-row-desc">Полное сопровождение от проекта до готового интерьера</div>
           </div>
-          <div class="srv-row-price">от 2% бюджета</div>
+          <div class="srv-row-price">5&thinsp;000 ₽ <span style="color:var(--red);font-size:.65rem">акция</span></div>
         </div>
 
         <div class="srv-row" role="listitem" data-r data-d="5">
@@ -967,28 +1018,6 @@
         </div>
 
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════ STATS ══════════ -->
-<section id="stats" aria-label="Показатели">
-  <div class="stats-grid">
-    <div class="stat-cell" data-r>
-      <div class="stat-big"><span class="cnt2" data-to="120">120</span><span class="stat-big-suffix">+</span></div>
-      <div class="stat-text">Реализованных<br>проектов</div>
-    </div>
-    <div class="stat-cell" data-r data-d="1">
-      <div class="stat-big"><span class="cnt2" data-to="8">8</span></div>
-      <div class="stat-text">Лет опыта<br>в дизайне</div>
-    </div>
-    <div class="stat-cell" data-r data-d="2">
-      <div class="stat-big"><span class="cnt2" data-to="15">15</span><span class="stat-big-suffix">+</span></div>
-      <div class="stat-text">Наград<br>и номинаций</div>
-    </div>
-    <div class="stat-cell" data-r data-d="3">
-      <div class="stat-big"><span class="cnt2" data-to="98">98</span><span class="stat-big-suffix">%</span></div>
-      <div class="stat-text">Клиентов<br>довольны результатом</div>
     </div>
   </div>
 </section>
@@ -1009,7 +1038,7 @@
       </a>
     </div>
 
-    <div class="port-grid" role="list">
+    <div class="port-grid collapsed" role="list">
 
       <div class="port-item" role="listitem" data-r>
         <!-- <img src="portfolio/1.jpg" alt="Апартаменты «Тишина»"> -->
@@ -1029,7 +1058,7 @@
         </div>
       </div>
 
-      <div class="port-item" role="listitem" data-r data-d="1">
+      <div class="port-item port-item--hidden" role="listitem" data-r data-d="1">
         <!-- <img src="portfolio/3.jpg" alt="Ресторан «Дом»"> -->
         <div class="port-ph"><span>Ресторан «Дом»</span></div>
         <div class="port-ov">
@@ -1038,7 +1067,7 @@
         </div>
       </div>
 
-      <div class="port-item" role="listitem" data-r data-d="2">
+      <div class="port-item port-item--hidden" role="listitem" data-r data-d="2">
         <!-- <img src="portfolio/4.jpg" alt="Студия в центре"> -->
         <div class="port-ph"><span>Студия в центре</span></div>
         <div class="port-ov">
@@ -1047,7 +1076,7 @@
         </div>
       </div>
 
-      <div class="port-item" role="listitem" data-r data-d="2">
+      <div class="port-item port-item--hidden" role="listitem" data-r data-d="2">
         <!-- <img src="portfolio/5.jpg" alt="Пентхаус на Патриарших"> -->
         <div class="port-ph"><span>Пентхаус</span></div>
         <div class="port-ov">
@@ -1057,44 +1086,13 @@
       </div>
 
     </div>
-  </div>
-</section>
-
-<!-- ══════════ ABOUT ══════════ -->
-<section id="about" class="section-pad" aria-labelledby="about-heading">
-  <div class="container">
-    <div class="about-grid">
-
-      <div class="about-img-col" data-r>
-        <div class="about-img" role="img" aria-label="Фотография Алины Мур">
-          <!-- <img src="about.jpg" alt="Алина Мур — архитектор-дизайнер"> -->
-          <div class="about-img-placeholder"><span>Ваше фото</span></div>
-        </div>
-        <div class="about-year" aria-hidden="true">8</div>
-      </div>
-
-      <div class="about-text-col">
-        <p class="section-label">Обо мне</p>
-        <h2 id="about-heading" data-r>
-          Создаю<br><em>осмысленные</em><br>пространства
-        </h2>
-        <p data-r data-d="1">
-          Меня зовут Алина Мур — архитектор-дизайнер с более чем 8&nbsp;годами опыта в&nbsp;создании жилых и&nbsp;коммерческих интерьеров. Мой подход сочетает глубокое понимание архитектуры с&nbsp;чуткостью к&nbsp;потребностям каждого клиента.
-        </p>
-        <p data-r data-d="2">
-          Каждый проект начинается со&nbsp;слушания. Я&nbsp;погружаюсь в&nbsp;образ жизни, привычки и&nbsp;мечты клиента, чтобы создать пространство, которое живёт и&nbsp;дышит вместе с&nbsp;ним.
-        </p>
-        <div class="about-tools" data-r data-d="3" aria-label="Инструменты">
-          <span class="tool-tag">ArchiCAD</span>
-          <span class="tool-tag">3ds Max</span>
-          <span class="tool-tag">V-Ray</span>
-          <span class="tool-tag">AutoCAD</span>
-          <span class="tool-tag">Revit</span>
-          <span class="tool-tag">SketchUp</span>
-        </div>
-        <div class="about-sig" data-r data-d="4" aria-hidden="true">Алина Мур</div>
-      </div>
-
+    <div style="margin-top: clamp(32px,4vw,48px); text-align:center;">
+      <button class="port-show-more" id="portShowMore">
+        Показать все проекты
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M7 2.5v9M7 11.5L3.5 8M7 11.5L10.5 8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </button>
     </div>
   </div>
 </section>
@@ -1117,16 +1115,21 @@
       </div>
       <div class="proc-item" role="listitem" data-r data-d="1">
         <div class="proc-n" aria-hidden="true">02</div>
-        <div class="proc-title">Концепция</div>
-        <div class="proc-desc">Разрабатываю планировочные решения, стилевую концепцию, подборку материалов и&nbsp;мудборд проекта.</div>
+        <div class="proc-title">Договор</div>
+        <div class="proc-desc">Фиксируем объём работ, стоимость и&nbsp;сроки. Прозрачные условия сотрудничества без скрытых платежей.</div>
       </div>
       <div class="proc-item" role="listitem" data-r data-d="2">
         <div class="proc-n" aria-hidden="true">03</div>
-        <div class="proc-title">Дизайн-проект</div>
-        <div class="proc-desc">Полный комплект рабочей документации: чертежи, спецификации, 3D-визуализации каждого помещения.</div>
+        <div class="proc-title">Концепция</div>
+        <div class="proc-desc">Разрабатываю планировочные решения, стилевую концепцию, подборку материалов и&nbsp;мудборд проекта.</div>
       </div>
       <div class="proc-item" role="listitem" data-r data-d="3">
         <div class="proc-n" aria-hidden="true">04</div>
+        <div class="proc-title">Дизайн-проект</div>
+        <div class="proc-desc">Полный комплект рабочей документации: чертежи, спецификации, 3D-визуализации каждого помещения.</div>
+      </div>
+      <div class="proc-item" role="listitem" data-r data-d="4">
+        <div class="proc-n" aria-hidden="true">05</div>
         <div class="proc-title">Реализация</div>
         <div class="proc-desc">Авторский надзор за&nbsp;исполнением, комплектация и&nbsp;контроль качества на&nbsp;каждом этапе ремонта.</div>
       </div>
@@ -1376,21 +1379,20 @@
   }, { threshold: 0.5 });
   if (heroStatSection) heroStatIO.observe(heroStatSection);
 
-  const statsSection = document.getElementById('stats');
-  const statsIO = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-      document.querySelectorAll('.cnt2').forEach(el => {
-        animateCount(el, parseInt(el.dataset.to), 1800);
-      });
-      statsIO.disconnect();
-    }
-  }, { threshold: 0.3 });
-  if (statsSection) statsIO.observe(statsSection);
-
   /* ─── Marquee clone ─── */
   const mq = document.getElementById('mqTrack');
   if (mq) {
     mq.innerHTML += mq.innerHTML;
+  }
+
+  /* ─── Portfolio expand ─── */
+  const portShowMore = document.getElementById('portShowMore');
+  if (portShowMore) {
+    portShowMore.addEventListener('click', () => {
+      document.querySelectorAll('.port-item--hidden').forEach(el => el.classList.add('vis-all'));
+      document.querySelector('.port-grid').classList.remove('collapsed');
+      portShowMore.style.display = 'none';
+    });
   }
 
   /* ─── Contact form ─── */
