@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Алина Зай">
+  <rect width="64" height="64" rx="12" fill="#1A1917"/>
+  <g fill="#F9F7F4">
+    <!-- hairline left diagonal -->
+    <path d="M25.5 11 H27.7 L15 51 H10.5 Z"/>
+    <!-- weighted right diagonal -->
+    <path d="M26.7 11 H30.7 L42.5 51 H34 Z"/>
+    <!-- crossbar -->
+    <path d="M17 37.6 H36 V40.2 H17 Z"/>
+    <!-- slab serifs -->
+    <path d="M7 48.2 H19 V51 H7 Z"/>
+    <path d="M30.5 48.2 H45.5 V51 H30.5 Z"/>
+  </g>
+  <!-- brand dot -->
+  <circle cx="53" cy="46.6" r="4.4" fill="#C0392B"/>
+</svg>
