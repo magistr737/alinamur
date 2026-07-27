@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Все работы — Алина Мур, архитектор-дизайнер</title>
+  <meta name="description" content="Портфолио: 10 проектов интерьеров — квартиры, семейные апартаменты, банный комплекс со СПА и ресторан в эко-стиле.">
+  <link rel="canonical" href="https://alinamur.ru/works.html">
+  <meta property="og:title" content="Все работы — Алина Мур">
+  <meta property="og:description" content="Портфолио интерьеров: квартиры, СПА-комплекс, ресторан.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/projects/aristokrat/aristokrat-01.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper:#F9F7F4; --cream:#EDE8E0; --cream-2:#E4DDD3;
+      --ink:#1A1917; --ink-mid:#5C574F; --ink-soft:#9B9389; --ink-faint:#D6D0C8;
+      --red:#C0392B; --warm-dark:#1C1A17; --nav-h:72px;
+    }
+    *,*::before,*::after { box-sizing:border-box; margin:0; padding:0 }
+    html { scroll-behavior:smooth; font-size:16px; scroll-padding-top:calc(var(--nav-h) + 56px) }
+    body {
+      background:var(--paper); color:var(--ink);
+      font-family:'DM Sans',sans-serif; line-height:1.6; overflow-x:hidden;
+    }
+    a { color:inherit; text-decoration:none }
+    img { max-width:100%; display:block }
+    ::selection { background:var(--ink); color:var(--paper) }
+    ::-webkit-scrollbar { width:2px }
+    ::-webkit-scrollbar-thumb { background:var(--ink-faint) }
+
+    [data-r] { opacity:0; transform:translateY(28px);
+      transition:opacity .9s cubic-bezier(.16,1,.3,1), transform .9s cubic-bezier(.16,1,.3,1) }
+    [data-r].vis { opacity:1; transform:none }
+
+    /* ── Nav ── */
+    #nav {
+      position:fixed; top:0; left:0; right:0; z-index:100; height:var(--nav-h);
+      display:flex; align-items:center; padding:0 clamp(20px,5vw,72px);
+      background:rgba(249,247,244,.92); backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--ink-faint);
+    }
+    .nav-inner { width:100%; display:flex; align-items:center; justify-content:space-between }
+    .nav-logo { font-family:'Cormorant',serif; font-size:1.3rem; letter-spacing:.12em; text-transform:uppercase }
+    .nav-links { display:flex; align-items:center; gap:40px; list-style:none }
+    .nav-links a { font-size:.72rem; letter-spacing:.14em; text-transform:uppercase;
+      color:var(--ink-soft); transition:color .25s }
+    .nav-links a:hover, .nav-links a[aria-current] { color:var(--ink) }
+    .nav-cta { font-size:.68rem; font-weight:500; letter-spacing:.16em; text-transform:uppercase;
+      padding:11px 26px; border:1px solid var(--ink); transition:background .25s,color .25s }
+    .nav-cta:hover { background:var(--ink); color:var(--paper) }
+    .burger { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px }
+    .burger span { display:block; width:26px; height:1px; background:var(--ink) }
+    .mob-menu { position:fixed; inset:0; background:var(--paper); z-index:99;
+      display:flex; flex-direction:column; align-items:center; justify-content:center; gap:32px;
+      opacity:0; pointer-events:none; transition:opacity .35s }
+    .mob-menu.open { opacity:1; pointer-events:all }
+    .mob-menu a { font-family:'Cormorant',serif; font-size:clamp(2.4rem,8vw,5rem); font-weight:300; color:var(--ink-soft) }
+    .mob-menu a:hover { color:var(--ink) }
+    .mob-close { position:absolute; top:28px; right:clamp(20px,5vw,72px); font-size:.72rem;
+      letter-spacing:.18em; text-transform:uppercase; background:none; border:none; cursor:pointer; color:var(--ink-soft) }
+
+    /* ── Page head ── */
+    #wh { padding:calc(var(--nav-h) + clamp(48px,7vw,96px)) 0 clamp(36px,4vw,56px);
+      border-bottom:1px solid var(--ink-faint) }
+    .container { width:100%; max-width:1440px; margin:0 auto; padding:0 clamp(20px,5vw,72px) }
+    .crumb { font-size:.62rem; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-soft);
+      display:flex; align-items:center; gap:10px; margin-bottom:22px }
+    .crumb a { transition:color .25s } .crumb a:hover { color:var(--ink) }
+    .wh-row { display:grid; grid-template-columns:1fr auto; gap:48px; align-items:end }
+    .wh-row h1 { font-family:'Cormorant',serif; font-weight:300;
+      font-size:clamp(3rem,8vw,8rem); line-height:.92; letter-spacing:-.01em }
+    .wh-row h1 em { font-style:italic }
+    .wh-side { text-align:right; color:var(--ink-mid); font-size:.9rem; line-height:1.8; max-width:340px }
+    .wh-nums { display:flex; gap:28px; justify-content:flex-end; margin-top:18px }
+    .wh-num b { font-family:'Cormorant',serif; font-weight:300; font-size:2.4rem; line-height:1; display:block }
+    .wh-num span { font-size:.6rem; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-soft) }
+
+    /* ── Filters ── */
+    #filters { position:sticky; top:var(--nav-h); z-index:80;
+      background:rgba(249,247,244,.94); backdrop-filter:blur(20px);
+      border-bottom:1px solid var(--ink-faint) }
+    .filt-row { display:flex; gap:6px; flex-wrap:wrap; padding:14px 0 }
+    .filt { font-family:'DM Sans',sans-serif; font-size:.66rem; letter-spacing:.16em; text-transform:uppercase;
+      padding:9px 20px; border:1px solid var(--ink-faint); background:none; color:var(--ink-soft);
+      cursor:pointer; transition:border-color .25s,color .25s,background .25s }
+    .filt:hover { color:var(--ink); border-color:var(--ink-soft) }
+    .filt.is-on { background:var(--ink); border-color:var(--ink); color:var(--paper) }
+
+    /* ── Project ── */
+    .project { padding:clamp(56px,7vw,110px) 0; border-bottom:1px solid var(--ink-faint) }
+    .project.hide { display:none }
+    .pj-head { display:grid; grid-template-columns:64px minmax(220px,1.1fr) 1.4fr auto;
+      gap:clamp(20px,3vw,48px); align-items:start; margin-bottom:clamp(28px,3.5vw,44px) }
+    .pj-n { font-family:'Cormorant',serif; font-size:2.6rem; font-weight:300; color:var(--ink-faint); line-height:.9 }
+    .pj-title { font-family:'Cormorant',serif; font-weight:300;
+      font-size:clamp(1.9rem,3.4vw,3.2rem); line-height:1.06 }
+    .pj-meta { font-size:.62rem; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-soft); margin-top:10px }
+    .pj-desc { color:var(--ink-mid); font-size:.9rem; line-height:1.85; padding-top:8px }
+    .pj-count { font-family:'Cormorant',serif; font-size:1.6rem; font-weight:300; color:var(--ink-soft); white-space:nowrap; padding-top:6px }
+    .pj-count span { font-family:'DM Sans',sans-serif; font-size:.6rem; letter-spacing:.16em;
+      text-transform:uppercase; color:var(--ink-faint) }
+
+    /* ── Gallery (masonry via columns) ── */
+    .gal { column-count:3; column-gap:2px }
+    .shot { display:block; margin-bottom:2px; break-inside:avoid; position:relative;
+      background:var(--cream); overflow:hidden; cursor:zoom-in }
+    .shot img { width:100%; height:auto; transition:transform .7s cubic-bezier(.16,1,.3,1), filter .5s }
+    .shot::after { content:''; position:absolute; inset:0; background:var(--ink);
+      opacity:0; transition:opacity .4s }
+    .shot:hover img { transform:scale(1.03) }
+    .shot:hover::after { opacity:.12 }
+    .shot:focus-visible { outline:2px solid var(--red); outline-offset:2px }
+
+    /* ── Closer ── */
+    #closer { padding:clamp(72px,9vw,130px) 0; }
+    .closer-inner { display:grid; grid-template-columns:1fr auto; align-items:end; gap:48px }
+    .closer-inner h2 { font-family:'Cormorant',serif; font-weight:300;
+      font-size:clamp(2.2rem,5.5vw,6rem); line-height:.98 }
+    .closer-inner h2 em { font-style:italic }
+    .btn-fill { display:inline-flex; align-items:center; gap:10px; background:var(--ink); color:var(--paper);
+      padding:15px 32px; font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; transition:background .25s }
+    .btn-fill:hover { background:var(--red) }
+    .btn-fill svg { transition:transform .25s } .btn-fill:hover svg { transform:translateX(4px) }
+
+    /* ── Footer ── */
+    #footer { background:var(--warm-dark); color:var(--paper) }
+    .footer-inner { display:grid; grid-template-columns:1fr 1fr 1fr;
+      padding:clamp(36px,5vw,64px) clamp(20px,5vw,72px); gap:48px;
+      border-bottom:1px solid rgba(255,255,255,.06) }
+    .footer-col-label { font-size:.58rem; letter-spacing:.24em; text-transform:uppercase;
+      color:rgba(255,255,255,.28); margin-bottom:20px }
+    .footer-logo { font-family:'Cormorant',serif; font-weight:300; font-size:1.6rem;
+      letter-spacing:.08em; color:rgba(255,255,255,.7); margin-bottom:12px }
+    .footer-tagline { font-size:.8rem; color:rgba(255,255,255,.3); line-height:1.6 }
+    .footer-nav, .footer-contacts { display:flex; flex-direction:column; gap:10px }
+    .footer-nav a, .footer-contacts a { font-size:.78rem; color:rgba(255,255,255,.38); transition:color .25s }
+    .footer-nav a:hover, .footer-contacts a:hover { color:rgba(255,255,255,.8) }
+    .footer-bottom { display:flex; justify-content:space-between; align-items:center;
+      padding:20px clamp(20px,5vw,72px) }
+    .footer-copy { font-size:.6rem; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.18) }
+    .footer-red-dot { width:8px; height:8px; border-radius:50%; background:var(--red) }
+
+    /* ── Lightbox ── */
+    #lb { position:fixed; inset:0; z-index:200; background:#100F0E;
+      display:none; opacity:0; transition:opacity .3s }
+    #lb.on { display:block } #lb.vis { opacity:1 }
+    .lb-stage { position:absolute; inset:64px 24px 76px; display:flex; align-items:center; justify-content:center }
+    .lb-stage img { max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain;
+      box-shadow:0 30px 80px rgba(0,0,0,.5) }
+    .lb-bar { position:absolute; left:0; right:0; display:flex; align-items:center;
+      justify-content:space-between; padding:20px clamp(16px,3vw,32px); color:rgba(255,255,255,.55);
+      font-size:.66rem; letter-spacing:.18em; text-transform:uppercase }
+    .lb-bar.top { top:0 } .lb-bar.bot { bottom:0 }
+    .lb-title { font-family:'Cormorant',serif; font-size:1.15rem; letter-spacing:.06em;
+      text-transform:none; color:rgba(255,255,255,.85) }
+    .lb-btn { background:none; border:1px solid rgba(255,255,255,.2); color:rgba(255,255,255,.7);
+      font-family:'DM Sans',sans-serif; font-size:.64rem; letter-spacing:.16em; text-transform:uppercase;
+      padding:10px 18px; cursor:pointer; transition:background .25s,color .25s,border-color .25s }
+    .lb-btn:hover { background:rgba(255,255,255,.9); color:var(--ink); border-color:transparent }
+    .lb-nav { position:absolute; top:50%; transform:translateY(-50%); width:56px; height:56px;
+      display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,.06);
+      border:none; color:#fff; cursor:pointer; transition:background .25s }
+    .lb-nav:hover { background:rgba(255,255,255,.18) }
+    .lb-nav.prev { left:clamp(8px,2vw,28px) } .lb-nav.next { right:clamp(8px,2vw,28px) }
+    .lb-count { font-variant-numeric:tabular-nums }
+
+    @media (max-width:1100px) {
+      .pj-head { grid-template-columns:48px 1fr; }
+      .pj-desc { grid-column:2; max-width:60ch }
+      .pj-count { grid-column:2; padding-top:0 }
+      .gal { column-count:2 }
+    }
+    @media (max-width:900px) {
+      .wh-row { grid-template-columns:1fr }
+      .wh-side { text-align:left; max-width:none }
+      .wh-nums { justify-content:flex-start }
+      .footer-inner { grid-template-columns:1fr 1fr }
+      .closer-inner { grid-template-columns:1fr }
+    }
+    @media (max-width:640px) {
+      .nav-links, .nav-cta { display:none }
+      .burger { display:flex }
+      .gal { column-count:1 }
+      .footer-inner { grid-template-columns:1fr }
+      .lb-stage { inset:56px 8px 68px }
+      .lb-nav { width:44px; height:44px }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      * { animation:none !important; transition:none !important }
+      [data-r] { opacity:1; transform:none }
+    }
+  </style>
+</head>
+<body>
+
+<nav id="nav" role="navigation" aria-label="Основная навигация">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Алина Мур — главная">Алина Мур</a>
+    <ul class="nav-links">
+      <li><a href="index.html#photo-services">Услуги</a></li>
+      <li><a href="works.html" aria-current="page">Работы</a></li>
+      <li><a href="index.html#about">Обо мне</a></li>
+      <li><a href="index.html#contact">Контакты</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta">Обсудить проект</a>
+    <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mob-menu" id="mobMenu" role="dialog" aria-modal="true" aria-label="Мобильное меню">
+  <button class="mob-close" id="mobClose">Закрыть</button>
+  <a href="index.html#photo-services" class="mlink">Услуги</a>
+  <a href="works.html"                class="mlink">Работы</a>
+  <a href="index.html#about"          class="mlink">Обо мне</a>
+  <a href="index.html#contact"        class="mlink">Контакты</a>
+</div>
+
+<main>
+
+  <section id="wh">
+    <div class="container">
+      <p class="crumb"><a href="index.html">Главная</a> — <span>Портфолио</span></p>
+      <div class="wh-row">
+        <h1 data-r>Все<br><em>работы</em></h1>
+        <div class="wh-side" data-r>
+          <p>Проекты квартир, семейных апартаментов и общественных пространств — от концепции до реализации.</p>
+          <div class="wh-nums">
+            <div class="wh-num"><b>10</b><span>проектов</span></div>
+            <div class="wh-num"><b>116</b><span>изображений</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="filters">
+    <div class="container">
+      <div class="filt-row" role="group" aria-label="Фильтр проектов">
+        <button class="filt is-on" data-f="all">Все проекты</button>
+        <button class="filt" data-f="realized">Реализовано</button>
+        <button class="filt" data-f="flats">Квартиры и дома</button>
+        <button class="filt" data-f="commercial">Коммерческие</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+      <article class="project" id="aristokrat" data-cat="realized">
+        <header class="pj-head">
+          <div class="pj-n" aria-hidden="true">01</div>
+          <div class="pj-title-wrap">
+            <h2 class="pj-title">Аристократ</h2>
+            <p class="pj-meta">Квартира · Реализовано · Фотосъёмка объекта</p>
+          </div>
+          <p class="pj-desc">Квартира с панорамным остеклением и выходом на террасу. Тёплое дерево, мягкий свет и спокойная палитра: пространство, снятое уже после заселения — так, как в нём живут каждый день.</p>
+          <div class="pj-count">14 <span>изобр.</span></div>
+        </header>
+        <div class="gal">
+          <a class="shot" href="assets/img/projects/aristokrat/aristokrat-01.jpg"
+             data-i="0" data-project="Аристократ"
+             aria-label="Открыть изображение 1 — Аристократ">
+            <img src="assets/img/projects/aristokrat/aristokrat-01-t.jpg" width="1800" height="986"
+                 alt="Аристократ — интерьер, изображение 1" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/aristokrat/aristokrat-02.jpg"
+             data-i="1" data-project="Аристократ"
+             aria-label="Открыть изображение 2 — Аристократ">
+            <img src="assets/img/projects/aristokrat/aristokrat-02-t.jpg" width="1800" height="1584"
+                 alt="Аристократ — интерьер, изображение 2" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/aristokrat/aristokrat-03.jpg"
+             data-i="2" data-project="Аристократ"
+             aria-label="Открыть изображение 3 — Аристократ">
+            <img src="assets/img/projects/aristokrat/aristokrat-03-t.jpg" width="1200" height="1800"
+                 alt="Аристократ — интерьер, изображение 3" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/aristokrat/aristokrat-04.jpg"
+             data-i="3" data-project="Аристократ"
+             aria-label="Открыть изображение 4 — Аристократ">
+            <img src="assets/img/projects/aristokrat/aristokrat-04-t.jpg" width="1200" height="1800"
+                 alt="Аристократ — интерьер, изображение 4" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/aristokrat/aristokrat-05.jpg"
+             data-i="4" data-project="Аристократ"
+             aria-label="Открыть изображение 5 — Аристократ">
+            <img src="assets/img/projects/aristokrat/aristokrat-05-t.jpg" width="1200" height="1800"
+                 alt="Аристократ — интерьер, изображение 5" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/aristokrat/aristokrat-06.jpg"
+             data-i="5" data-project="Аристократ"
+             aria-label="Открыть изображение 6 — Аристократ">
+            <img src="assets/img/projects/aristokrat/aristokrat-06-t.jpg" width="1800" height="1200"
+                 alt="Аристократ — интерьер, изображение 6" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/aristokrat/aristokrat-07.jpg"
+             data-i="6" data-project="Аристократ"
+             aria-label="Открыть изображение 7 — Аристократ">
+            <img src="assets/img/projects/aristokrat/aristokrat-07-t.jpg" width="1800" height="1046"
+                 alt="Аристократ — интерьер, изображение 7" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/aristokrat/aristokrat-08.jpg"
+             data-i="7" data-project="Аристократ"
+             aria-label="Открыть изображение 8 — Аристократ">
+            <img src="assets/img/projects/aristokrat/aristokrat-08-t.jpg" width="1200" height="1800"
+                 alt="Аристократ — интерьер, изображение 8" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/aristokrat/aristokrat-09.jpg"
+             data-i="8" data-project="Аристократ"
+             aria-label="Открыть изображение 9 — Аристократ">
+            <img src="assets/img/projects/aristokrat/aristokrat-09-t.jpg" width="1800" height="1200"
+                 alt="Аристократ — интерьер, изображение 9" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/aristokrat/aristokrat-10.jpg"
+             data-i="9" data-project="Аристократ"
+             aria-label="Открыть изображение 10 — Аристократ">
+            <img src="assets/img/projects/aristokrat/aristokrat-10-t.jpg" width="1200" height="1800"
+                 alt="Аристократ — интерьер, изображение 10" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/aristokrat/aristokrat-11.jpg"
+             data-i="10" data-project="Аристократ"
+             aria-label="Открыть изображение 11 — Аристократ">
+            <img src="assets/img/projects/aristokrat/aristokrat-11-t.jpg" width="1800" height="989"
+                 alt="Аристократ — интерьер, изображение 11" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/aristokrat/aristokrat-12.jpg"
+             data-i="11" data-project="Аристократ"
+             aria-label="Открыть изображение 12 — Аристократ">
+            <img src="assets/img/projects/aristokrat/aristokrat-12-t.jpg" width="1800" height="1573"
+                 alt="Аристократ — интерьер, изображение 12" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/aristokrat/aristokrat-13.jpg"
+             data-i="12" data-project="Аристократ"
+             aria-label="Открыть изображение 13 — Аристократ">
+            <img src="assets/img/projects/aristokrat/aristokrat-13-t.jpg" width="1200" height="1800"
+                 alt="Аристократ — интерьер, изображение 13" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/aristokrat/aristokrat-14.jpg"
+             data-i="13" data-project="Аристократ"
+             aria-label="Открыть изображение 14 — Аристократ">
+            <img src="assets/img/projects/aristokrat/aristokrat-14-t.jpg" width="1800" height="1200"
+                 alt="Аристократ — интерьер, изображение 14" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </article>
+      <article class="project" id="lot-706" data-cat="flats">
+        <header class="pj-head">
+          <div class="pj-n" aria-hidden="true">02</div>
+          <div class="pj-title-wrap">
+            <h2 class="pj-title">Лот 706</h2>
+            <p class="pj-meta">Семейная квартира · Современная классика · Проект</p>
+          </div>
+          <p class="pj-desc">Светлая семейная квартира: оникс, латунь и мягкие изгибы в общественной зоне, характерные детские — космос для сына и лёгкий балдахин для дочери.</p>
+          <div class="pj-count">14 <span>изобр.</span></div>
+        </header>
+        <div class="gal">
+          <a class="shot" href="assets/img/projects/lot-706/lot-706-01.jpg"
+             data-i="0" data-project="Лот 706"
+             aria-label="Открыть изображение 1 — Лот 706">
+            <img src="assets/img/projects/lot-706/lot-706-01-t.jpg" width="1800" height="1350"
+                 alt="Лот 706 — интерьер, изображение 1" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-706/lot-706-02.jpg"
+             data-i="1" data-project="Лот 706"
+             aria-label="Открыть изображение 2 — Лот 706">
+            <img src="assets/img/projects/lot-706/lot-706-02-t.jpg" width="1800" height="1350"
+                 alt="Лот 706 — интерьер, изображение 2" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-706/lot-706-03.jpg"
+             data-i="2" data-project="Лот 706"
+             aria-label="Открыть изображение 3 — Лот 706">
+            <img src="assets/img/projects/lot-706/lot-706-03-t.jpg" width="1350" height="1800"
+                 alt="Лот 706 — интерьер, изображение 3" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-706/lot-706-04.jpg"
+             data-i="3" data-project="Лот 706"
+             aria-label="Открыть изображение 4 — Лот 706">
+            <img src="assets/img/projects/lot-706/lot-706-04-t.jpg" width="1350" height="1800"
+                 alt="Лот 706 — интерьер, изображение 4" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-706/lot-706-05.jpg"
+             data-i="4" data-project="Лот 706"
+             aria-label="Открыть изображение 5 — Лот 706">
+            <img src="assets/img/projects/lot-706/lot-706-05-t.jpg" width="1800" height="1350"
+                 alt="Лот 706 — интерьер, изображение 5" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-706/lot-706-06.jpg"
+             data-i="5" data-project="Лот 706"
+             aria-label="Открыть изображение 6 — Лот 706">
+            <img src="assets/img/projects/lot-706/lot-706-06-t.jpg" width="1800" height="1350"
+                 alt="Лот 706 — интерьер, изображение 6" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-706/lot-706-07.jpg"
+             data-i="6" data-project="Лот 706"
+             aria-label="Открыть изображение 7 — Лот 706">
+            <img src="assets/img/projects/lot-706/lot-706-07-t.jpg" width="1800" height="1350"
+                 alt="Лот 706 — интерьер, изображение 7" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-706/lot-706-08.jpg"
+             data-i="7" data-project="Лот 706"
+             aria-label="Открыть изображение 8 — Лот 706">
+            <img src="assets/img/projects/lot-706/lot-706-08-t.jpg" width="1800" height="1350"
+                 alt="Лот 706 — интерьер, изображение 8" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-706/lot-706-09.jpg"
+             data-i="8" data-project="Лот 706"
+             aria-label="Открыть изображение 9 — Лот 706">
+            <img src="assets/img/projects/lot-706/lot-706-09-t.jpg" width="1800" height="1350"
+                 alt="Лот 706 — интерьер, изображение 9" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-706/lot-706-10.jpg"
+             data-i="9" data-project="Лот 706"
+             aria-label="Открыть изображение 10 — Лот 706">
+            <img src="assets/img/projects/lot-706/lot-706-10-t.jpg" width="1350" height="1800"
+                 alt="Лот 706 — интерьер, изображение 10" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-706/lot-706-11.jpg"
+             data-i="10" data-project="Лот 706"
+             aria-label="Открыть изображение 11 — Лот 706">
+            <img src="assets/img/projects/lot-706/lot-706-11-t.jpg" width="1800" height="1350"
+                 alt="Лот 706 — интерьер, изображение 11" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-706/lot-706-12.jpg"
+             data-i="11" data-project="Лот 706"
+             aria-label="Открыть изображение 12 — Лот 706">
+            <img src="assets/img/projects/lot-706/lot-706-12-t.jpg" width="1800" height="1350"
+                 alt="Лот 706 — интерьер, изображение 12" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-706/lot-706-13.jpg"
+             data-i="12" data-project="Лот 706"
+             aria-label="Открыть изображение 13 — Лот 706">
+            <img src="assets/img/projects/lot-706/lot-706-13-t.jpg" width="1100" height="1400"
+                 alt="Лот 706 — интерьер, изображение 13" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-706/lot-706-14.jpg"
+             data-i="13" data-project="Лот 706"
+             aria-label="Открыть изображение 14 — Лот 706">
+            <img src="assets/img/projects/lot-706/lot-706-14-t.jpg" width="1350" height="1800"
+                 alt="Лот 706 — интерьер, изображение 14" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </article>
+      <article class="project" id="lot-49" data-cat="flats">
+        <header class="pj-head">
+          <div class="pj-n" aria-hidden="true">03</div>
+          <div class="pj-title-wrap">
+            <h2 class="pj-title">Лот 49</h2>
+            <p class="pj-meta">Квартира · Тёмный минимализм · Проект</p>
+          </div>
+          <p class="pj-desc">Графичный интерьер на контрасте тёмного мрамора, дерева и скрытого света. Строгая геометрия, минимум деталей, акцентная подсветка вместо декора.</p>
+          <div class="pj-count">12 <span>изобр.</span></div>
+        </header>
+        <div class="gal">
+          <a class="shot" href="assets/img/projects/lot-49/lot-49-01.jpg"
+             data-i="0" data-project="Лот 49"
+             aria-label="Открыть изображение 1 — Лот 49">
+            <img src="assets/img/projects/lot-49/lot-49-01-t.jpg" width="1800" height="1080"
+                 alt="Лот 49 — интерьер, изображение 1" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-49/lot-49-02.jpg"
+             data-i="1" data-project="Лот 49"
+             aria-label="Открыть изображение 2 — Лот 49">
+            <img src="assets/img/projects/lot-49/lot-49-02-t.jpg" width="1800" height="1080"
+                 alt="Лот 49 — интерьер, изображение 2" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-49/lot-49-03.jpg"
+             data-i="2" data-project="Лот 49"
+             aria-label="Открыть изображение 3 — Лот 49">
+            <img src="assets/img/projects/lot-49/lot-49-03-t.jpg" width="1800" height="1080"
+                 alt="Лот 49 — интерьер, изображение 3" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-49/lot-49-04.jpg"
+             data-i="3" data-project="Лот 49"
+             aria-label="Открыть изображение 4 — Лот 49">
+            <img src="assets/img/projects/lot-49/lot-49-04-t.jpg" width="1400" height="1302"
+                 alt="Лот 49 — интерьер, изображение 4" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-49/lot-49-05.jpg"
+             data-i="4" data-project="Лот 49"
+             aria-label="Открыть изображение 5 — Лот 49">
+            <img src="assets/img/projects/lot-49/lot-49-05-t.jpg" width="1400" height="1083"
+                 alt="Лот 49 — интерьер, изображение 5" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-49/lot-49-06.jpg"
+             data-i="5" data-project="Лот 49"
+             aria-label="Открыть изображение 6 — Лот 49">
+            <img src="assets/img/projects/lot-49/lot-49-06-t.jpg" width="1800" height="1260"
+                 alt="Лот 49 — интерьер, изображение 6" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-49/lot-49-07.jpg"
+             data-i="6" data-project="Лот 49"
+             aria-label="Открыть изображение 7 — Лот 49">
+            <img src="assets/img/projects/lot-49/lot-49-07-t.jpg" width="1800" height="1260"
+                 alt="Лот 49 — интерьер, изображение 7" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-49/lot-49-08.jpg"
+             data-i="7" data-project="Лот 49"
+             aria-label="Открыть изображение 8 — Лот 49">
+            <img src="assets/img/projects/lot-49/lot-49-08-t.jpg" width="1260" height="1800"
+                 alt="Лот 49 — интерьер, изображение 8" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-49/lot-49-09.jpg"
+             data-i="8" data-project="Лот 49"
+             aria-label="Открыть изображение 9 — Лот 49">
+            <img src="assets/img/projects/lot-49/lot-49-09-t.jpg" width="1800" height="1080"
+                 alt="Лот 49 — интерьер, изображение 9" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-49/lot-49-10.jpg"
+             data-i="9" data-project="Лот 49"
+             aria-label="Открыть изображение 10 — Лот 49">
+            <img src="assets/img/projects/lot-49/lot-49-10-t.jpg" width="1260" height="1800"
+                 alt="Лот 49 — интерьер, изображение 10" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-49/lot-49-11.jpg"
+             data-i="10" data-project="Лот 49"
+             aria-label="Открыть изображение 11 — Лот 49">
+            <img src="assets/img/projects/lot-49/lot-49-11-t.jpg" width="1260" height="1800"
+                 alt="Лот 49 — интерьер, изображение 11" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-49/lot-49-12.jpg"
+             data-i="11" data-project="Лот 49"
+             aria-label="Открыть изображение 12 — Лот 49">
+            <img src="assets/img/projects/lot-49/lot-49-12-t.jpg" width="1260" height="1800"
+                 alt="Лот 49 — интерьер, изображение 12" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </article>
+      <article class="project" id="spa-banya" data-cat="commercial">
+        <header class="pj-head">
+          <div class="pj-n" aria-hidden="true">04</div>
+          <div class="pj-title-wrap">
+            <h2 class="pj-title">Банный комплекс</h2>
+            <p class="pj-meta">Общественное пространство · СПА и зона отдыха · Проект</p>
+          </div>
+          <p class="pj-desc">Комплекс с парной, хамамом, кабинетами СПА, раздевалками и лаунж-зоной. Дерево, камень и дровяная фактура — сценарий отдыха выстроен от входа до чайной зоны.</p>
+          <div class="pj-count">12 <span>изобр.</span></div>
+        </header>
+        <div class="gal">
+          <a class="shot" href="assets/img/projects/spa-banya/spa-banya-01.jpg"
+             data-i="0" data-project="Банный комплекс"
+             aria-label="Открыть изображение 1 — Банный комплекс">
+            <img src="assets/img/projects/spa-banya/spa-banya-01-t.jpg" width="1440" height="1800"
+                 alt="Банный комплекс — интерьер, изображение 1" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/spa-banya/spa-banya-02.jpg"
+             data-i="1" data-project="Банный комплекс"
+             aria-label="Открыть изображение 2 — Банный комплекс">
+            <img src="assets/img/projects/spa-banya/spa-banya-02-t.jpg" width="1440" height="1800"
+                 alt="Банный комплекс — интерьер, изображение 2" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/spa-banya/spa-banya-03.jpg"
+             data-i="2" data-project="Банный комплекс"
+             aria-label="Открыть изображение 3 — Банный комплекс">
+            <img src="assets/img/projects/spa-banya/spa-banya-03-t.jpg" width="1440" height="1800"
+                 alt="Банный комплекс — интерьер, изображение 3" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/spa-banya/spa-banya-04.jpg"
+             data-i="3" data-project="Банный комплекс"
+             aria-label="Открыть изображение 4 — Банный комплекс">
+            <img src="assets/img/projects/spa-banya/spa-banya-04-t.jpg" width="1440" height="1800"
+                 alt="Банный комплекс — интерьер, изображение 4" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/spa-banya/spa-banya-05.jpg"
+             data-i="4" data-project="Банный комплекс"
+             aria-label="Открыть изображение 5 — Банный комплекс">
+            <img src="assets/img/projects/spa-banya/spa-banya-05-t.jpg" width="1440" height="1800"
+                 alt="Банный комплекс — интерьер, изображение 5" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/spa-banya/spa-banya-06.jpg"
+             data-i="5" data-project="Банный комплекс"
+             aria-label="Открыть изображение 6 — Банный комплекс">
+            <img src="assets/img/projects/spa-banya/spa-banya-06-t.jpg" width="1440" height="1800"
+                 alt="Банный комплекс — интерьер, изображение 6" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/spa-banya/spa-banya-07.jpg"
+             data-i="6" data-project="Банный комплекс"
+             aria-label="Открыть изображение 7 — Банный комплекс">
+            <img src="assets/img/projects/spa-banya/spa-banya-07-t.jpg" width="1440" height="1800"
+                 alt="Банный комплекс — интерьер, изображение 7" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/spa-banya/spa-banya-08.jpg"
+             data-i="7" data-project="Банный комплекс"
+             aria-label="Открыть изображение 8 — Банный комплекс">
+            <img src="assets/img/projects/spa-banya/spa-banya-08-t.jpg" width="1440" height="1800"
+                 alt="Банный комплекс — интерьер, изображение 8" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/spa-banya/spa-banya-09.jpg"
+             data-i="8" data-project="Банный комплекс"
+             aria-label="Открыть изображение 9 — Банный комплекс">
+            <img src="assets/img/projects/spa-banya/spa-banya-09-t.jpg" width="1440" height="1800"
+                 alt="Банный комплекс — интерьер, изображение 9" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/spa-banya/spa-banya-10.jpg"
+             data-i="9" data-project="Банный комплекс"
+             aria-label="Открыть изображение 10 — Банный комплекс">
+            <img src="assets/img/projects/spa-banya/spa-banya-10-t.jpg" width="1440" height="1800"
+                 alt="Банный комплекс — интерьер, изображение 10" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/spa-banya/spa-banya-11.jpg"
+             data-i="10" data-project="Банный комплекс"
+             aria-label="Открыть изображение 11 — Банный комплекс">
+            <img src="assets/img/projects/spa-banya/spa-banya-11-t.jpg" width="1500" height="1800"
+                 alt="Банный комплекс — интерьер, изображение 11" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/spa-banya/spa-banya-12.jpg"
+             data-i="11" data-project="Банный комплекс"
+             aria-label="Открыть изображение 12 — Банный комплекс">
+            <img src="assets/img/projects/spa-banya/spa-banya-12-t.jpg" width="1290" height="1543"
+                 alt="Банный комплекс — интерьер, изображение 12" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </article>
+      <article class="project" id="restaurant" data-cat="commercial">
+        <header class="pj-head">
+          <div class="pj-n" aria-hidden="true">05</div>
+          <div class="pj-title-wrap">
+            <h2 class="pj-title">Ресторан</h2>
+            <p class="pj-meta">Коммерческий интерьер · Эко-стиль · Проект</p>
+          </div>
+          <p class="pj-desc">Ресторан в природной палитре: беленое дерево, ротанг, макраме и живой огонь. Зал перетекает в летнюю террасу с плетёной мебелью и злаками.</p>
+          <div class="pj-count">9 <span>изобр.</span></div>
+        </header>
+        <div class="gal">
+          <a class="shot" href="assets/img/projects/restaurant/restaurant-01.jpg"
+             data-i="0" data-project="Ресторан"
+             aria-label="Открыть изображение 1 — Ресторан">
+            <img src="assets/img/projects/restaurant/restaurant-01-t.jpg" width="1286" height="1800"
+                 alt="Ресторан — интерьер, изображение 1" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/restaurant/restaurant-02.jpg"
+             data-i="1" data-project="Ресторан"
+             aria-label="Открыть изображение 2 — Ресторан">
+            <img src="assets/img/projects/restaurant/restaurant-02-t.jpg" width="1286" height="1800"
+                 alt="Ресторан — интерьер, изображение 2" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/restaurant/restaurant-03.jpg"
+             data-i="2" data-project="Ресторан"
+             aria-label="Открыть изображение 3 — Ресторан">
+            <img src="assets/img/projects/restaurant/restaurant-03-t.jpg" width="1286" height="1800"
+                 alt="Ресторан — интерьер, изображение 3" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/restaurant/restaurant-04.jpg"
+             data-i="3" data-project="Ресторан"
+             aria-label="Открыть изображение 4 — Ресторан">
+            <img src="assets/img/projects/restaurant/restaurant-04-t.jpg" width="1800" height="1200"
+                 alt="Ресторан — интерьер, изображение 4" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/restaurant/restaurant-05.jpg"
+             data-i="4" data-project="Ресторан"
+             aria-label="Открыть изображение 5 — Ресторан">
+            <img src="assets/img/projects/restaurant/restaurant-05-t.jpg" width="1800" height="1200"
+                 alt="Ресторан — интерьер, изображение 5" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/restaurant/restaurant-06.jpg"
+             data-i="5" data-project="Ресторан"
+             aria-label="Открыть изображение 6 — Ресторан">
+            <img src="assets/img/projects/restaurant/restaurant-06-t.jpg" width="1286" height="1800"
+                 alt="Ресторан — интерьер, изображение 6" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/restaurant/restaurant-07.jpg"
+             data-i="6" data-project="Ресторан"
+             aria-label="Открыть изображение 7 — Ресторан">
+            <img src="assets/img/projects/restaurant/restaurant-07-t.jpg" width="1800" height="1200"
+                 alt="Ресторан — интерьер, изображение 7" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/restaurant/restaurant-08.jpg"
+             data-i="7" data-project="Ресторан"
+             aria-label="Открыть изображение 8 — Ресторан">
+            <img src="assets/img/projects/restaurant/restaurant-08-t.jpg" width="1800" height="1200"
+                 alt="Ресторан — интерьер, изображение 8" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/restaurant/restaurant-09.jpg"
+             data-i="8" data-project="Ресторан"
+             aria-label="Открыть изображение 9 — Ресторан">
+            <img src="assets/img/projects/restaurant/restaurant-09-t.jpg" width="1286" height="1800"
+                 alt="Ресторан — интерьер, изображение 9" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </article>
+      <article class="project" id="lot-243" data-cat="flats">
+        <header class="pj-head">
+          <div class="pj-n" aria-hidden="true">06</div>
+          <div class="pj-title-wrap">
+            <h2 class="pj-title">Лот 243</h2>
+            <p class="pj-meta">Квартира · Неоклассика · Проект</p>
+          </div>
+          <p class="pj-desc">Неоклассика без избыточности: молдинги, ёлочка на полу, изумрудный велюр и библиотека из тёмного дерева в гостиной.</p>
+          <div class="pj-count">12 <span>изобр.</span></div>
+        </header>
+        <div class="gal">
+          <a class="shot" href="assets/img/projects/lot-243/lot-243-01.jpg"
+             data-i="0" data-project="Лот 243"
+             aria-label="Открыть изображение 1 — Лот 243">
+            <img src="assets/img/projects/lot-243/lot-243-01-t.jpg" width="1800" height="1080"
+                 alt="Лот 243 — интерьер, изображение 1" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-243/lot-243-02.jpg"
+             data-i="1" data-project="Лот 243"
+             aria-label="Открыть изображение 2 — Лот 243">
+            <img src="assets/img/projects/lot-243/lot-243-02-t.jpg" width="1800" height="1800"
+                 alt="Лот 243 — интерьер, изображение 2" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-243/lot-243-03.jpg"
+             data-i="2" data-project="Лот 243"
+             aria-label="Открыть изображение 3 — Лот 243">
+            <img src="assets/img/projects/lot-243/lot-243-03-t.jpg" width="1800" height="1080"
+                 alt="Лот 243 — интерьер, изображение 3" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-243/lot-243-04.jpg"
+             data-i="3" data-project="Лот 243"
+             aria-label="Открыть изображение 4 — Лот 243">
+            <img src="assets/img/projects/lot-243/lot-243-04-t.jpg" width="1800" height="1620"
+                 alt="Лот 243 — интерьер, изображение 4" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-243/lot-243-05.jpg"
+             data-i="4" data-project="Лот 243"
+             aria-label="Открыть изображение 5 — Лот 243">
+            <img src="assets/img/projects/lot-243/lot-243-05-t.jpg" width="1800" height="1080"
+                 alt="Лот 243 — интерьер, изображение 5" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-243/lot-243-06.jpg"
+             data-i="5" data-project="Лот 243"
+             aria-label="Открыть изображение 6 — Лот 243">
+            <img src="assets/img/projects/lot-243/lot-243-06-t.jpg" width="1800" height="1620"
+                 alt="Лот 243 — интерьер, изображение 6" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-243/lot-243-07.jpg"
+             data-i="6" data-project="Лот 243"
+             aria-label="Открыть изображение 7 — Лот 243">
+            <img src="assets/img/projects/lot-243/lot-243-07-t.jpg" width="1800" height="1800"
+                 alt="Лот 243 — интерьер, изображение 7" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-243/lot-243-08.jpg"
+             data-i="7" data-project="Лот 243"
+             aria-label="Открыть изображение 8 — Лот 243">
+            <img src="assets/img/projects/lot-243/lot-243-08-t.jpg" width="1800" height="1080"
+                 alt="Лот 243 — интерьер, изображение 8" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-243/lot-243-09.jpg"
+             data-i="8" data-project="Лот 243"
+             aria-label="Открыть изображение 9 — Лот 243">
+            <img src="assets/img/projects/lot-243/lot-243-09-t.jpg" width="1296" height="1800"
+                 alt="Лот 243 — интерьер, изображение 9" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-243/lot-243-10.jpg"
+             data-i="9" data-project="Лот 243"
+             aria-label="Открыть изображение 10 — Лот 243">
+            <img src="assets/img/projects/lot-243/lot-243-10-t.jpg" width="1296" height="1800"
+                 alt="Лот 243 — интерьер, изображение 10" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-243/lot-243-11.jpg"
+             data-i="10" data-project="Лот 243"
+             aria-label="Открыть изображение 11 — Лот 243">
+            <img src="assets/img/projects/lot-243/lot-243-11-t.jpg" width="1296" height="1800"
+                 alt="Лот 243 — интерьер, изображение 11" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-243/lot-243-12.jpg"
+             data-i="11" data-project="Лот 243"
+             aria-label="Открыть изображение 12 — Лот 243">
+            <img src="assets/img/projects/lot-243/lot-243-12-t.jpg" width="1100" height="1400"
+                 alt="Лот 243 — интерьер, изображение 12" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </article>
+      <article class="project" id="lot-963" data-cat="flats">
+        <header class="pj-head">
+          <div class="pj-n" aria-hidden="true">07</div>
+          <div class="pj-title-wrap">
+            <h2 class="pj-title">Лот 963</h2>
+            <p class="pj-meta">Квартира · Тёплый минимализм · Проект</p>
+          </div>
+          <p class="pj-desc">Компактная планировка с продуманным зонированием: тёплый камень, дерево и стеклянные перегородки, отделяющие спальню от общей зоны.</p>
+          <div class="pj-count">11 <span>изобр.</span></div>
+        </header>
+        <div class="gal">
+          <a class="shot" href="assets/img/projects/lot-963/lot-963-01.jpg"
+             data-i="0" data-project="Лот 963"
+             aria-label="Открыть изображение 1 — Лот 963">
+            <img src="assets/img/projects/lot-963/lot-963-01-t.jpg" width="1800" height="1702"
+                 alt="Лот 963 — интерьер, изображение 1" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-963/lot-963-02.jpg"
+             data-i="1" data-project="Лот 963"
+             aria-label="Открыть изображение 2 — Лот 963">
+            <img src="assets/img/projects/lot-963/lot-963-02-t.jpg" width="1800" height="1800"
+                 alt="Лот 963 — интерьер, изображение 2" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-963/lot-963-03.jpg"
+             data-i="2" data-project="Лот 963"
+             aria-label="Открыть изображение 3 — Лот 963">
+            <img src="assets/img/projects/lot-963/lot-963-03-t.jpg" width="1260" height="1800"
+                 alt="Лот 963 — интерьер, изображение 3" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-963/lot-963-04.jpg"
+             data-i="3" data-project="Лот 963"
+             aria-label="Открыть изображение 4 — Лот 963">
+            <img src="assets/img/projects/lot-963/lot-963-04-t.jpg" width="1260" height="1800"
+                 alt="Лот 963 — интерьер, изображение 4" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-963/lot-963-05.jpg"
+             data-i="4" data-project="Лот 963"
+             aria-label="Открыть изображение 5 — Лот 963">
+            <img src="assets/img/projects/lot-963/lot-963-05-t.jpg" width="1260" height="1800"
+                 alt="Лот 963 — интерьер, изображение 5" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-963/lot-963-06.jpg"
+             data-i="5" data-project="Лот 963"
+             aria-label="Открыть изображение 6 — Лот 963">
+            <img src="assets/img/projects/lot-963/lot-963-06-t.jpg" width="1260" height="1800"
+                 alt="Лот 963 — интерьер, изображение 6" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-963/lot-963-07.jpg"
+             data-i="6" data-project="Лот 963"
+             aria-label="Открыть изображение 7 — Лот 963">
+            <img src="assets/img/projects/lot-963/lot-963-07-t.jpg" width="1800" height="1608"
+                 alt="Лот 963 — интерьер, изображение 7" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-963/lot-963-08.jpg"
+             data-i="7" data-project="Лот 963"
+             aria-label="Открыть изображение 8 — Лот 963">
+            <img src="assets/img/projects/lot-963/lot-963-08-t.jpg" width="1260" height="1800"
+                 alt="Лот 963 — интерьер, изображение 8" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-963/lot-963-09.jpg"
+             data-i="8" data-project="Лот 963"
+             aria-label="Открыть изображение 9 — Лот 963">
+            <img src="assets/img/projects/lot-963/lot-963-09-t.jpg" width="1260" height="1800"
+                 alt="Лот 963 — интерьер, изображение 9" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-963/lot-963-10.jpg"
+             data-i="9" data-project="Лот 963"
+             aria-label="Открыть изображение 10 — Лот 963">
+            <img src="assets/img/projects/lot-963/lot-963-10-t.jpg" width="1260" height="1800"
+                 alt="Лот 963 — интерьер, изображение 10" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-963/lot-963-11.jpg"
+             data-i="10" data-project="Лот 963"
+             aria-label="Открыть изображение 11 — Лот 963">
+            <img src="assets/img/projects/lot-963/lot-963-11-t.jpg" width="1260" height="1800"
+                 alt="Лот 963 — интерьер, изображение 11" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </article>
+      <article class="project" id="volgograd" data-cat="flats">
+        <header class="pj-head">
+          <div class="pj-n" aria-hidden="true">08</div>
+          <div class="pj-title-wrap">
+            <h2 class="pj-title">Квартира в Волгограде</h2>
+            <p class="pj-meta">Квартира · Современный минимализм · Проект</p>
+          </div>
+          <p class="pj-desc">Спокойный интерьер в бежево-графитовой гамме: кухня-остров, рабочее место в спальне и лоджия, превращённая в зону отдыха.</p>
+          <div class="pj-count">11 <span>изобр.</span></div>
+        </header>
+        <div class="gal">
+          <a class="shot" href="assets/img/projects/volgograd/volgograd-01.jpg"
+             data-i="0" data-project="Квартира в Волгограде"
+             aria-label="Открыть изображение 1 — Квартира в Волгограде">
+            <img src="assets/img/projects/volgograd/volgograd-01-t.jpg" width="1800" height="1200"
+                 alt="Квартира в Волгограде — интерьер, изображение 1" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/volgograd/volgograd-02.jpg"
+             data-i="1" data-project="Квартира в Волгограде"
+             aria-label="Открыть изображение 2 — Квартира в Волгограде">
+            <img src="assets/img/projects/volgograd/volgograd-02-t.jpg" width="1800" height="1200"
+                 alt="Квартира в Волгограде — интерьер, изображение 2" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/volgograd/volgograd-03.jpg"
+             data-i="2" data-project="Квартира в Волгограде"
+             aria-label="Открыть изображение 3 — Квартира в Волгограде">
+            <img src="assets/img/projects/volgograd/volgograd-03-t.jpg" width="1800" height="1200"
+                 alt="Квартира в Волгограде — интерьер, изображение 3" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/volgograd/volgograd-04.jpg"
+             data-i="3" data-project="Квартира в Волгограде"
+             aria-label="Открыть изображение 4 — Квартира в Волгограде">
+            <img src="assets/img/projects/volgograd/volgograd-04-t.jpg" width="1800" height="1512"
+                 alt="Квартира в Волгограде — интерьер, изображение 4" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/volgograd/volgograd-05.jpg"
+             data-i="4" data-project="Квартира в Волгограде"
+             aria-label="Открыть изображение 5 — Квартира в Волгограде">
+            <img src="assets/img/projects/volgograd/volgograd-05-t.jpg" width="1800" height="1512"
+                 alt="Квартира в Волгограде — интерьер, изображение 5" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/volgograd/volgograd-06.jpg"
+             data-i="5" data-project="Квартира в Волгограде"
+             aria-label="Открыть изображение 6 — Квартира в Волгограде">
+            <img src="assets/img/projects/volgograd/volgograd-06-t.jpg" width="1800" height="1512"
+                 alt="Квартира в Волгограде — интерьер, изображение 6" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/volgograd/volgograd-07.jpg"
+             data-i="6" data-project="Квартира в Волгограде"
+             aria-label="Открыть изображение 7 — Квартира в Волгограде">
+            <img src="assets/img/projects/volgograd/volgograd-07-t.jpg" width="1800" height="1200"
+                 alt="Квартира в Волгограде — интерьер, изображение 7" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/volgograd/volgograd-08.jpg"
+             data-i="7" data-project="Квартира в Волгограде"
+             aria-label="Открыть изображение 8 — Квартира в Волгограде">
+            <img src="assets/img/projects/volgograd/volgograd-08-t.jpg" width="1800" height="1200"
+                 alt="Квартира в Волгограде — интерьер, изображение 8" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/volgograd/volgograd-09.jpg"
+             data-i="8" data-project="Квартира в Волгограде"
+             aria-label="Открыть изображение 9 — Квартира в Волгограде">
+            <img src="assets/img/projects/volgograd/volgograd-09-t.jpg" width="1800" height="1200"
+                 alt="Квартира в Волгограде — интерьер, изображение 9" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/volgograd/volgograd-10.jpg"
+             data-i="9" data-project="Квартира в Волгограде"
+             aria-label="Открыть изображение 10 — Квартира в Волгограде">
+            <img src="assets/img/projects/volgograd/volgograd-10-t.jpg" width="1800" height="1512"
+                 alt="Квартира в Волгограде — интерьер, изображение 10" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/volgograd/volgograd-11.jpg"
+             data-i="10" data-project="Квартира в Волгограде"
+             aria-label="Открыть изображение 11 — Квартира в Волгограде">
+            <img src="assets/img/projects/volgograd/volgograd-11-t.jpg" width="1800" height="1512"
+                 alt="Квартира в Волгограде — интерьер, изображение 11" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </article>
+      <article class="project" id="lot-80" data-cat="flats">
+        <header class="pj-head">
+          <div class="pj-n" aria-hidden="true">09</div>
+          <div class="pj-title-wrap">
+            <h2 class="pj-title">Лот 80</h2>
+            <p class="pj-meta">Семейная квартира · Минимализм · Проект</p>
+          </div>
+          <p class="pj-desc">Квартира для семьи с ребёнком: гостиная-столовая, спальня с рабочим местом и детская, вписанная в общую светлую палитру.</p>
+          <div class="pj-count">10 <span>изобр.</span></div>
+        </header>
+        <div class="gal">
+          <a class="shot" href="assets/img/projects/lot-80/lot-80-01.jpg"
+             data-i="0" data-project="Лот 80"
+             aria-label="Открыть изображение 1 — Лот 80">
+            <img src="assets/img/projects/lot-80/lot-80-01-t.jpg" width="1800" height="1080"
+                 alt="Лот 80 — интерьер, изображение 1" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-80/lot-80-02.jpg"
+             data-i="1" data-project="Лот 80"
+             aria-label="Открыть изображение 2 — Лот 80">
+            <img src="assets/img/projects/lot-80/lot-80-02-t.jpg" width="1296" height="1800"
+                 alt="Лот 80 — интерьер, изображение 2" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-80/lot-80-03.jpg"
+             data-i="2" data-project="Лот 80"
+             aria-label="Открыть изображение 3 — Лот 80">
+            <img src="assets/img/projects/lot-80/lot-80-03-t.jpg" width="1800" height="1080"
+                 alt="Лот 80 — интерьер, изображение 3" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-80/lot-80-04.jpg"
+             data-i="3" data-project="Лот 80"
+             aria-label="Открыть изображение 4 — Лот 80">
+            <img src="assets/img/projects/lot-80/lot-80-04-t.jpg" width="1296" height="1800"
+                 alt="Лот 80 — интерьер, изображение 4" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-80/lot-80-05.jpg"
+             data-i="4" data-project="Лот 80"
+             aria-label="Открыть изображение 5 — Лот 80">
+            <img src="assets/img/projects/lot-80/lot-80-05-t.jpg" width="1296" height="1800"
+                 alt="Лот 80 — интерьер, изображение 5" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-80/lot-80-06.jpg"
+             data-i="5" data-project="Лот 80"
+             aria-label="Открыть изображение 6 — Лот 80">
+            <img src="assets/img/projects/lot-80/lot-80-06-t.jpg" width="1800" height="1080"
+                 alt="Лот 80 — интерьер, изображение 6" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-80/lot-80-07.jpg"
+             data-i="6" data-project="Лот 80"
+             aria-label="Открыть изображение 7 — Лот 80">
+            <img src="assets/img/projects/lot-80/lot-80-07-t.jpg" width="1800" height="1080"
+                 alt="Лот 80 — интерьер, изображение 7" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-80/lot-80-08.jpg"
+             data-i="7" data-project="Лот 80"
+             aria-label="Открыть изображение 8 — Лот 80">
+            <img src="assets/img/projects/lot-80/lot-80-08-t.jpg" width="1800" height="1080"
+                 alt="Лот 80 — интерьер, изображение 8" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-80/lot-80-09.jpg"
+             data-i="8" data-project="Лот 80"
+             aria-label="Открыть изображение 9 — Лот 80">
+            <img src="assets/img/projects/lot-80/lot-80-09-t.jpg" width="1800" height="1080"
+                 alt="Лот 80 — интерьер, изображение 9" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-80/lot-80-10.jpg"
+             data-i="9" data-project="Лот 80"
+             aria-label="Открыть изображение 10 — Лот 80">
+            <img src="assets/img/projects/lot-80/lot-80-10-t.jpg" width="1296" height="1800"
+                 alt="Лот 80 — интерьер, изображение 10" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </article>
+      <article class="project" id="lot-959" data-cat="flats">
+        <header class="pj-head">
+          <div class="pj-n" aria-hidden="true">10</div>
+          <div class="pj-title-wrap">
+            <h2 class="pj-title">Лот 959</h2>
+            <p class="pj-meta">Квартира · Светлый минимализм · Проект</p>
+          </div>
+          <p class="pj-desc">Небольшая квартира, где каждый метр работает: реечные панели, встроенные шкафы, гардеробная и акцент из изумрудного велюра.</p>
+          <div class="pj-count">11 <span>изобр.</span></div>
+        </header>
+        <div class="gal">
+          <a class="shot" href="assets/img/projects/lot-959/lot-959-01.jpg"
+             data-i="0" data-project="Лот 959"
+             aria-label="Открыть изображение 1 — Лот 959">
+            <img src="assets/img/projects/lot-959/lot-959-01-t.jpg" width="1224" height="1800"
+                 alt="Лот 959 — интерьер, изображение 1" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-959/lot-959-02.jpg"
+             data-i="1" data-project="Лот 959"
+             aria-label="Открыть изображение 2 — Лот 959">
+            <img src="assets/img/projects/lot-959/lot-959-02-t.jpg" width="1224" height="1800"
+                 alt="Лот 959 — интерьер, изображение 2" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-959/lot-959-03.jpg"
+             data-i="2" data-project="Лот 959"
+             aria-label="Открыть изображение 3 — Лот 959">
+            <img src="assets/img/projects/lot-959/lot-959-03-t.jpg" width="1224" height="1800"
+                 alt="Лот 959 — интерьер, изображение 3" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-959/lot-959-04.jpg"
+             data-i="3" data-project="Лот 959"
+             aria-label="Открыть изображение 4 — Лот 959">
+            <img src="assets/img/projects/lot-959/lot-959-04-t.jpg" width="1224" height="1800"
+                 alt="Лот 959 — интерьер, изображение 4" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-959/lot-959-05.jpg"
+             data-i="4" data-project="Лот 959"
+             aria-label="Открыть изображение 5 — Лот 959">
+            <img src="assets/img/projects/lot-959/lot-959-05-t.jpg" width="1224" height="1800"
+                 alt="Лот 959 — интерьер, изображение 5" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-959/lot-959-06.jpg"
+             data-i="5" data-project="Лот 959"
+             aria-label="Открыть изображение 6 — Лот 959">
+            <img src="assets/img/projects/lot-959/lot-959-06-t.jpg" width="1260" height="1800"
+                 alt="Лот 959 — интерьер, изображение 6" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-959/lot-959-07.jpg"
+             data-i="6" data-project="Лот 959"
+             aria-label="Открыть изображение 7 — Лот 959">
+            <img src="assets/img/projects/lot-959/lot-959-07-t.jpg" width="1800" height="1260"
+                 alt="Лот 959 — интерьер, изображение 7" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-959/lot-959-08.jpg"
+             data-i="7" data-project="Лот 959"
+             aria-label="Открыть изображение 8 — Лот 959">
+            <img src="assets/img/projects/lot-959/lot-959-08-t.jpg" width="1260" height="1800"
+                 alt="Лот 959 — интерьер, изображение 8" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-959/lot-959-09.jpg"
+             data-i="8" data-project="Лот 959"
+             aria-label="Открыть изображение 9 — Лот 959">
+            <img src="assets/img/projects/lot-959/lot-959-09-t.jpg" width="1260" height="1800"
+                 alt="Лот 959 — интерьер, изображение 9" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-959/lot-959-10.jpg"
+             data-i="9" data-project="Лот 959"
+             aria-label="Открыть изображение 10 — Лот 959">
+            <img src="assets/img/projects/lot-959/lot-959-10-t.jpg" width="1224" height="1800"
+                 alt="Лот 959 — интерьер, изображение 10" loading="lazy" decoding="async">
+          </a>
+          <a class="shot" href="assets/img/projects/lot-959/lot-959-11.jpg"
+             data-i="10" data-project="Лот 959"
+             aria-label="Открыть изображение 11 — Лот 959">
+            <img src="assets/img/projects/lot-959/lot-959-11-t.jpg" width="1224" height="1800"
+                 alt="Лот 959 — интерьер, изображение 11" loading="lazy" decoding="async">
+          </a>
+        </div>
+      </article>
+  </div>
+
+  <section id="closer">
+    <div class="container">
+      <div class="closer-inner" data-r>
+        <h2>Понравился<br><em>подход?</em></h2>
+        <a href="index.html#contact" class="btn-fill">
+          Обсудить проект
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2.5 7h9M11.5 7L8 3.5M11.5 7L8 10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="footer" role="contentinfo">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-col-label">Бренд</div>
+      <div class="footer-logo">Алина Мур</div>
+      <div class="footer-tagline">Архитектурное проектирование<br>и дизайн интерьеров</div>
+    </div>
+    <div>
+      <div class="footer-col-label">Навигация</div>
+      <nav class="footer-nav" aria-label="Навигация в подвале">
+        <a href="index.html#photo-services">Услуги</a>
+        <a href="works.html">Портфолио</a>
+        <a href="index.html#about">Обо мне</a>
+        <a href="index.html#process">Процесс</a>
+        <a href="index.html#contact">Контакты</a>
+      </nav>
+    </div>
+    <div>
+      <div class="footer-col-label">Связь</div>
+      <div class="footer-contacts">
+        <a href="tel:+79001234567">+7 (900) 123-45-67</a>
+        <a href="mailto:hello@alinamur.ru">hello@alinamur.ru</a>
+        <a href="https://instagram.com/alinamur" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://t.me/alinamur" target="_blank" rel="noopener">Telegram</a>
+        <span style="color:rgba(255,255,255,.2);font-size:.78rem;margin-top:8px">Москва, Россия</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2024 Алина Мур. Все права защищены.</span>
+    <div class="footer-red-dot" aria-hidden="true"></div>
+    <span class="footer-copy">Архитектор-дизайнер · Москва</span>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div id="lb" role="dialog" aria-modal="true" aria-label="Просмотр изображения">
+  <div class="lb-bar top">
+    <span class="lb-title" id="lbTitle"></span>
+    <button class="lb-btn" id="lbClose">Закрыть ✕</button>
+  </div>
+  <div class="lb-stage"><img id="lbImg" src="" alt=""></div>
+  <button class="lb-nav prev" id="lbPrev" aria-label="Предыдущее изображение">
+    <svg width="18" height="18" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+      <path d="M11.5 7h-9M2.5 7L6 3.5M2.5 7L6 10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    </svg>
+  </button>
+  <button class="lb-nav next" id="lbNext" aria-label="Следующее изображение">
+    <svg width="18" height="18" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+      <path d="M2.5 7h9M11.5 7L8 3.5M11.5 7L8 10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+    </svg>
+  </button>
+  <div class="lb-bar bot">
+    <span class="lb-count" id="lbCount"></span>
+    <span>← → листать · Esc закрыть</span>
+  </div>
+</div>
+
+<script>
+  /* Mobile menu */
+  const burger = document.getElementById('burgerBtn');
+  const mobMenu = document.getElementById('mobMenu');
+  document.getElementById('mobClose').addEventListener('click', closeMenu);
+  burger.addEventListener('click', () => {
+    mobMenu.classList.add('open'); burger.setAttribute('aria-expanded','true');
+    document.body.style.overflow = 'hidden';
+  });
+  function closeMenu() {
+    mobMenu.classList.remove('open'); burger.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.mlink').forEach(l => l.addEventListener('click', closeMenu));
+
+  /* Reveal */
+  const io = new IntersectionObserver((es) => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); io.unobserve(e.target); } });
+  }, { threshold:.08, rootMargin:'0px 0px -40px 0px' });
+  document.querySelectorAll('[data-r]').forEach(el => io.observe(el));
+
+  /* Filters */
+  const projects = [...document.querySelectorAll('.project')];
+  document.querySelectorAll('.filt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const f = btn.dataset.f;
+      document.querySelectorAll('.filt').forEach(b => b.classList.toggle('is-on', b === btn));
+      projects.forEach(p => p.classList.toggle('hide', f !== 'all' && p.dataset.cat !== f));
+      window.scrollTo({ top: document.getElementById('filters').offsetTop - 72, behavior:'smooth' });
+    });
+  });
+
+  /* Lightbox */
+  const lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'),
+        lbTitle = document.getElementById('lbTitle'), lbCount = document.getElementById('lbCount');
+  let group = [], idx = 0, lastFocus = null;
+
+  function show(i) {
+    idx = (i + group.length) % group.length;
+    const a = group[idx];
+    lbImg.src = a.getAttribute('href');
+    lbImg.alt = a.querySelector('img').alt;
+    lbTitle.textContent = a.dataset.project;
+    lbCount.textContent = String(idx + 1).padStart(2,'0') + ' / ' + String(group.length).padStart(2,'0');
+    [1,-1].forEach(d => { const n = group[(idx+d+group.length)%group.length];
+      if (n) new Image().src = n.getAttribute('href'); });
+  }
+  function open(a) {
+    group = [...a.closest('.gal').querySelectorAll('.shot')];
+    lastFocus = a;
+    show(group.indexOf(a));
+    lb.classList.add('on'); requestAnimationFrame(() => lb.classList.add('vis'));
+    document.body.style.overflow = 'hidden';
+    document.getElementById('lbClose').focus();
+  }
+  function close() {
+    lb.classList.remove('vis');
+    setTimeout(() => { lb.classList.remove('on'); lbImg.src = ''; }, 300);
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  }
+  document.querySelectorAll('.shot').forEach(a => {
+    a.addEventListener('click', e => { e.preventDefault(); open(a); });
+  });
+  document.getElementById('lbClose').addEventListener('click', close);
+  document.getElementById('lbPrev').addEventListener('click', () => show(idx - 1));
+  document.getElementById('lbNext').addEventListener('click', () => show(idx + 1));
+  lb.addEventListener('click', e => { if (e.target === lb || e.target.parentElement.className === 'lb-stage') close(); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('on')) return;
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft') show(idx - 1);
+    else if (e.key === 'ArrowRight') show(idx + 1);
+  });
+
+  /* Swipe on touch */
+  let tx = 0;
+  lb.addEventListener('touchstart', e => tx = e.changedTouches[0].clientX, {passive:true});
+  lb.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
+  }, {passive:true});
+</script>
+</body>
+</html>
