@@ -3,14 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Алина Зай — Архитектор-дизайнер интерьеров в Москве</title>
-  <meta name="description" content="Создаю пространства, которые вдохновляют. Архитектурное проектирование и дизайн интерьеров. Авторский подход, уникальные решения.">
-  <meta name="author" content="Алина Зай">
-  <link rel="canonical" href="https://alinamur.ru">
-  <meta property="og:title" content="Алина Зай — Архитектор-дизайнер">
-  <meta property="og:description" content="Создаю пространства, которые вдохновляют. Дизайн интерьеров и архитектурное проектирование.">
+  <title>Дизайн интерьера в Москве — архитектор-дизайнер Алина Мур</title>
+  <meta name="description" content="Алина Мур — архитектор-дизайнер в Москве. Дизайн-проект интерьера квартир и домов от 3 500 ₽/м², архитектурное проектирование, 3D-визуализация и авторский надзор. 120+ реализованных проектов, 10 лет опыта.">
+  <meta name="keywords" content="дизайн интерьера Москва, дизайнер интерьера, архитектор-дизайнер, дизайн-проект квартиры, проектирование загородного дома, 3D-визуализация интерьера, авторский надзор, Алина Мур">
+  <meta name="author" content="Алина Мур">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <link rel="canonical" href="https://magistr737.github.io/alinamur/">
+
+  <meta name="geo.region" content="RU-MOW">
+  <meta name="geo.placename" content="Москва">
+
+  <meta property="og:site_name" content="Алина Мур — архитектор-дизайнер">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Дизайн интерьера в Москве — архитектор-дизайнер Алина Мур">
+  <meta property="og:description" content="Дизайн-проект интерьера квартир и домов, архитектурное проектирование, 3D-визуализация и авторский надзор. 120+ реализованных проектов.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="assets/img/projects/aristokrat/aristokrat-01.jpg">
+  <meta property="og:url" content="https://magistr737.github.io/alinamur/">
+  <meta property="og:image" content="https://magistr737.github.io/alinamur/assets/img/projects/aristokrat/aristokrat-01.jpg">
+  <meta property="og:image:alt" content="Интерьер проекта «Аристократ» — работа архитектора-дизайнера Алины Мур">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Дизайн интерьера в Москве — архитектор-дизайнер Алина Мур">
+  <meta name="twitter:description" content="Дизайн-проект интерьера квартир и домов, архитектурное проектирование, 3D-визуализация и авторский надзор.">
+  <meta name="twitter:image" content="https://magistr737.github.io/alinamur/assets/img/projects/aristokrat/aristokrat-01.jpg">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48">
@@ -136,12 +151,20 @@
       border-bottom: 1px solid var(--ink-faint);
       overflow: hidden;
     }
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px; height: 1px;
+      margin: -1px; padding: 0; border: 0;
+      clip: rect(0 0 0 0); clip-path: inset(50%);
+      overflow: hidden; white-space: nowrap;
+    }
     .hero-title-row {
       padding: var(--nav-h) clamp(20px, 5vw, 72px) 0;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: end;
       gap: 0;
+      font-size: 1rem; font-weight: 400;
       border-bottom: 1px solid var(--ink-faint);
     }
     .hero-name-left {
@@ -268,6 +291,107 @@
       background: var(--red); flex-shrink: 0;
     }
     @keyframes mq { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+    /* ─── Reel: бесконечная лента проектов ───────────────────── */
+    .reel-sec {
+      padding: clamp(64px, 8vw, 110px) 0;
+      background: var(--cream);
+      border-top: 1px solid var(--ink-faint);
+      border-bottom: 1px solid var(--ink-faint);
+      overflow: hidden;
+    }
+    .reel-head {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      gap: 24px; flex-wrap: wrap;
+      margin-bottom: clamp(32px, 4vw, 52px);
+    }
+    .reel-head h2 {
+      font-family: 'Cormorant', serif; font-weight: 300;
+      font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1.02;
+      letter-spacing: -.01em;
+    }
+    .reel-head h2 em { font-style: italic; color: var(--ink-mid); }
+    .reel-hint {
+      display: flex; align-items: center; gap: 10px;
+      font-size: .6rem; letter-spacing: .22em; text-transform: uppercase;
+      color: var(--ink-soft); padding-bottom: 6px;
+    }
+    .reel-hint svg { color: var(--red); }
+    .reel-rows { display: flex; flex-direction: column; gap: clamp(10px, 1.4vw, 18px); }
+    .reel-row {
+      position: relative;
+      -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+              mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
+    }
+    /* отступ задан margin'ом на карточке, а не gap'ом:
+       иначе половина трека ≠ одному набору и на стыке цикла виден рывок */
+    .reel-track {
+      display: flex; width: max-content;
+      will-change: transform;
+    }
+    .reel-row--a .reel-track { animation: reelA 64s linear infinite; }
+    .reel-row--b .reel-track { animation: reelB 78s linear infinite; }
+    .reel-sec:hover .reel-track,
+    .reel-sec:focus-within .reel-track { animation-play-state: paused; }
+    @keyframes reelA { 0%{transform:translateX(0)}      100%{transform:translateX(-50%)} }
+    @keyframes reelB { 0%{transform:translateX(-50%)}   100%{transform:translateX(0)} }
+
+    .reel-item {
+      position: relative; flex-shrink: 0; display: block;
+      width: clamp(210px, 26vw, 400px);
+      margin-right: clamp(10px, 1.4vw, 18px);
+      aspect-ratio: 4 / 3;
+      overflow: hidden; background: var(--cream-2);
+    }
+    .reel-item img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform .7s cubic-bezier(.16,1,.3,1), filter .45s;
+    }
+    .reel-item::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(26,25,23,.72) 0%, rgba(26,25,23,0) 52%);
+      opacity: 0; transition: opacity .45s;
+    }
+    .reel-cap {
+      position: absolute; left: 16px; right: 16px; bottom: 14px; z-index: 2;
+      color: #fff; opacity: 0; transform: translateY(8px);
+      transition: opacity .45s, transform .45s cubic-bezier(.16,1,.3,1);
+      pointer-events: none;
+    }
+    .reel-cap b {
+      display: block; font-family: 'Cormorant', serif;
+      font-weight: 400; font-size: 1.15rem; line-height: 1.2;
+    }
+    .reel-cap span {
+      display: block; margin-top: 2px;
+      font-size: .58rem; letter-spacing: .2em; text-transform: uppercase;
+      color: rgba(255,255,255,.62);
+    }
+    .reel-item:hover img,
+    .reel-item:focus-visible img { transform: scale(1.06); }
+    .reel-item:hover::after,
+    .reel-item:focus-visible::after { opacity: 1; }
+    .reel-item:hover .reel-cap,
+    .reel-item:focus-visible .reel-cap { opacity: 1; transform: none; }
+    .reel-item:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+
+    .reel-foot {
+      display: flex; justify-content: center;
+      margin-top: clamp(32px, 4vw, 52px);
+    }
+    .reel-all {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: .65rem; letter-spacing: .22em; text-transform: uppercase;
+      padding-bottom: 5px; border-bottom: 1px solid var(--ink-faint);
+      transition: border-color .3s, gap .3s;
+    }
+    .reel-all:hover { border-bottom-color: var(--ink); gap: 16px; }
+    .reel-all svg { color: var(--red); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reel-track { animation: none !important; }
+      .reel-row { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    }
 
     /* ─── Section common ─────────────────────────────────────── */
     .section-pad { padding: clamp(72px, 10vw, 140px) 0; }
@@ -831,13 +955,147 @@
       .port-item:nth-child(n) { grid-column: 1; grid-row: auto; }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://magistr737.github.io/alinamur/#website",
+        "url": "https://magistr737.github.io/alinamur/",
+        "name": "Алина Мур — архитектор-дизайнер",
+        "inLanguage": "ru-RU",
+        "publisher": { "@id": "https://magistr737.github.io/alinamur/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://magistr737.github.io/alinamur/#person",
+        "name": "Алина Мур",
+        "url": "https://magistr737.github.io/alinamur/",
+        "image": "https://magistr737.github.io/alinamur/assets/img/author/alina-portrait.jpg",
+        "jobTitle": "Архитектор-дизайнер интерьеров",
+        "description": "Архитектор-дизайнер с более чем 10 годами опыта в создании жилых и коммерческих интерьеров.",
+        "telephone": "+7-965-607-83-71",
+        "email": "zajnut@yandex.ru",
+        "knowsAbout": [
+          "Дизайн интерьера",
+          "Архитектурное проектирование",
+          "3D-визуализация",
+          "Авторский надзор",
+          "Комплектация интерьера"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        },
+        "sameAs": [
+          "https://t.me/alinamur_design",
+          "https://www.instagram.com/alinamur_design"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://magistr737.github.io/alinamur/#business",
+        "name": "Алина Мур — дизайн интерьера и архитектурное проектирование",
+        "url": "https://magistr737.github.io/alinamur/",
+        "image": "https://magistr737.github.io/alinamur/assets/img/projects/aristokrat/aristokrat-01.jpg",
+        "description": "Дизайн-проекты интерьеров квартир и загородных домов, архитектурное проектирование, 3D-визуализация, авторский надзор и комплектация. Москва и вся Россия.",
+        "founder": { "@id": "https://magistr737.github.io/alinamur/#person" },
+        "telephone": "+7-965-607-83-71",
+        "email": "zajnut@yandex.ru",
+        "priceRange": "от 3 500 ₽/м²",
+        "currenciesAccepted": "RUB",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Москва",
+          "addressCountry": "RU"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Москва" },
+          { "@type": "Country", "name": "Россия" }
+        ],
+        "sameAs": [
+          "https://t.me/alinamur_design",
+          "https://www.instagram.com/alinamur_design"
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Услуги",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Дизайн интерьера",
+                "description": "Полный дизайн-проект с рабочей документацией"
+              },
+              "priceCurrency": "RUB",
+              "price": "3500",
+              "unitText": "за м²"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Архитектурный проект",
+                "description": "Жилые дома и загородные резиденции: архитектурный, конструктивный и инженерные разделы (ВК, ОВ, ЭОМ, слаботочные системы)"
+              },
+              "priceCurrency": "RUB"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "3D-визуализация",
+                "description": "Фотореалистичные рендеры пространства"
+              },
+              "priceCurrency": "RUB",
+              "price": "800",
+              "unitText": "за м²"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Авторский надзор",
+                "description": "Контроль качества работ на стройке"
+              },
+              "priceCurrency": "RUB"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Дизайн интерьера под ключ",
+                "description": "Полное сопровождение от проекта до готового интерьера"
+              },
+              "priceCurrency": "RUB",
+              "price": "5000"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Консультация дизайнера",
+                "description": "Онлайн или на объекте — конкретные решения по вашему пространству"
+              },
+              "priceCurrency": "RUB"
+            }
+          ]
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
 <!-- ══════════ NAV ══════════ -->
 <nav id="nav" role="navigation" aria-label="Основная навигация">
   <div class="nav-inner">
-    <a href="#hero" class="nav-logo" aria-label="Алина Зай — главная">Алина Зай</a>
+    <a href="#hero" class="nav-logo" aria-label="Алина Мур — главная">Алина Мур</a>
     <ul class="nav-links">
       <li><a href="#photo-services">Услуги</a></li>
       <li><a href="works.html">Работы</a></li>
@@ -866,25 +1124,26 @@
 <section id="hero" aria-labelledby="hero-name">
 
   <!-- Name row -->
-  <div class="hero-title-row">
-    <div class="hero-name-left" id="hero-name" data-r>Алина</div>
-    <div class="hero-dot" aria-hidden="true"></div>
-    <div class="hero-name-right" data-r data-d="1">Зай</div>
-  </div>
+  <h1 class="hero-title-row" id="hero-name">
+    <span class="hero-name-left" data-r>Алина</span>
+    <span class="hero-dot" aria-hidden="true"></span>
+    <span class="hero-name-right" data-r data-d="1">Мур</span>
+    <span class="visually-hidden">— архитектор и дизайнер интерьеров в Москве</span>
+  </h1>
 
   <!-- Metadata -->
-  <div class="hero-meta-row" aria-hidden="true">
+  <p class="hero-meta-row">
     <span class="hero-meta-item">Дизайнер&thinsp;интерьеров</span>
     <span class="hero-meta-item">Москва · Россия</span>
     <span class="hero-meta-item">Архитектурное&thinsp;бюро</span>
-  </div>
+  </p>
 
   <!-- Split photo area -->
   <div class="hero-split">
     <div class="hero-left">
       <div class="hero-photo-wrap">
         <img src="assets/img/author/alina-full.jpg"
-             alt="Алина Зай — архитектор-дизайнер, за работой над проектом"
+             alt="Алина Мур — архитектор-дизайнер, за работой над проектом"
              width="1333" height="2000" fetchpriority="high">
       </div>
     </div>
@@ -952,7 +1211,7 @@
       <div class="about-img-col" data-r>
         <div class="about-img">
           <img src="assets/img/author/alina-portrait.jpg"
-               alt="Алина Зай — архитектор-дизайнер"
+               alt="Алина Мур — архитектор-дизайнер"
                width="1400" height="1358" loading="lazy" decoding="async">
         </div>
         <div class="about-year" aria-hidden="true">10</div>
@@ -964,7 +1223,7 @@
           Создаю<br><em>осмысленные</em><br>пространства
         </h2>
         <p data-r data-d="1">
-          Меня зовут Алина Зай — архитектор-дизайнер с более чем 10&nbsp;годами опыта в&nbsp;создании жилых и&nbsp;коммерческих интерьеров. Мой подход сочетает глубокое понимание архитектуры с&nbsp;чуткостью к&nbsp;потребностям каждого клиента.
+          Меня зовут Алина Мур — архитектор-дизайнер с более чем 10&nbsp;годами опыта в&nbsp;создании жилых и&nbsp;коммерческих интерьеров. Мой подход сочетает глубокое понимание архитектуры с&nbsp;чуткостью к&nbsp;потребностям каждого клиента.
         </p>
         <p data-r data-d="2">
           Каждый проект начинается со&nbsp;слушания. Я&nbsp;погружаюсь в&nbsp;образ жизни, привычки и&nbsp;мечты клиента, чтобы создать пространство, которое живёт и&nbsp;дышит вместе с&nbsp;ним.
@@ -977,7 +1236,7 @@
           <span class="tool-tag">Revit</span>
           <span class="tool-tag">SketchUp</span>
         </div>
-        <div class="about-sig" data-r data-d="4" aria-hidden="true">Алина Зай</div>
+        <div class="about-sig" data-r data-d="4" aria-hidden="true">Алина Мур</div>
       </div>
 
     </div>
@@ -1220,6 +1479,246 @@
   </div>
 </section>
 
+<!-- ══════════ REEL — бесконечная лента проектов ══════════ -->
+<section class="reel-sec" id="reel" aria-labelledby="reel-heading">
+  <div class="container">
+    <div class="reel-head" data-r>
+      <div>
+        <p class="section-label">Портфолио в движении</p>
+        <h2 id="reel-heading">Больше<br><em>кадров</em></h2>
+      </div>
+      <p class="reel-hint">
+        <svg width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true">
+          <path d="M15 5H1M1 5l3.5-3.5M1 5l3.5 3.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        Лента листается сама · наведите, чтобы остановить
+      </p>
+    </div>
+  </div>
+
+  <div class="reel-rows">
+    <div class="reel-row reel-row--a">
+      <div class="reel-track">
+        <a class="reel-item" href="works.html#aristokrat">
+          <img src="assets/img/projects/aristokrat/aristokrat-04-t.jpg"
+               alt="Аристократ — квартира, реализовано" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Аристократ</b><span>Квартира · Реализовано</span></span>
+        </a>
+        <a class="reel-item" href="works.html#lot-706">
+          <img src="assets/img/projects/lot-706/lot-706-03-t.jpg"
+               alt="Лот 706 — семейная квартира, классика" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Лот 706</b><span>Семейная квартира · Классика</span></span>
+        </a>
+        <a class="reel-item" href="works.html#modular-house">
+          <img src="assets/img/projects/modular-house/modular-house-13-t.jpg"
+               alt="Модульный дом 30 м² — каркасный дом, авторский надзор" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Модульный дом 30 м²</b><span>Каркасный дом · Авторский надзор</span></span>
+        </a>
+        <a class="reel-item" href="works.html#wellness">
+          <img src="assets/img/projects/wellness/wellness-09-t.jpg"
+               alt="Wellness-зона — частный дом, бассейн и парная" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Wellness-зона</b><span>Частный дом · Бассейн и парная</span></span>
+        </a>
+        <a class="reel-item" href="works.html#lot-49">
+          <img src="assets/img/projects/lot-49/lot-49-03-t.jpg"
+               alt="Лот 49 — квартира, тёмная палитра" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Лот 49</b><span>Квартира · Тёмная палитра</span></span>
+        </a>
+        <a class="reel-item" href="works.html#glamping">
+          <img src="assets/img/projects/glamping/glamping-08-t.jpg"
+               alt="Глэмпинг-клуб — база отдыха, генплан" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Глэмпинг-клуб</b><span>База отдыха · Генплан</span></span>
+        </a>
+        <a class="reel-item" href="works.html#concrete-villa">
+          <img src="assets/img/projects/concrete-villa/concrete-villa-02-t.jpg"
+               alt="Дом в минимализме — загородный дом, архитектура" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Дом в минимализме</b><span>Загородный дом · Архитектура</span></span>
+        </a>
+        <a class="reel-item" href="works.html#restaurant">
+          <img src="assets/img/projects/restaurant/restaurant-02-t.jpg"
+               alt="Ресторан — коммерческий интерьер, эко-стиль" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Ресторан</b><span>Коммерческий интерьер · Эко-стиль</span></span>
+        </a>
+        <a class="reel-item" href="works.html#lot-963">
+          <img src="assets/img/projects/lot-963/lot-963-02-t.jpg"
+               alt="Лот 963 — квартира, дизайн-проект" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Лот 963</b><span>Квартира · Дизайн-проект</span></span>
+        </a>
+        <a class="reel-item" href="works.html#spa-banya">
+          <img src="assets/img/projects/spa-banya/spa-banya-01-t.jpg"
+               alt="Банный комплекс — общественное пространство, спа" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Банный комплекс</b><span>Общественное пространство · СПА</span></span>
+        </a>
+        <a class="reel-item" href="works.html#aristokrat" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/aristokrat/aristokrat-04-t.jpg"
+               alt="Аристократ — квартира, реализовано" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Аристократ</b><span>Квартира · Реализовано</span></span>
+        </a>
+        <a class="reel-item" href="works.html#lot-706" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/lot-706/lot-706-03-t.jpg"
+               alt="Лот 706 — семейная квартира, классика" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Лот 706</b><span>Семейная квартира · Классика</span></span>
+        </a>
+        <a class="reel-item" href="works.html#modular-house" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/modular-house/modular-house-13-t.jpg"
+               alt="Модульный дом 30 м² — каркасный дом, авторский надзор" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Модульный дом 30 м²</b><span>Каркасный дом · Авторский надзор</span></span>
+        </a>
+        <a class="reel-item" href="works.html#wellness" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/wellness/wellness-09-t.jpg"
+               alt="Wellness-зона — частный дом, бассейн и парная" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Wellness-зона</b><span>Частный дом · Бассейн и парная</span></span>
+        </a>
+        <a class="reel-item" href="works.html#lot-49" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/lot-49/lot-49-03-t.jpg"
+               alt="Лот 49 — квартира, тёмная палитра" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Лот 49</b><span>Квартира · Тёмная палитра</span></span>
+        </a>
+        <a class="reel-item" href="works.html#glamping" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/glamping/glamping-08-t.jpg"
+               alt="Глэмпинг-клуб — база отдыха, генплан" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Глэмпинг-клуб</b><span>База отдыха · Генплан</span></span>
+        </a>
+        <a class="reel-item" href="works.html#concrete-villa" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/concrete-villa/concrete-villa-02-t.jpg"
+               alt="Дом в минимализме — загородный дом, архитектура" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Дом в минимализме</b><span>Загородный дом · Архитектура</span></span>
+        </a>
+        <a class="reel-item" href="works.html#restaurant" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/restaurant/restaurant-02-t.jpg"
+               alt="Ресторан — коммерческий интерьер, эко-стиль" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Ресторан</b><span>Коммерческий интерьер · Эко-стиль</span></span>
+        </a>
+        <a class="reel-item" href="works.html#lot-963" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/lot-963/lot-963-02-t.jpg"
+               alt="Лот 963 — квартира, дизайн-проект" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Лот 963</b><span>Квартира · Дизайн-проект</span></span>
+        </a>
+        <a class="reel-item" href="works.html#spa-banya" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/spa-banya/spa-banya-01-t.jpg"
+               alt="Банный комплекс — общественное пространство, спа" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Банный комплекс</b><span>Общественное пространство · СПА</span></span>
+        </a>
+      </div>
+    </div>
+    <div class="reel-row reel-row--b">
+      <div class="reel-track">
+        <a class="reel-item" href="works.html#office-800">
+          <img src="assets/img/projects/office-800/office-800-02-t.jpg"
+               alt="Офис 800 м² — коммерческий интерьер" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Офис 800 м²</b><span>Коммерческий интерьер</span></span>
+        </a>
+        <a class="reel-item" href="works.html#studio-lady">
+          <img src="assets/img/projects/studio-lady/studio-lady-03-t.jpg"
+               alt="Студия для молодой девушки — квартира-студия" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Студия для молодой девушки</b><span>Квартира-студия</span></span>
+        </a>
+        <a class="reel-item" href="works.html#lot-243">
+          <img src="assets/img/projects/lot-243/lot-243-02-t.jpg"
+               alt="Лот 243 — квартира, дизайн-проект" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Лот 243</b><span>Квартира · Дизайн-проект</span></span>
+        </a>
+        <a class="reel-item" href="works.html#volgograd">
+          <img src="assets/img/projects/volgograd/volgograd-02-t.jpg"
+               alt="Квартира в Волгограде — жилой интерьер" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Квартира в Волгограде</b><span>Жилой интерьер</span></span>
+        </a>
+        <a class="reel-item" href="works.html#lot-80">
+          <img src="assets/img/projects/lot-80/lot-80-02-t.jpg"
+               alt="Лот 80 — квартира, дизайн-проект" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Лот 80</b><span>Квартира · Дизайн-проект</span></span>
+        </a>
+        <a class="reel-item" href="works.html#lot-959">
+          <img src="assets/img/projects/lot-959/lot-959-02-t.jpg"
+               alt="Лот 959 — квартира, дизайн-проект" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Лот 959</b><span>Квартира · Дизайн-проект</span></span>
+        </a>
+        <a class="reel-item" href="works.html#aristokrat">
+          <img src="assets/img/projects/aristokrat/aristokrat-13-t.jpg"
+               alt="Аристократ — гостиная зона, фотосъёмка" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Аристократ</b><span>Гостиная зона · Фотосъёмка</span></span>
+        </a>
+        <a class="reel-item" href="works.html#wellness">
+          <img src="assets/img/projects/wellness/wellness-02-t.jpg"
+               alt="Wellness-зона — бассейн, частный дом" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Wellness-зона</b><span>Бассейн · Частный дом</span></span>
+        </a>
+        <a class="reel-item" href="works.html#glamping">
+          <img src="assets/img/projects/glamping/glamping-03-t.jpg"
+               alt="Глэмпинг-клуб — общественные зоны" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Глэмпинг-клуб</b><span>Общественные зоны</span></span>
+        </a>
+        <a class="reel-item" href="works.html#lot-706">
+          <img src="assets/img/projects/lot-706/lot-706-13-t.jpg"
+               alt="Лот 706 — ванная, оникс и латунь" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Лот 706</b><span>Ванная · Оникс и латунь</span></span>
+        </a>
+        <a class="reel-item" href="works.html#office-800" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/office-800/office-800-02-t.jpg"
+               alt="Офис 800 м² — коммерческий интерьер" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Офис 800 м²</b><span>Коммерческий интерьер</span></span>
+        </a>
+        <a class="reel-item" href="works.html#studio-lady" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/studio-lady/studio-lady-03-t.jpg"
+               alt="Студия для молодой девушки — квартира-студия" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Студия для молодой девушки</b><span>Квартира-студия</span></span>
+        </a>
+        <a class="reel-item" href="works.html#lot-243" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/lot-243/lot-243-02-t.jpg"
+               alt="Лот 243 — квартира, дизайн-проект" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Лот 243</b><span>Квартира · Дизайн-проект</span></span>
+        </a>
+        <a class="reel-item" href="works.html#volgograd" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/volgograd/volgograd-02-t.jpg"
+               alt="Квартира в Волгограде — жилой интерьер" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Квартира в Волгограде</b><span>Жилой интерьер</span></span>
+        </a>
+        <a class="reel-item" href="works.html#lot-80" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/lot-80/lot-80-02-t.jpg"
+               alt="Лот 80 — квартира, дизайн-проект" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Лот 80</b><span>Квартира · Дизайн-проект</span></span>
+        </a>
+        <a class="reel-item" href="works.html#lot-959" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/lot-959/lot-959-02-t.jpg"
+               alt="Лот 959 — квартира, дизайн-проект" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Лот 959</b><span>Квартира · Дизайн-проект</span></span>
+        </a>
+        <a class="reel-item" href="works.html#aristokrat" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/aristokrat/aristokrat-13-t.jpg"
+               alt="Аристократ — гостиная зона, фотосъёмка" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Аристократ</b><span>Гостиная зона · Фотосъёмка</span></span>
+        </a>
+        <a class="reel-item" href="works.html#wellness" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/wellness/wellness-02-t.jpg"
+               alt="Wellness-зона — бассейн, частный дом" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Wellness-зона</b><span>Бассейн · Частный дом</span></span>
+        </a>
+        <a class="reel-item" href="works.html#glamping" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/glamping/glamping-03-t.jpg"
+               alt="Глэмпинг-клуб — общественные зоны" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Глэмпинг-клуб</b><span>Общественные зоны</span></span>
+        </a>
+        <a class="reel-item" href="works.html#lot-706" aria-hidden="true" tabindex="-1">
+          <img src="assets/img/projects/lot-706/lot-706-13-t.jpg"
+               alt="Лот 706 — ванная, оникс и латунь" loading="lazy" decoding="async">
+          <span class="reel-cap"><b>Лот 706</b><span>Ванная · Оникс и латунь</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="reel-foot">
+      <a class="reel-all" href="works.html">
+        Открыть все 16 проектов
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <path d="M2.5 7h9M11.5 7L8 3.5M11.5 7L8 10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════ TESTIMONIALS ══════════ -->
 <section id="testimonials" class="section-pad" aria-labelledby="test-heading">
   <div class="container">
@@ -1344,12 +1843,12 @@
 <footer id="footer" role="contentinfo">
 
   <!-- Giant name at the end -->
-  <span class="footer-name-display" aria-hidden="true">Алина Зай</span>
+  <span class="footer-name-display" aria-hidden="true">Алина Мур</span>
 
   <div class="footer-inner">
     <div>
       <div class="footer-col-label">Бренд</div>
-      <div class="footer-logo">Алина Зай</div>
+      <div class="footer-logo">Алина Мур</div>
       <div class="footer-tagline">Архитектурное проектирование<br>и дизайн интерьеров</div>
     </div>
     <div>
@@ -1375,7 +1874,7 @@
   </div>
 
   <div class="footer-bottom">
-    <span class="footer-copy">© 2026 Алина Зай. Все права защищены.</span>
+    <span class="footer-copy">© 2026 Алина Мур. Все права защищены.</span>
     <div class="footer-red-dot" aria-hidden="true"></div>
     <span class="footer-copy">Архитектор-дизайнер · Москва</span>
   </div>
